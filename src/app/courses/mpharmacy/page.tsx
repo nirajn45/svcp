@@ -91,7 +91,7 @@ export default function MPharmacyPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Must have a Bachelor's degree in Pharmacy (B.Pharm) from an institution approved by the Pharmacy
+                  Must have a Bachelor&apos;s degree in Pharmacy (B.Pharm) from an institution approved by the Pharmacy
                   Council of India with a minimum aggregate score of 55% or equivalent qualification recognized by PCI.
                 </p>
               </CardContent>

@@ -382,7 +382,7 @@ export default function AboutPage() {
                 <div className="text-gray-600 text-base leading-relaxed space-y-4 border-l-4 border-[#fea700] pl-6">
                   <p>
                     &quot;Since 2005, as one of the pioneering educational groups in Punjab, SVCP has established a strong
-                    brand identity in the field of pharmaceutical education. India's pharmaceutical sector is growing
+                    brand identity in the field of pharmaceutical education. India&apos;s pharmaceutical sector is growing
                     fast, creating thousands of employment opportunities annually.&quot;
                   </p>
                   <p>

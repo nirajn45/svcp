@@ -57,7 +57,7 @@ export default function ContactPage() {
             <div className="animate-slide-up">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We're here to help you with your academic journey. Reach out to us for admissions, course information,
+                We&apos;re here to help you with your academic journey. Reach out to us for admissions, course information,
                 or any other queries.
               </p>
             </div>

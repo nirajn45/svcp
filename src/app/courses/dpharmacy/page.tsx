@@ -65,7 +65,7 @@ export default function DPharmacyPage() {
                   industry. The number of hospitals, clinics and nursing homes are continuously increasing, so is the
                   demand of professionals of this field. One have reasonably good career in pharmacy. One can not only
                   do job but also can own pharmacy or chemists and druggists shop to stock and sell medicines and
-                  dispense medicines according to doctor's prescription.
+                  dispense medicines according to doctor&apos;s prescription.
                 </p>
               </CardContent>
             </Card>
