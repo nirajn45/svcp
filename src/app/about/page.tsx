@@ -282,13 +282,13 @@ export default function AboutPage() {
                       <span className="text-[#fea700] font-semibold text-xs">Message</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {managementTeam[currentManagement].position}'s Message
+                      {managementTeam[currentManagement].position}&apos;s Message
                     </h3>
                     <div className="w-16 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded"></div>
                   </div>
 
                   <blockquote className="text-gray-600 text-base leading-relaxed italic border-l-4 border-[#fea700] pl-4">
-                    "{managementTeam[currentManagement].message}"
+                    &quot;{managementTeam[currentManagement].message}&quot;
                   </blockquote>
 
                   <div className="mt-8 flex items-center justify-between">
@@ -374,26 +374,26 @@ export default function AboutPage() {
                     <div className="inline-flex items-center bg-[#fea700]/10 px-3 py-1 rounded-full mb-2">
                       <span className="text-[#fea700] font-semibold text-xs">Academic Leadership</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Principal's Message</h3>
+                    <h3 className="text-xl font-bold text-gray-900">Principal &apos;s Message</h3>
                     <p className="text-[#fea700] font-semibold text-sm">Prof. (Dr.) Sanjeev Mittal</p>
                   </div>
                 </div>
 
                 <div className="text-gray-600 text-base leading-relaxed space-y-4 border-l-4 border-[#fea700] pl-6">
                   <p>
-                    "Since 2005, as one of the pioneering educational groups in Punjab, SVCP has established a strong
+                    &quot;Since 2005, as one of the pioneering educational groups in Punjab, SVCP has established a strong
                     brand identity in the field of pharmaceutical education. India's pharmaceutical sector is growing
-                    fast, creating thousands of employment opportunities annually."
+                    fast, creating thousands of employment opportunities annually.&quot;
                   </p>
                   <p>
-                    "At SVCP, we believe that every successful academic experience is backed by seamless operations. Our
+                    &quot;At SVCP, we believe that every successful academic experience is backed by seamless operations. Our
                     systems are designed to reduce barriers and enhance the focus on learning, providing students and
-                    faculty with efficient, transparent, and tech-enabled support."
+                    faculty with efficient, transparent, and tech-enabled support.&quot;
                   </p>
                   <p>
-                    "We regularly organize academic and extracurricular initiatives, including conferences, seminars,
+                    &quot;We regularly organize academic and extracurricular initiatives, including conferences, seminars,
                     workshops, guest lectures, and cultural activities to enhance intellectual growth and personality
-                    development."
+                    development.&quot;
                   </p>
                 </div>
 
