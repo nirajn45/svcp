@@ -42,12 +42,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="https://uj.servergi.com:8079/ISIMSVIET/login" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Student ERP Login
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="https://uj.servergi.com:8079/SIMWEBSVIET/Login" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Faculty ERP Login
                 </a>
               </li>
@@ -64,17 +64,17 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumZaZfSp8nLS41ZsWrz2yX9qNdG5vVC7FuBlfa" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Anti-Ragging Committee
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Grievance Redressal Committee
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumin6L7sfb2az8t64xBvVQ3dyjGgHlh7Y0fDTo" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Internal Complaint Committee
                 </a>
               </li>

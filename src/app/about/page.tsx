@@ -12,42 +12,42 @@ export default function AboutPage() {
     {
       name: "Sh. Ashwani Kumar Garg",
       position: "Chairman",
-      image: "/placeholder.svg?height=600&width=500",
+      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumf661MZaYkHm1F9V8CTevrSbQIWoZPdXiUjpz",
       message:
         "As Chairman of SVCP, I welcome you at SVCP Campus- one of the most innovative, dynamic and vibrant campus offering a wide range of undergraduate and postgraduate courses. At SVCP, we are guided by a mission to deliver education that transcends textbooks and transforms lives. I believe that true education shapes character, builds intellect, and instills the courage to lead. Our focus is on holistic education, preparing students for the challenges of a globalized world. With each passing year, we strengthen our resolve to create a legacy of excellence that empowers generations. Our commitment to excellence is reflected in the diverse student body, including foreign exchange students, enriching our campus culture.",
     },
     {
       name: "Sh. Ashok Kumar Garg",
       position: "President",
-      image: "/placeholder.svg?height=600&width=500",
+      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumyHY4CdGvj9LGdSxXKPThlzeQcWmgO61ZJ87U",
       message:
         "Education is the foundation of transformation. At SVCP, we strive to create a nurturing environment where young minds are encouraged to innovate, lead, and serve. Our commitment to academic rigor, discipline, and personal development enables students to emerge as responsible professionals ready to meet global standards.",
     },
     {
       name: "Er. Vishal Garg",
       position: "Director Secretarial & Administration",
-      image: "/placeholder.svg?height=600&width=500",
+      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumLCg08opJTjhB1safN9YzRtPmg236DXq5uS4C",
       message:
         "Efficient administration forms the backbone of a successful institution. We have an ecosystem in our college that values structure, discipline, and transparency. In the field of pharmacy, where accuracy and accountability are non-negotiable, our administrative foundation reflects these principles. We ensure that students experience a well-managed academic journey—supported by policies that promote fairness, respect, and responsibility at every level.",
     },
     {
       name: "Er. Sahil Garg",
       position: "Project Director",
-      image: "/placeholder.svg?height=600&width=500",
+      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumIxnLX7R21jqluvKkFoRaDpPfCGTtxewIs74z",
       message:
         "Our commitment is to make quality pharmaceutical education affordable and purposeful. At our institution, from advanced laboratories to digitally enabled classrooms, every facility has been crafted to foster innovation and hands-on learning, helping students become confident, capable professionals in a rapidly advancing pharmaceutical world.",
     },
     {
       name: "Mr. Ankur Gupta",
       position: "Director Corporate Affairs",
-      image: "/placeholder.svg?height=600&width=500",
+      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumzyIX5fhYxgKZ6AOMFluBUJEmvVjiwbnNWpqy",
       message:
         "Industry exposure is the bridge between education and employment. At SVCP, we strive to build partnerships that bring industry into the classroom and our students into the corporate world. Through internships, guest lectures, and career-oriented training, we ensure our students gain the practical insights and soft skills required to lead in a competitive world. We don't just prepare students for jobs—we prepare them for lifelong careers.",
     },
     {
       name: "Adv. Shubham Garg",
       position: "Director Placements",
-      image: "/placeholder.svg?height=600&width=500",
+      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumhhSQmVj1xiCWTIEqDGVAyUHtNgve4dfROn83",
       message:
         "Our responsibility goes beyond classroom education—it's about ensuring every student finds a path to a successful career. We work tirelessly to connect students with leading pharma companies, hospitals, and research institutions. Through career guidance, training modules, and placement drives, we help students translate their learning into impactful, purpose-driven careers.",
     },
@@ -64,24 +64,34 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="hero-bg min-h-[50vh] flex items-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-[#fea700] to-yellow-500"></div>
-        <div className="absolute top-1/2 right-6 transform -translate-y-1/2 -rotate-90 text-[#fea700] font-bold text-xs tracking-widest">
+      <section className="hero-bg h-[70vh] flex items-center relative overflow-hidden">
+        {/* Background Images */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+        src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumIKdVHqR21jqluvKkFoRaDpPfCGTtxewIs74z"
+        alt="Campus background"
+        className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        {/* Decorative right bar and label */}
+        <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-[#fea700] to-yellow-500 z-10"></div>
+        <div className="absolute top-1/2 right-6 transform -translate-y-1/2 -rotate-90 text-[#fea700] font-bold text-xs tracking-widest z-10">
           ABOUT US
         </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* Main Content Overlay */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="text-white animate-slide-left max-w-3xl">
-            <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <GraduationCap className="h-5 w-5 text-[#fea700] mr-2" />
-              <span className="text-[#fea700] font-semibold text-sm">Excellence in Education</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              About <span className="text-[#fea700]">SVCP</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-              Learn about our history, mission, and unwavering commitment to excellence in pharmaceutical education
-            </p>
+        <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <GraduationCap className="h-5 w-5 text-[#fea700] mr-2" />
+          <span className="text-[#fea700] font-semibold text-sm">Excellence in Education</span>
+        </div>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+          About <span className="text-[#fea700]">SVCP</span>
+        </h1>
+        <p className="text-lg md:text-xl text-gray-50 leading-relaxed">
+          Learn about our history, mission, and unwavering commitment to excellence in pharmaceutical education
+        </p>
           </div>
         </div>
       </section>
@@ -93,7 +103,7 @@ export default function AboutPage() {
             <div className="animate-slide-left">
               <div className="relative">
                 <img
-                  src="/placeholder.svg?height=400&width=500"
+                  src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumEZsUJmikmAegFfMCLq7bOh61Z2wP4iyx35rz"
                   alt="SVCP Campus"
                   className="rounded-xl shadow-lg w-full"
                 />
@@ -254,7 +264,7 @@ export default function AboutPage() {
                   <img
                     src={managementTeam[currentManagement].image || "/placeholder.svg"}
                     alt={managementTeam[currentManagement].name}
-                    className="w-full h-[500px] object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-[500px] object-cover object-center rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
                   <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg">
@@ -346,7 +356,7 @@ export default function AboutPage() {
             <div className="animate-slide-left">
               <div className="relative group">
                 <img
-                  src="/placeholder.svg?height=500&width=400"
+                  src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAum6kuQTIFtYkXDQV3xwMmdzE6iugCS4bW9e720"
                   alt="Prof. (Dr.) Sanjeev Mittal"
                   className="w-full h-[500px] object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
                 />

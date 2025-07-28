@@ -77,7 +77,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section - Redesigned */}
-      <section className="py-12 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
             {/* Left Half - Institute Information */}
@@ -93,20 +93,20 @@ export default function HomePage() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-gray-700 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm text-justify">
                   Swami Vivekanand College of Pharmacy (SVCP), established in
                   2005, stands as a premier institution under the Swami
                   Vivekanand Group of Institutes (SVGOI). We are committed to
                   delivering value-based education through innovative teaching
                   methods and hands-on training.
                 </p>
-                <p className="text-gray-700 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm text-justify">
                   As the oldest college of pharmacy in the region, we offer
                   comprehensive undergraduate and postgraduate programs approved
                   by the Pharmacy Council of India (PCI) and affiliated with
                   IKGPTU and PSBTE.
                 </p>
-                <p className="text-gray-700 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm text-justify">
                   Our modern infrastructure, experienced faculty, and
                   industry-oriented curriculum prepare students for dynamic
                   careers in the global pharmaceutical landscape, ensuring they
@@ -454,30 +454,46 @@ export default function HomePage() {
       </section>
 
       {/* Recruiters Section */}
-      <section className="py-12 bg-gray-900 text-white">
+      {/* Recruiters Section */}
+      <section className="py-12 bg-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
-            <h2 className="border-l-4 border-[#fea700] pl-4 text-3xl md:text-4xl font-bold mb-3">
-              Our <span className="text-[#fea700]">Recruiters</span>
-            </h2>
-            <p className="text-base text-gray-300 leading-relaxed">
-              Leading pharmaceutical companies and healthcare organizations that
-              trust our graduates
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
+          <div className="mb-10"></div>
+          <h2 className="border-l-4 border-[#fea700] pl-4 text-3xl md:text-4xl font-bold mb-3">
+            Our <span className="text-[#fea700]">Recruiters</span>
+          </h2>
+          <p className="text-base text-gray-300 leading-relaxed mb-12">
+            Leading pharmaceutical companies and healthcare organizations that
+            trust our graduates
+          </p>
+          {/* Image array for recruiters */}
+          {/*
+            Replace the src values below with actual logo URLs as needed.
+          */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center mb-12">
+            {[
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumzEkTEBJhYxgKZ6AOMFluBUJEmvVjiwbnNWpq",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumr5LWCT1tqLi810a5BU7mZyDEfnuXpQgMYRIT",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumaOOP9VqYuBgVRlAkHZebycN59qvW6rTdJwUL",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumAVDSFHMaBDdmCoRJZjItUX34hq2PyvkYHzVA",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumumhB6ezGDN7MfW9sTV1IA0zrSZwixYbo25LP",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumfItwLkaYkHm1F9V8CTevrSbQIWoZPdXiUjpz",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumi3reGhfb2az8t64xBvVQ3dyjGgHlh7Y0fDTo",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumVFdzCj3gFkCwLrRjtm2nJhzUIixOYXBA8NDb",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumyvUPrpGvj9LGdSxXKPThlzeQcWmgO61ZJ87U",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumc8v2cWH8VXEy6oP2FKNmz4aCbwtxqpB9gkJD",
+              "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumhkO1p67j1xiCWTIEqDGVAyUHtNgve4dfROn8",
+           
+            ].map((src, i) => (
               <Card
                 key={i}
-                className="bg-white/5 backdrop-blur-sm border-white/10 transition-all duration-300 hover:bg-white/10 animate-fade-in"
+                className="bg-white backdrop-blur-sm border-white/10 transition-all duration-300 hover:bg-white/10 animate-fade-in"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <CardContent className="p-4">
+                <CardContent className="p-1">
                   <img
-                    src={`/placeholder.svg?height=60&width=100&query=pharmaceutical company logo ${i}`}
-                    alt={`Recruiter ${i}`}
-                    className="w-full h-12 object-contain filter brightness-0 invert"
+                    src={src}
+                    alt={`Recruiter ${i + 1}`}
+                    className="w-full h-24 object-contain"
                   />
                 </CardContent>
               </Card>
