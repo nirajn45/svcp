@@ -350,7 +350,7 @@ export default function AboutPage() {
             <div className="animate-slide-left">
               <div className="relative group">
                 <img
-                  src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw27qJM4FHGgPMcYz1OWkdBFREKuV26DoNUAjX"
+                  src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumjPBSQDFEKYdovOsGfC3D9tNMk6nXaAzRVqy0"
                   alt="Prof. (Dr.) Sanjeev Mittal"
                   className="w-full h-[500px] object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
                 />
