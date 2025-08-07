@@ -56,11 +56,13 @@ export default function CoursesPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[60vh] text-white overflow-hidden">
-        <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop playsInline>
-          <source src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumGkFk3XIoeyaO1d7xYQMuBsK0zrR9WmSiLvEN" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="relative w-full h-full flex items-center py-12 bg-black bg-opacity-50">
+        {/* Background Images */}
+        <div className="absolute inset-0 w-full h-full">
+          <img src="https://sviet.org.in/wp-content/uploads/2023/04/DSC_6776-1024x684.jpg" alt="courses background"
+           className="absolute inset-0 w-full h-full object-cover"/>
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative w-full h-full flex items-center py-12 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
               <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
@@ -200,7 +202,7 @@ export default function CoursesPage() {
                 description:
                   "State-of-the-art laboratories equipped with modern instruments for pharmaceutical research and drug development.",
                 icon: FlaskConical,
-                image: "/placeholder.svg?height=300&width=400",
+                image: "https://www.sviet.ac.in/Courses/pharmacy/pharm/lab/QA.jpg",
                 gradient: "from-blue-500 to-purple-600"
               },
               {
@@ -208,7 +210,7 @@ export default function CoursesPage() {
                 description:
                   "Comprehensive clinical research programs focusing on drug safety, efficacy, and patient care optimization.",
                 icon: Microscope,
-                image: "/placeholder.svg?height=300&width=400",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_ArxUNNeQdI9gcdVGj05z9d5FUCQ_6g6I0g&s",
                 gradient: "from-green-500 to-teal-600"
               },
               {
@@ -216,7 +218,7 @@ export default function CoursesPage() {
                 description:
                   "Strong partnerships with pharmaceutical companies for research projects and technology transfer initiatives.",
                 icon: Award,
-                image: "/placeholder.svg?height=300&width=400",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRqsGtznDlpDaWEDY1kniYlQrfviyzxjR2LQ&s",
                 gradient: "from-[#fea700] to-red-500"
               },
             ].map((facility, index) => {
@@ -281,7 +283,7 @@ export default function CoursesPage() {
                 description:
                   "Well-equipped labs with latest instruments and technology for hands-on learning and research.",
                 icon: BookOpen,
-                image: "/placeholder.svg?height=300&width=400",
+                image: "https://www.sviet.ac.in/Courses/pharmacy/pharm/lab/practical.jpg",
                 stats: "15+ Labs",
                 color: "bg-blue-500"
               },
@@ -290,7 +292,7 @@ export default function CoursesPage() {
                 description:
                   "Comprehensive digital library with access to latest pharmaceutical literature and research databases.",
                 icon: Award,
-                image: "/placeholder.svg?height=300&width=400",
+                image: "https://images.shiksha.com/mediadata/images/1674026405phpPWWGmA.jpeg",
                 stats: "10,000+ Books",
                 color: "bg-green-500"
               },
@@ -299,7 +301,7 @@ export default function CoursesPage() {
                 description:
                   "Technology-enabled classrooms with modern audio-visual equipment for interactive learning.",
                 icon: Users,
-                image: "/placeholder.svg?height=300&width=400",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjJL4PPWsgmgPaKG_sXemxpj-UyLV0jeijHXGfWEzHVv7zYV4Vf-pO8sRd5N3Q5JU43A0&usqp=CAU",
                 stats: "20+ Rooms",
                 color: "bg-purple-500"
               },

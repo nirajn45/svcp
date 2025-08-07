@@ -33,21 +33,21 @@ export default function AboutPage() {
     {
       name: "Er. Sahil Garg",
       position: "Project Director",
-      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumIxnLX7R21jqluvKkFoRaDpPfCGTtxewIs74z",
+      image: "https://urbanmelange.com/wp-content/uploads/2024/02/A37I9376-1200x1713.jpg",
       message:
         "Our commitment is to make quality pharmaceutical education affordable and purposeful. At our institution, from advanced laboratories to digitally enabled classrooms, every facility has been crafted to foster innovation and hands-on learning, helping students become confident, capable professionals in a rapidly advancing pharmaceutical world.",
     },
     {
       name: "Mr. Ankur Gupta",
       position: "Director Corporate Affairs",
-      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumzyIX5fhYxgKZ6AOMFluBUJEmvVjiwbnNWpqy",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZXHAv0neqxKlZoJTza38A9rl0VWWrx-Cbpw&s",
       message:
         "Industry exposure is the bridge between education and employment. At SVCP, we strive to build partnerships that bring industry into the classroom and our students into the corporate world. Through internships, guest lectures, and career-oriented training, we ensure our students gain the practical insights and soft skills required to lead in a competitive world. We don't just prepare students for jobs—we prepare them for lifelong careers.",
     },
     {
       name: "Adv. Shubham Garg",
       position: "Director Placements",
-      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumhhSQmVj1xiCWTIEqDGVAyUHtNgve4dfROn83",
+      image: "https://media.licdn.com/dms/image/v2/C5616AQFvPzOFLejVRw/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1647505019130?e=2147483647&v=beta&t=nu4TYMF1d9ADf1kSM9lJYqPMhgdhWIc3mW2TStbbwEY",
       message:
         "Our responsibility goes beyond classroom education—it's about ensuring every student finds a path to a successful career. We work tirelessly to connect students with leading pharma companies, hospitals, and research institutions. Through career guidance, training modules, and placement drives, we help students translate their learning into impactful, purpose-driven careers.",
     },
@@ -67,11 +67,8 @@ export default function AboutPage() {
       <section className="hero-bg h-[70vh] flex items-center relative overflow-hidden">
         {/* Background Images */}
         <div className="absolute inset-0 w-full h-full">
-          <img
-        src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumIKdVHqR21jqluvKkFoRaDpPfCGTtxewIs74z"
-        alt="Campus background"
-        className="absolute inset-0 w-full h-full object-cover"
-          />
+          <img src="https://www.sviet.ac.in/_next/static/media/labs.7b47ee62.jpg" alt="Campus background"
+           className="absolute inset-0 w-full h-full object-cover"/>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         {/* Decorative right bar and label */}
@@ -102,11 +99,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="animate-slide-left">
               <div className="relative">
-                <img
-                  src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumEZsUJmikmAegFfMCLq7bOh61Z2wP4iyx35rz"
-                  alt="SVCP Campus"
-                  className="rounded-xl shadow-lg w-full"
-                />
+                <img src="https://sviet.org.in/wp-content/uploads/2023/06/IMG_8756-scaled.jpg" alt="SVCP Campus"
+                  className="rounded-xl shadow-lg w-full"/>
                 <div className="absolute -bottom-4 -right-4 bg-[#fea700] text-white p-4 rounded-xl shadow-lg">
                   <div className="text-center">
                     <div className="text-2xl font-bold">2005</div>
@@ -356,7 +350,7 @@ export default function AboutPage() {
             <div className="animate-slide-left">
               <div className="relative group">
                 <img
-                  src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAum6kuQTIFtYkXDQV3xwMmdzE6iugCS4bW9e720"
+                  src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw27qJM4FHGgPMcYz1OWkdBFREKuV26DoNUAjX"
                   alt="Prof. (Dr.) Sanjeev Mittal"
                   className="w-full h-[500px] object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
                 />

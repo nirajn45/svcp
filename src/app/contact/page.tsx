@@ -32,23 +32,33 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="hero-bg min-h-[60vh] flex items-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-orange-400 to-yellow-500"></div>
-        <div className="absolute top-1/2 right-8 transform -translate-y-1/2 -rotate-90 text-orange-400 font-bold text-sm tracking-widest">
-          CONTACT US
-        </div>
+      <section
+  className="hero-bg min-h-[60vh] flex items-center relative overflow-hidden"
+  style={{
+    backgroundImage: "url('https://sviet.org.in/wp-content/uploads/2023/04/DSC_6776-1024x684.jpg')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+  <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-orange-400 to-yellow-500 z-10"></div>
+  <div className="absolute top-1/2 right-8 transform -translate-y-1/2 -rotate-90 text-orange-400 font-bold text-sm tracking-widest z-10">
+    CONTACT US
+  </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-white animate-slide-left max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Contact <span className="text-gradient">Us</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-              Get in touch with us for admissions, course information, and any inquiries about your academic journey
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div className="text-white animate-slide-left max-w-4xl relative z-10">
+      <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        Contact <span className="text-gradient">Us</span>
+      </h1>
+      <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+        Get in touch with us for admissions, course information, and any inquiries about your academic journey
+      </p>
+    </div>
+  </div>
+</section>
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

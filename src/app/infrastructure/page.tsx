@@ -19,7 +19,7 @@ export default function InfrastructurePage() {
       description:
         "SVCP offers well-furnished and fully ventilated classrooms designed to create a focused academic environment. The classrooms are spacious and equipped with projectors, audio-visual aids, and ergonomic seating.",
       icon: BookOpen,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://images.shiksha.com/mediadata/images/1674026405phpPWWGmA.jpeg",
       color: "orange",
     },
     {
@@ -27,7 +27,7 @@ export default function InfrastructurePage() {
       description:
         "State-of-the-art laboratories fully equipped with modern apparatus and instruments, ensuring hands-on training in Pharmaceutics, Pharmacology, Pharmaceutical Chemistry, and more.",
       icon: FlaskConical,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://www.sviet.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDSC00544.6e2a8f2f.jpg&w=3840&q=75",
       color: "yellow",
     },
     {
@@ -35,7 +35,7 @@ export default function InfrastructurePage() {
       description:
         "Rich and resourceful library stocked with national and international books, journals, periodicals, and research publications. Digital library facility available for e-learning.",
       icon: Library,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://www.sviet.ac.in/_next/static/media/library.50145328.jpg",
       color: "orange",
     },
     {
@@ -43,7 +43,7 @@ export default function InfrastructurePage() {
       description:
         "Fully air-conditioned auditorium and well-equipped seminar halls hosting guest lectures, workshops, conferences, and cultural activities with multimedia technology.",
       icon: Presentation,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbhVI3vRMU4HWzZXf-A_HEgiuwKFsXAqdFKQ&s",
       color: "yellow",
     },
     {
@@ -51,7 +51,7 @@ export default function InfrastructurePage() {
       description:
         "Strong ties with reputed hospitals for Pharm.D and clinical training. Students receive practical exposure through hospital visits, internships, and live patient case studies.",
       icon: Building2,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://pbs.twimg.com/media/FFHXqMJVQAEolEB.jpg:large",
       color: "orange",
     },
     {
@@ -59,7 +59,7 @@ export default function InfrastructurePage() {
       description:
         "Spacious playgrounds for cricket, football, basketball, and other sports, along with a modern gymnasium for health and fitness promoting holistic development.",
       icon: Dumbbell,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk8YvPyGAfHWYK8PWNpGGbiV6Z0XkoqV-3iw&s",
       color: "yellow",
     },
   ]
@@ -67,27 +67,35 @@ export default function InfrastructurePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="hero-bg min-h-[50vh] flex items-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-[#fea700] to-yellow-500"></div>
-        <div className="absolute top-1/2 right-6 transform -translate-y-1/2 -rotate-90 text-[#fea700] font-bold text-xs tracking-widest">
-          INFRASTRUCTURE
-        </div>
+      {/* Hero Section */}
+<section
+  className="relative min-h-[50vh] flex items-center justify-center bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('https://in5cdn.npfs.co/uploads/template/5151/3958/publish/images/DSC_6822-1-1536x1001.jpg')",
+  }}
+>
+  <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-[#fea700] to-yellow-500"></div>
+  <div className="absolute top-1/2 right-6 transform -translate-y-1/2 -rotate-90 text-[#fea700] font-bold text-xs tracking-widest">
+    INFRASTRUCTURE
+  </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-white animate-slide-left max-w-3xl">
-            <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Building2 className="h-5 w-5 text-[#fea700] mr-2" />
-              <span className="text-[#fea700] font-semibold text-sm">World-Class Facilities</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              Infrastructure & <span className="text-[#fea700]">Facilities</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-              World-class facilities designed to support your academic journey and holistic development
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div className="text-white animate-slide-left max-w-3xl">
+      <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+        <Building2 className="h-5 w-5 text-[#fea700] mr-2" />
+        <span className="text-[#fea700] font-semibold text-sm">World-Class Facilities</span>
+      </div>
+      <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+        Infrastructure & <span className="text-[#fea700]">Facilities</span>
+      </h1>
+      <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+        World-class facilities designed to support your academic journey and holistic development
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Facilities Grid */}
       <section className="py-16 bg-gradient-to-br from-orange-50 to-yellow-50">

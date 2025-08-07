@@ -33,24 +33,17 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Video Background */}
-      <section className="relative h-[80vh] text-white overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          controls
-        >
-          <source
-            src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumGkFk3XIoeyaO1d7xYQMuBsK0zrR9WmSiLvEN"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div className="relative w-full h-full flex items-center py-12 bg-black/20 bg-opacity-50">
+      <section
+        className="relative h-[80vh] text-white overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://www.sviet.ac.in/_next/static/media/Research.52b5d24f.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50 z-0"></div>
+        <div className="relative w-full h-full flex items-center py-12 z-10">
           <div className="w-10/12 mx-auto flex flex-wrap items-center">
-            <div className="w-full  py-12">
+            <div className="w-full py-12">
               <p className="text-2xl lg:text-4xl font-bold w-4/5 mb-3 pb-3 animate-slide-left">
                 Empowering Pharma Excellence Since 2005: A Trusted Name in
                 Education.
