@@ -69,7 +69,7 @@ export default function InfrastructurePage() {
       {/* Hero Section */}
       {/* Hero Section */}
 <section
-  className="relative min-h-[50vh] flex items-center justify-center bg-cover bg-center"
+  className="relative h-[80vh] flex items-center justify-center bg-cover  "
   style={{
     backgroundImage:
       "linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('https://in5cdn.npfs.co/uploads/template/5151/3958/publish/images/DSC_6822-1-1536x1001.jpg')",
