@@ -106,10 +106,10 @@ export default function Footer() {
               <div className="flex items-start space-x-2">
                 <Mail className="h-4 w-4 text-blue-400 mt-1" />
                 <div>
-                      <h3 className="font-semibold text-gray-900">Email</h3>
                       <p className="text-gray-600">Principal@svcp.org.in</p>
                       <p className="text-gray-600">hod@svcp.org.in</p>
                       <p className="text-gray-600">hr@svcp.org.in</p>
+                      <p className="text-gray-600">registrar@svcp.org.in</p>
                       <p className="text-gray-600">iqac@svcp.org.in</p>
                     </div>
               </div>
