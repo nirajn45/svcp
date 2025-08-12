@@ -19,7 +19,7 @@ export default function InfrastructurePage() {
       description:
         "SVCP offers well-furnished and fully ventilated classrooms designed to create a focused academic environment. The classrooms are spacious and equipped with projectors, audio-visual aids, and ergonomic seating.",
       icon: BookOpen,
-      image: "https://images.shiksha.com/mediadata/images/1674026405phpPWWGmA.jpeg",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwEsVAedRN98Yq5oMVpl3Pis7wxueh1Ofb0XF4",
       color: "orange",
     },
     {

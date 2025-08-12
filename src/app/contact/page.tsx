@@ -96,10 +96,10 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-yellow-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Email</h3>
                       <p className="text-gray-600">Principal@svcp.org.in</p>
                       <p className="text-gray-600">hod@svcp.org.in</p>
                       <p className="text-gray-600">hr@svcp.org.in</p>
+                      <p className="text-gray-600">registrar@svcp.org.in</p>
                       <p className="text-gray-600">iqac@svcp.org.in</p>
                     </div>
                   </div>
