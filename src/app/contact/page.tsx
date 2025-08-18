@@ -22,7 +22,11 @@ export default function ContactPage() {
     setFormData({ name: "", email: "", phone: "", course: "", message: "" })
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -33,47 +37,54 @@ export default function ContactPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-  className="hero-bg min-h-[60vh] flex items-center relative overflow-hidden"
-  style={{
-    backgroundImage: "url('https://sviet.org.in/wp-content/uploads/2023/04/DSC_6776-1024x684.jpg')",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-  <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-orange-400 to-yellow-500 z-10"></div>
-  <div className="absolute top-1/2 right-8 transform -translate-y-1/2 -rotate-90 text-orange-400 font-bold text-sm tracking-widest z-10">
-    CONTACT US
-  </div>
+        className="hero-bg min-h-[60vh] flex items-center relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://images.shiksha.com/mediadata/images/1746170353phpCC94lo.jpeg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="absolute top-0 right-0 h-full w-2 bg-gradient-to-b from-orange-400 to-yellow-500 z-10"></div>
+        <div className="absolute top-1/2 right-8 transform -translate-y-1/2 -rotate-90 text-orange-400 font-bold text-sm tracking-widest z-10">
+          CONTACT US
+        </div>
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-    <div className="text-white animate-slide-left max-w-4xl relative z-10">
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-        Contact <span className="text-gradient">Us</span>
-      </h1>
-      <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-        Get in touch with us for admissions, course information, and any inquiries about your academic journey
-      </p>
-    </div>
-  </div>
-</section>
-
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-white animate-slide-left max-w-4xl relative z-10">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              Contact <span className="text-gradient">Us</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+              Get in touch with us for admissions, course information, and any
+              inquiries about your academic journey
+            </p>
+          </div>
+        </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="animate-slide-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Get in Touch
+              </h2>
               <p className="text-lg text-gray-600 mb-8">
-                We&apos;re here to help you with your academic journey. Reach out to us for admissions, course information,
-                or any other queries.
+                We&apos;re here to help you with your academic journey. Reach
+                out to us for admissions, course information, or any other
+                queries.
               </p>
             </div>
 
             <div className="space-y-6">
-              <Card className="card-hover animate-slide-up border-0 shadow-lg" style={{ animationDelay: "0.1s" }}>
+              <Card
+                className="card-hover animate-slide-up border-0 shadow-lg"
+                style={{ animationDelay: "0.1s" }}
+              >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
                     <div className="bg-orange-100 p-3 rounded-full">
@@ -89,7 +100,10 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card className="card-hover animate-slide-up border-0 shadow-lg" style={{ animationDelay: "0.2s" }}>
+              <Card
+                className="card-hover animate-slide-up border-0 shadow-lg"
+                style={{ animationDelay: "0.2s" }}
+              >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
                     <div className="bg-yellow-100 p-3 rounded-full">
@@ -106,7 +120,10 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card className="card-hover animate-slide-up border-0 shadow-lg" style={{ animationDelay: "0.3s" }}>
+              <Card
+                className="card-hover animate-slide-up border-0 shadow-lg"
+                style={{ animationDelay: "0.3s" }}
+              >
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-orange-100 p-3 rounded-full">
@@ -130,16 +147,25 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card className="card-hover animate-slide-up border-0 shadow-lg" style={{ animationDelay: "0.4s" }}>
+              <Card
+                className="card-hover animate-slide-up border-0 shadow-lg"
+                style={{ animationDelay: "0.4s" }}
+              >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
                     <div className="bg-yellow-100 p-3 rounded-full">
                       <Clock className="h-6 w-6 text-yellow-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Office Hours</h3>
-                      <p className="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM</p>
-                      <p className="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
+                      <h3 className="font-semibold text-gray-900">
+                        Office Hours
+                      </h3>
+                      <p className="text-gray-600">
+                        Monday - Friday: 9:00 AM - 5:00 PM
+                      </p>
+                      <p className="text-gray-600">
+                        Saturday: 9:00 AM - 1:00 PM
+                      </p>
                       <p className="text-gray-600">Sunday: Closed</p>
                     </div>
                   </div>
@@ -157,7 +183,10 @@ export default function ContactPage() {
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -173,7 +202,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -189,7 +221,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Phone Number *
                     </label>
                     <input
@@ -205,7 +240,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="course" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="course"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Course of Interest
                     </label>
                     <select
@@ -224,7 +262,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Message *
                     </label>
                     <textarea
@@ -259,12 +300,16 @@ export default function ContactPage() {
               <CardTitle className="text-2xl">Find Us</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <div className="bg-gradient-to-br from-gray-100 to-orange-50 rounded-b-lg h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 text-orange-500 mx-auto mb-4" />
-                  <p className="text-gray-600 text-lg">Interactive Map Coming Soon</p>
-                  <p className="text-gray-500">Chandigarh Patiala National Highway, Village- Ramnagar Near Banur</p>
-                </div>
+              <div className="w-full h-96 rounded-b-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.6490781537264!2d76.71952387525858!3d30.51638020163042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb14a9e5d7e3%3A0x2f43e5efebf5b394!2sSwami%20Vivekanand%20College%20of%20Pharmacy!5e0!3m2!1sen!2sin!4v1716808888888!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </CardContent>
           </Card>

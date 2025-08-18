@@ -12,21 +12,21 @@ export default function AboutPage() {
     {
       name: "Sh. Ashwani Kumar Garg",
       position: "Chairman",
-      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumf661MZaYkHm1F9V8CTevrSbQIWoZPdXiUjpz",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwIAnMHO767QT5S3R9ugLVAoxje4IGbPqa1Clc",
       message:
         "As Chairman of SVCP, I welcome you at SVCP Campus- one of the most innovative, dynamic and vibrant campus offering a wide range of undergraduate and postgraduate courses. At SVCP, we are guided by a mission to deliver education that transcends textbooks and transforms lives. I believe that true education shapes character, builds intellect, and instills the courage to lead. Our focus is on holistic education, preparing students for the challenges of a globalized world. With each passing year, we strengthen our resolve to create a legacy of excellence that empowers generations. Our commitment to excellence is reflected in the diverse student body, including foreign exchange students, enriching our campus culture.",
     },
     {
       name: "Sh. Ashok Kumar Garg",
       position: "President",
-      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumyHY4CdGvj9LGdSxXKPThlzeQcWmgO61ZJ87U",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwRQi3i9XsDGPLe31wMSEvBqibVUpIy7AHKfYT",
       message:
         "Education is the foundation of transformation. At SVCP, we strive to create a nurturing environment where young minds are encouraged to innovate, lead, and serve. Our commitment to academic rigor, discipline, and personal development enables students to emerge as responsible professionals ready to meet global standards.",
     },
     {
       name: "Er. Vishal Garg",
       position: "Director Secretarial & Administration",
-      image: "https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumLCg08opJTjhB1safN9YzRtPmg236DXq5uS4C",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwNlR77x0yoU2FaRhrYmBI0dQZTqL1vMlnXJei",
       message:
         "Efficient administration forms the backbone of a successful institution. We have an ecosystem in our college that values structure, discipline, and transparency. In the field of pharmacy, where accuracy and accountability are non-negotiable, our administrative foundation reflects these principles. We ensure that students experience a well-managed academic journey—supported by policies that promote fairness, respect, and responsibility at every level.",
     },
@@ -40,14 +40,14 @@ export default function AboutPage() {
     {
       name: "Mr. Ankur Gupta",
       position: "Director Corporate Affairs",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZXHAv0neqxKlZoJTza38A9rl0VWWrx-Cbpw&s",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwxZa79p4Fz9vfNj7L5miX4SuQMexJhoPwragV",
       message:
         "Industry exposure is the bridge between education and employment. At SVCP, we strive to build partnerships that bring industry into the classroom and our students into the corporate world. Through internships, guest lectures, and career-oriented training, we ensure our students gain the practical insights and soft skills required to lead in a competitive world. We don't just prepare students for jobs—we prepare them for lifelong careers.",
     },
     {
       name: "Adv. Shubham Garg",
       position: "Director Placements",
-      image: "https://media.licdn.com/dms/image/v2/C5616AQFvPzOFLejVRw/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1647505019130?e=2147483647&v=beta&t=nu4TYMF1d9ADf1kSM9lJYqPMhgdhWIc3mW2TStbbwEY",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwaHStKpwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH",
       message:
         "Our responsibility goes beyond classroom education—it's about ensuring every student finds a path to a successful career. We work tirelessly to connect students with leading pharma companies, hospitals, and research institutions. Through career guidance, training modules, and placement drives, we help students translate their learning into impactful, purpose-driven careers.",
     },

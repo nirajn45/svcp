@@ -52,7 +52,7 @@ export default function HomePage() {
                 SVCP, under SVGOI’s visionary leadership, blends academics,
                 research, and holistic growth in pharmaceutical sciences.
               </p>
-              <div className="flex gap-3 flex-wrap animate-slide-left">
+              {/* <div className="flex gap-3 flex-wrap animate-slide-left">
                 <Link href="https://admission.sviet.ac.in/">
                   <button className="bg-[#fea700] cursor-pointer text-white text-xl px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:bg-[#e6960a]">
                     Apply Now
@@ -63,7 +63,7 @@ export default function HomePage() {
                     Download Brochure
                   </button>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
