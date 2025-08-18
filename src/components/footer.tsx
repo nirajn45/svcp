@@ -113,13 +113,13 @@ export default function Footer() {
                       <p className="text-gray-300">iqac@svcp.org.in</p>
                     </div>
               </div>
-              <div className="flex items-start space-x-2">
+              {/* <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400 mt-1" />
                 <span className="text-gray-300 text-sm">
                   Chandigarh Patiala National Highway, Village- Ramnagar Near Banur, Tehsil- Rajpura, District- Patiala,
                   Punjab
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

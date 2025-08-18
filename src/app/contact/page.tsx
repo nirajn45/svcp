@@ -37,7 +37,7 @@ export default function ContactPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="hero-bg min-h-[60vh] flex items-center relative overflow-hidden"
+        className="hero-bg min-h-[80vh] flex items-center relative overflow-hidden"
         style={{
           backgroundImage:
             "url('https://images.shiksha.com/mediadata/images/1746170353phpCC94lo.jpeg')",
@@ -302,7 +302,7 @@ export default function ContactPage() {
             <CardContent className="p-0">
               <div className="w-full h-96 rounded-b-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.6490781537264!2d76.71952387525858!3d30.51638020163042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb14a9e5d7e3%3A0x2f43e5efebf5b394!2sSwami%20Vivekanand%20College%20of%20Pharmacy!5e0!3m2!1sen!2sin!4v1716808888888!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.6174268276504!2d76.66908327536477!3d30.530636974682338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feda785d2ec5f%3A0x634727519e9f636!2sSwami%20Vivekanand%20Group%20of%20Institutes!5e1!3m2!1sen!2sin!4v1755540421357!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

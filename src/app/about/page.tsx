@@ -66,7 +66,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="hero-bg h-[70vh] flex items-center relative overflow-hidden">
         {/* Background Images */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-80vh">
           <img src="https://www.sviet.ac.in/_next/static/media/labs.7b47ee62.jpg" alt="Campus background"
            className="absolute inset-0 w-full h-full object-cover"/>
           <div className="absolute inset-0 bg-black/50"></div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
           ABOUT US
         </div>
         {/* Main Content Overlay */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 mt-10">
           <div className="text-white animate-slide-left max-w-3xl">
         <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
           <GraduationCap className="h-5 w-5 text-[#fea700] mr-2" />

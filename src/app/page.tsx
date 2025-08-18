@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/50 z-0"></div>
         <div className="relative w-full h-full flex items-center py-12 z-10">
           <div className="w-10/12 mx-auto flex flex-wrap items-center">
-            <div className="w-full py-12">
+            <div className="w-full py-12 mt-25">
               <p className="text-2xl lg:text-4xl font-bold w-4/5 mb-3 pb-3 animate-slide-left">
                 Empowering Pharma Excellence Since 2005: A Trusted Name in
                 Education.

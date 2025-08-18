@@ -57,14 +57,14 @@ export default function CoursesPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] text-white overflow-hidden">
         {/* Background Images */}
-        <div className="absolute inset-0 w-full h-full ">
+        <div className="absolute inset-0 w-full h-80vh ">
           <img src="https://media.getmyuni.com/azure/college-images-test/swami-vivekanand-institute-of-engineering-technology-sviet-patiala/student-life-e301dcc46c59ed90d23789fe67006d11.jpg" alt="courses background"
-           className="absolute inset-0 w-full  object-cover"/>
+           className="absolute inset-0 w-full object-cover"/>
           {/* <div className="absolute inset-0 bg-black/20"></div> */}
         </div>
         <div className="relative w-full h-full flex items-center py-12 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mt-25">
               <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <GraduationCap className="h-5 w-5 text-[#fea700] mr-2" />
                 <span className="text-[#fea700] font-semibold text-sm">Premium Education</span>

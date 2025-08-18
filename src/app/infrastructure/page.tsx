@@ -81,7 +81,7 @@ export default function InfrastructurePage() {
   </div>
 
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-    <div className="text-white animate-slide-left max-w-3xl">
+    <div className="text-white animate-slide-left max-w-3xl mt-25">
       <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
         <Building2 className="h-5 w-5 text-[#fea700] mr-2" />
         <span className="text-[#fea700] font-semibold text-sm">World-Class Facilities</span>
