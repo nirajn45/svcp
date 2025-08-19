@@ -99,7 +99,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="animate-slide-left">
               <div className="relative">
-                <img src="https://sviet.org.in/wp-content/uploads/2023/06/IMG_8756-scaled.jpg" alt="SVCP Campus"
+                <img src="https://media.collegedekho.com/media/img/institute/crawled_images/None/DSC_9449.JPG" alt="SVCP Campus"
                   className="rounded-xl shadow-lg w-full"/>
                 <div className="absolute -bottom-4 -right-4 bg-[#fea700] text-white p-4 rounded-xl shadow-lg">
                   <div className="text-center">
