@@ -6,24 +6,21 @@ import { Menu, X, ChevronDown } from "lucide-react"
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [openSubmenu, setOpenSubmenu] = useState(null)
-  const navRef = useRef(null)
+  const [openSubmenu, setOpenSubmenu] = useState<number | null>(null)
+  const navRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-
-  const toggleSubmenu = (index) => {
+  const toggleSubmenu = (index: number) => {
     setOpenSubmenu(openSubmenu === index ? null : index)
   }
 
-  // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navRef.current && !navRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false)
         setOpenSubmenu(null)
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside)
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
@@ -42,7 +39,9 @@ export default function Navigation() {
         { name: "Affiliated College / Affiliating University", href: "/about/AffiliatedCollege" },
       ],
     },
-    { name: "Administration", href: "/adminstrator",
+    {
+      name: "Administration",
+      href: "/adminstrator",
       subItems: [
         { name: "Chairman", href: "/adminstrator/chairman" },
         { name: "President", href: "/adminstrator/president" },
@@ -52,7 +51,9 @@ export default function Navigation() {
       ],
     },
     { name: "Courses", href: "/courses" },
-    { name: "Academics", href: "/academics",
+    {
+      name: "Academics",
+      href: "/academics",
       subItems: [
         { name: "Academic Calendar", href: "/academics/academicCalendar" },
         { name: "IQAC", href: "/academics/iqac" },
@@ -61,7 +62,9 @@ export default function Navigation() {
       ],
     },
     { name: "Infrastructure", href: "/infrastructure" },
-    { name: "Programs", href: "/programs",
+    {
+      name: "Programs",
+      href: "/programs",
       subItems: [
         { name: "D.Pharmacy", href: "/programs/D.Pharmacy" },
         { name: "B.Pharmacy", href: "/programs/B.Pharmacy" },
@@ -69,7 +72,9 @@ export default function Navigation() {
         { name: "M.Pharmacy", href: "/programs/M.Pharmacy" },
       ],
     },
-    { name: "Admission", href: "/admission",
+    {
+      name: "Admission",
+      href: "/admission",
       subItems: [
         { name: "Course Offered", href: "/admission/courseOffered" },
         { name: "Brochure", href: "/admission/brochure" },
@@ -78,7 +83,9 @@ export default function Navigation() {
       ],
     },
     { name: "Research", href: "/research" },
-    { name: "Placement", href: "/placements",
+    {
+      name: "Placement",
+      href: "/placements",
       subItems: [
         { name: "About Placements", href: "/placements/aboutPlacements" },
         { name: "Placement Training", href: "/placements/placementTraining" },
@@ -87,7 +94,9 @@ export default function Navigation() {
         { name: "Recruiting Companies", href: "/placements/recruitingCompanies" },
       ],
     },
-    { name: "Facilities", href: "/facilities",
+    {
+      name: "Facilities",
+      href: "/facilities",
       subItems: [
         { name: "ICT Classrooms & LABS", href: "/facilities/ictClassrooms" },
         { name: "Library ", href: "/facilities/library" },
@@ -96,21 +105,27 @@ export default function Navigation() {
         { name: "Counselling Center", href: "/facilities/counsellingCenter" },
       ],
     },
-    { name: "Committees", href: "/committees",
+    {
+      name: "Committees",
+      href: "/committees",
       subItems: [
         { name: "Internal Complaint Committee", href: "/committees/internalComplaint" },
         { name: "Anti Ragging Cell ", href: "/committees/antiRagging" },
         { name: "Student Grievance Redressal Committee (SGRC)", href: "/committees/student" },
       ],
     },
-    { name: "Alumni", href: "/alumni",
+    {
+      name: "Alumni",
+      href: "/alumni",
       subItems: [
         { name: "Alumni Association with details", href: "/alumni/alumniAssociation" },
         { name: "Alumni Meets ", href: "/alumni/alumniMeets" },
         { name: "Convocation", href: "/alumni/convocation" },
       ],
     },
-    { name: "Documents", href: "/documents",
+    {
+      name: "Documents",
+      href: "/documents",
       subItems: [
         { name: "PCI", href: "/documents/PCI" },
         { name: "Rankings and Information ", href: "/documents/rankings" },
@@ -120,7 +135,9 @@ export default function Navigation() {
         { name: "Rules and Regulations", href: "/documents/rulesAndRegulations" },
       ],
     },
-    { name: "Activities", href: "/activities",
+    {
+      name: "Activities",
+      href: "/activities",
       subItems: [
         { name: "Cultural Activities", href: "/activities/culturalActivities" },
         { name: "Curricular & Co-curricular Activities ", href: "/activities/curricular" },
@@ -129,7 +146,9 @@ export default function Navigation() {
         { name: "Departmental Activities", href: "/activities/departmentalActivities" },
       ],
     },
-    { name: "Picture Gallery", href: "/gallery",
+    {
+      name: "Picture Gallery",
+      href: "/gallery",
       subItems: [
         { name: "Infrastructure", href: "/gallery/infrastructure" },
         { name: "Sports ", href: "/gallery/sports" },
@@ -145,41 +164,33 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 py-2" ref={navRef}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logos */}
-          <Link href="/" className="flex items-center space-x-2 shrink-0">
-            <img
-              src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumla9Og3u4P3qMiabZeUz87wrEkVfCgNntQHSJ"
-              alt="SVCP Logo"
-              width={60}
-              height={60}
-              className="object-contain h-12 w-auto"
-            />
-            <img
-              src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw5P7EWnPADlNytJvziUwYAZMjFrEn9bXORaHu"
-              alt="PCI Logo"
-              width={50}
-              height={40}
-              className="object-contain h-10 w-auto"
-            />
-            <img
-              src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwauOTamwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH"
-              alt="PTU Logo"
-              width={50}
-              height={40}
-              className="object-contain h-10 w-auto"
-            />
-          </Link>
+    <nav className="bg-white shadow-lg sticky top-0 z-50" ref={navRef}>
+      {/* 🔹 Banner Section */}
+      <div className="flex flex-col items-center py-4 px-2 text-center border-b border-gray-200">
+        <div className="flex gap-10 items-center mb-2">
+          <img src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumla9Og3u4P3qMiabZeUz87wrEkVfCgNntQHSJ" alt="SVCP Logo" className="h-20 w-auto" />
+          <img src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw5P7EWnPADlNytJvziUwYAZMjFrEn9bXORaHu" alt="PCI Logo" className="h-20 w-auto" />
+          <img src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwauOTamwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH" alt="PTU Logo" className="h-20 w-auto" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mt-5 mb-2 text-[#fea700]">
+          SWAMI VIVEKANAND COLLEGE OF PHARMACY
+        </h2>
+        <p className="text-sm md:text-base font-medium text-[#016cb6]">Approved by Pharmacy Council of India - PCI-2443, Government of Punjab.</p>
+        <p className="text-sm md:text-base font-medium text-[#016cb6]">Affiliated to I.K. Gujral Punjab Technical University, Jalandhar</p>
+        <p className="text-sm md:text-base font-medium text-[#016cb6]">Promoted by: Shri Raghu Nath Rai Memorial Educational & Charitable Trust</p>
+        <p className="text-sm md:text-base font-medium text-[#016cb6]">Established Year : 2005</p>
+      </div>
 
+      {/* 🔹 Navigation Tabs */}
+      <div className="max-w-7xl ">
+        <div className="flex justify-between items-center h-14">
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-end flex-1 ml-4">
-            <div className="flex flex-wrap justify-end gap-x-1 gap-y-1">
+          <div className="hidden lg:flex items-center w-full">
+            <div className="flex justify-between w-full">
               {navItems.map((item, index) =>
                 item.subItems ? (
                   <div key={item.name} className="relative group">
-                    <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 px-2 py-1 text-sm font-medium transition-colors duration-200 whitespace-nowrap">
+                    <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap">
                       <span>{item.name}</span>
                       <ChevronDown className="h-3 w-3" />
                     </button>
@@ -200,7 +211,7 @@ export default function Navigation() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 px-2 py-1 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
                   >
                     {item.name}
                   </Link>
