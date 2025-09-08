@@ -167,18 +167,49 @@ export default function Navigation() {
     <nav className="bg-white shadow-lg sticky top-0 z-50" ref={navRef}>
       {/* 🔹 Banner Section */}
       <div className="flex flex-col items-center py-4 px-2 text-center border-b border-gray-200">
-        <div className="flex gap-10 items-center mb-2">
-          <img src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumla9Og3u4P3qMiabZeUz87wrEkVfCgNntQHSJ" alt="SVCP Logo" className="h-20 w-auto" />
-          <img src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw5P7EWnPADlNytJvziUwYAZMjFrEn9bXORaHu" alt="PCI Logo" className="h-20 w-auto" />
-          <img src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwauOTamwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH" alt="PTU Logo" className="h-20 w-auto" />
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full max-w-7xl px-4">
+          {/* Left Logo */}
+          <div className="flex justify-center md:justify-start mb-4 md:mb-0">
+            <img
+              src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumla9Og3u4P3qMiabZeUz87wrEkVfCgNntQHSJ"
+              alt="SVCP Logo"
+              className="h-20 w-auto"
+            />
+          </div>
+
+          {/* Center Text */}
+          <div className="flex flex-col items-center text-center flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-2 text-[#fea700]">
+              SWAMI VIVEKANAND COLLEGE OF PHARMACY
+            </h2>
+            <p className="text-sm md:text-base font-medium text-[#016cb6]">
+              Approved by Pharmacy Council of India - PCI-2443, Government of Punjab.
+            </p>
+            <p className="text-sm md:text-base font-medium text-[#016cb6]">
+              Affiliated to I.K. Gujral Punjab Technical University, Jalandhar
+            </p>
+            <p className="text-sm md:text-base font-medium text-[#016cb6]">
+              Promoted by: Shri Raghu Nath Rai Memorial Educational & Charitable Trust
+            </p>
+            <p className="text-sm md:text-base font-medium text-[#016cb6]">
+              Established Year : 2005
+            </p>
+          </div>
+
+          {/* Right Logos */}
+          <div className="flex justify-center md:justify-end gap-6 mt-4 md:mt-0">
+            <img
+              src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw5P7EWnPADlNytJvziUwYAZMjFrEn9bXORaHu"
+              alt="PCI Logo"
+              className="h-20 w-auto"
+            />
+            <img
+              src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwauOTamwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH"
+              alt="PTU Logo"
+              className="h-20 w-auto"
+            />
+          </div>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold mt-5 mb-2 text-[#fea700]">
-          SWAMI VIVEKANAND COLLEGE OF PHARMACY
-        </h2>
-        <p className="text-sm md:text-base font-medium text-[#016cb6]">Approved by Pharmacy Council of India - PCI-2443, Government of Punjab.</p>
-        <p className="text-sm md:text-base font-medium text-[#016cb6]">Affiliated to I.K. Gujral Punjab Technical University, Jalandhar</p>
-        <p className="text-sm md:text-base font-medium text-[#016cb6]">Promoted by: Shri Raghu Nath Rai Memorial Educational & Charitable Trust</p>
-        <p className="text-sm md:text-base font-medium text-[#016cb6]">Established Year : 2005</p>
       </div>
 
       {/* 🔹 Navigation Tabs */}
