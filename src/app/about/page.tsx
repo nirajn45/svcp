@@ -14,14 +14,14 @@ export default function AboutPage() {
       position: "Chairman",
       image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwIAnMHO767QT5S3R9ugLVAoxje4IGbPqa1Clc",
       message:
-        "As Chairman of SVCP, I welcome you at SVCP Campus- one of the most innovative, dynamic and vibrant campus offering a wide range of undergraduate and postgraduate courses. At SVCP, we are guided by a mission to deliver education that transcends textbooks and transforms lives. I believe that true education shapes character, builds intellect, and instills the courage to lead. Our focus is on holistic education, preparing students for the challenges of a globalized world. With each passing year, we strengthen our resolve to create a legacy of excellence that empowers generations. Our commitment to excellence is reflected in the diverse student body, including foreign exchange students, enriching our campus culture.",
+        "I welcome every aspiring achiever to the Swami Vivekanand Group of Institutions. Today SVGOI has become a dream place to provide valuable educational experience to students, from different cultures and backgrounds. I am delighted to see the contributions, the students, faculty, and management of SVGOI have been making towards the overall success of students across the world. We have an interactive curriculum made to provide definite learning solutions in the field of Scientific studies, Medical studies, Arts, Business & Engineering. In this world known as a global village, all boundaries and the national borders are gradually becoming more transparent. Our international collaborations have helped students to form unlimited opportunities of global exposure for our students, to excel in their careers. So join your hands with SVGOI and be future-ready.",
     },
     {
       name: "Sh. Ashok Kumar Garg",
       position: "President",
       image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwRQi3i9XsDGPLe31wMSEvBqibVUpIy7AHKfYT",
       message:
-        "Education is the foundation of transformation. At SVCP, we strive to create a nurturing environment where young minds are encouraged to innovate, lead, and serve. Our commitment to academic rigor, discipline, and personal development enables students to emerge as responsible professionals ready to meet global standards.",
+        "SVGOI has experienced remarkable growth in recent years, earning widespread acclaim for its rapid advancement. Our journey from inception to our current standing is a testament to our unwavering dedication, exceptional faculty, and enriching learning environment. With a focus on quality education, we offer diverse programs affiliated with both national and international universities. We celebrate the achievements of our faculty, staff, and partners, employing modern teaching methods that empower students to realize their full potential. Emphasizing hands-on experience over mere theoretical knowledge, SVGOI is dedicated to providing practical solutions and fostering intellectual brilliance through research and development. Let's collaborate in building a skilled society together.",
     },
     {
       name: "Er. Vishal Garg",
@@ -50,6 +50,20 @@ export default function AboutPage() {
       image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwaHStKpwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH",
       message:
         "Our responsibility goes beyond classroom education—it's about ensuring every student finds a path to a successful career. We work tirelessly to connect students with leading pharma companies, hospitals, and research institutions. Through career guidance, training modules, and placement drives, we help students translate their learning into impactful, purpose-driven careers.",
+    },
+    {
+      name: "Prof. (Dr.) Sanjeev Saini",
+      position: "Director Academics",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwaHStKpwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH",
+      message:
+        "Modern education must go beyond preparing students for jobs—it should equip them for lifelong learning, leadership, and meaningful contributions to society. Guided by this belief, Swami Vivekanand College of Pharmacy (SVCP) has built an academic ecosystem where knowledge meets innovation, and values shape vision. At Swami Vivekanand College of Pharmacy (SVCP), our vision goes beyond delivering academic content—we are committed to creating an environment where innovation, critical thinking, and lifelong learning flourish. Since our establishment in 2005, we have embraced the evolving demands of industry and society, designing academic programs that are practical, relevant, and future-ready.  Our academic philosophy places students at the heart of every initiative. Through well-structured curricular, outcome-based teaching, and the integration of modern technology, we equip our learners with the knowledge and skills needed to excel in a competitive global landscape. Our faculty members, serving as mentors and role models, guide students to cultivate professional competence alongside integrity and social responsibility.   We complement classroom learning with experiential opportunities—ranging from research projects and industrial training to seminars, cultural fests, and global collaborations—ensuring a well-rounded growth experience.   At SVCP, education is not merely about degrees; it is about transforming potential into achievement. We remain dedicated to producing graduates who are not only job-ready but also future leaders, innovators, and change-makers in their chosen fields.",
+    },
+    {
+      name: "Mr. Himanshu Rao",
+      position: "Registrar",
+      image: "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwzyXzaXLn7CWOjAimtbzX4a35RNgJTxvedhHc",
+      message:
+        "Swami Vivekanand College of Pharmacy, an institution committed to academic excellence, innovation, and holistic development of students.  At SVCP, we nurture future pharmacists with strong professional ethics, scientific knowledge, and practical skills, enabling them to contribute effectively to the healthcare sector. Guided by the vision of Swami Vivekanand Ji, we strive to instill values of discipline, dedication, and service to society.  Our dedicated faculty, modern infrastructure, well-equipped laboratories, and a student-centric environment provide the perfect platform for young minds to excel in academics, research, and co-curricular activities. We aim to empower students not only to achieve professional success but also to become responsible citizens who can make a positive difference in the community.",
     },
   ]
 
@@ -375,19 +389,13 @@ export default function AboutPage() {
 
                 <div className="text-gray-600 text-base leading-relaxed space-y-4 border-l-4 border-[#fea700] pl-6">
                   <p>
-                    &quot;Since 2005, as one of the pioneering educational groups in Punjab, SVCP has established a strong
-                    brand identity in the field of pharmaceutical education. India&apos;s pharmaceutical sector is growing
-                    fast, creating thousands of employment opportunities annually.&quot;
+                    &quot;Our institution, inspired by the ideals of Swami Vivekanand Ji, is dedicated to nurturing competent, compassionate, and ethical pharmacy professionals who can contribute meaningfully to society and the healthcare sector.&quot;
                   </p>
                   <p>
-                    &quot;At SVCP, we believe that every successful academic experience is backed by seamless operations. Our
-                    systems are designed to reduce barriers and enhance the focus on learning, providing students and
-                    faculty with efficient, transparent, and tech-enabled support.&quot;
+                    &quot;At SVCP, we believe that education goes beyond classrooms. Along with academic excellence, we focus on research, innovation, and skill development to prepare our students for the dynamic global pharmaceutical industry. Our state-of-the-art laboratories, well-stocked library, experienced faculty, and vibrant learning environment ensure that every student has the right platform to explore, learn, and excel.&quot;
                   </p>
                   <p>
-                    &quot;We regularly organize academic and extracurricular initiatives, including conferences, seminars,
-                    workshops, guest lectures, and cultural activities to enhance intellectual growth and personality
-                    development.&quot;
+                    &quot;We encourage our students to imbibe not only professional knowledge but also values of integrity, discipline, and social responsibility. Through co-curricular and extracurricular activities, we strive to shape well-rounded individuals who can adapt to challenges and emerge as leaders in their chosen fields.&quot;
                   </p>
                 </div>
 
