@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Swami Vivekanand College of Pharmacy",
   description:
     "Fostering Future Healthcare Professionals Through Excellence in Pharmacy Education",
+  icons: {
+    icon: "/favicon.ico",
+  },  
 }
 
 export default function RootLayout({

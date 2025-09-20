@@ -1,47 +1,325 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Page = () => {
+  const [currentManagement, setCurrentManagement] = useState(0);
+
+  const managementTeam = [
+    {
+      name: "Sh. Ashwani Kumar Garg",
+      position: "Chairman",
+      image:
+        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwIAnMHO767QT5S3R9ugLVAoxje4IGbPqa1Clc",
+      message:
+        "I welcome every aspiring achiever to the Swami Vivekanand Group of Institutions. Today SVGOI has become a dream place to provide valuable educational experience to students, from different cultures and backgrounds. I am delighted to see the contributions, the students, faculty, and management of SVGOI have been making towards the overall success of students across the world. We have an interactive curriculum made to provide definite learning solutions in the field of Scientific studies, Medical studies, Arts, Business & Engineering. In this world known as a global village, all boundaries and the national borders are gradually becoming more transparent. Our international collaborations have helped students to form unlimited opportunities of global exposure for our students, to excel in their careers. So join your hands with SVGOI and be future-ready.",
+    },
+    {
+      name: "Sh. Ashok Kumar Garg",
+      position: "President",
+      image:
+        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwRQi3i9XsDGPLe31wMSEvBqibVUpIy7AHKfYT",
+      message:
+        "SVGOI has experienced remarkable growth in recent years, earning widespread acclaim for its rapid advancement. Our journey from inception to our current standing is a testament to our unwavering dedication, exceptional faculty, and enriching learning environment. With a focus on quality education, we offer diverse programs affiliated with both national and international universities. We celebrate the achievements of our faculty, staff, and partners, employing modern teaching methods that empower students to realize their full potential. Emphasizing hands-on experience over mere theoretical knowledge, SVGOI is dedicated to providing practical solutions and fostering intellectual brilliance through research and development. Let's collaborate in building a skilled society together.",
+    },
+    {
+      name: "Er. Vishal Garg",
+      position: "Director Secretarial & Administration",
+      image:
+        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwNlR77x0yoU2FaRhrYmBI0dQZTqL1vMlnXJei",
+      message:
+        "Efficient administration forms the backbone of a successful institution. We have an ecosystem in our college that values structure, discipline, and transparency. In the field of pharmacy, where accuracy and accountability are non-negotiable, our administrative foundation reflects these principles. We ensure that students experience a well-managed academic journey—supported by policies that promote fairness, respect, and responsibility at every level.",
+    },
+    {
+      name: "Er. Sahil Garg",
+      position: "Project Director",
+      image:
+        "https://urbanmelange.com/wp-content/uploads/2024/02/A37I9376-1200x1713.jpg",
+      message:
+        "Our commitment is to make quality pharmaceutical education affordable and purposeful. At our institution, from advanced laboratories to digitally enabled classrooms, every facility has been crafted to foster innovation and hands-on learning, helping students become confident, capable professionals in a rapidly advancing pharmaceutical world.",
+    },
+    {
+      name: "Mr. Ankur Gupta",
+      position: "Director Corporate Affairs",
+      image:
+        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwxZa79p4Fz9vfNj7L5miX4SuQMexJhoPwragV",
+      message:
+        "Industry exposure is the bridge between education and employment. At SVCP, we strive to build partnerships that bring industry into the classroom and our students into the corporate world. Through internships, guest lectures, and career-oriented training, we ensure our students gain the practical insights and soft skills required to lead in a competitive world. We don't just prepare students for jobs—we prepare them for lifelong careers.",
+    },
+    {
+      name: "Adv. Shubham Garg",
+      position: "Director Placements",
+      image:
+        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwaHStKpwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH",
+      message:
+        "Our responsibility goes beyond classroom education—it's about ensuring every student finds a path to a successful career. We work tirelessly to connect students with leading pharma companies, hospitals, and research institutions. Through career guidance, training modules, and placement drives, we help students translate their learning into impactful, purpose-driven careers.",
+    },
+    {
+      name: "Prof. (Dr.) Sanjeev Saini",
+      position: "Director Academics",
+      image:
+        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uwk7o8CEBEhdiQ1fRaxNIe28lVAgo5KmY6qy3S",
+      message:
+        "Modern education must go beyond preparing students for jobs—it should equip them for lifelong learning, leadership, and meaningful contributions to society. Guided by this belief, Swami Vivekanand College of Pharmacy (SVCP) has built an academic ecosystem where knowledge meets innovation, and values shape vision. Since our establishment in 2005, we have embraced the evolving demands of industry and society, designing academic programs that are practical, relevant, and future-ready. Our academic philosophy places students at the heart of every initiative. Through well-structured curricular, outcome-based teaching, and the integration of modern technology, we equip our learners with the knowledge and skills needed to excel in a competitive global landscape. Our faculty members, serving as mentors and role models, guide students to cultivate professional competence alongside integrity and social responsibility. We complement classroom learning with experiential opportunities—ranging from research projects and industrial training to seminars, cultural fests, and global collaborations—ensuring a well-rounded growth experience. At SVCP, education is not merely about degrees; it is about transforming potential into achievement. We remain dedicated to producing graduates who are not only job-ready but also future leaders, innovators, and change-makers in their chosen fields.",
+    },
+    {
+      name: "Mr. Himanshu Rao",
+      position: "Registrar",
+      image:
+        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwzyXzaXLn7CWOjAimtbzX4a35RNgJTxvedhHc",
+      message:
+        "Swami Vivekanand College of Pharmacy, an institution committed to academic excellence, innovation, and holistic development of students. At SVCP, we nurture future pharmacists with strong professional ethics, scientific knowledge, and practical skills, enabling them to contribute effectively to the healthcare sector. Guided by the vision of Swami Vivekanand Ji, we strive to instill values of discipline, dedication, and service to society. Our dedicated faculty, modern infrastructure, well-equipped laboratories, and a student-centric environment provide the perfect platform for young minds to excel in academics, research, and co-curricular activities. We aim to empower students not only to achieve professional success but also to become responsible citizens who can make a positive difference in the community.",
+    },
+  ];
+
+  const nextManagement = () => {
+    setCurrentManagement((prev) => (prev + 1) % managementTeam.length);
+  };
+
+  const prevManagement = () => {
+    setCurrentManagement(
+      (prev) => (prev - 1 + managementTeam.length) % managementTeam.length
+    );
+  };
+
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Left Half - Institute Information */}
-          <div className="flex flex-col justify-center">
-            <div className="mb-6">
-              <h2 className="border-l-4 border-[#fea700] text-3xl pl-4 md:text-4xl font-bold text-gray-900 mb-3">
-                About <span className="text-[#fea700]">SVCP</span>
-              </h2>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Discover our journey of excellence in pharmaceutical education and our commitment to shaping future healthcare professionals.
-              </p>
+    <>
+      {/* About Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Left Half - Institute Information */}
+            <div className="flex flex-col justify-center">
+              <div className="mb-6">
+                <h2 className="border-l-4 border-[#fea700] text-3xl pl-4 md:text-4xl font-bold text-gray-900 mb-3">
+                  About <span className="text-[#fea700]">SVCP</span>
+                </h2>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  Discover our journey of excellence in pharmaceutical education
+                  and our commitment to shaping future healthcare
+                  professionals.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <p className="text-gray-700 leading-relaxed text-sm text-justify">
+                  Swami Vivekanand College of Pharmacy (SVCP), established in
+                  2005, stands as a premier institution under the Swami
+                  Vivekanand Group of Institutes (SVGOI). We are committed to
+                  delivering value-based education through innovative teaching
+                  methods and hands-on training.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed text-sm text-justify">
+                  As the oldest college of pharmacy in the region, we offer
+                  comprehensive undergraduate and postgraduate programs approved
+                  by the Pharmacy Council of India (PCI) and affiliated with
+                  IKGPTU and PSBTE.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed text-sm text-justify">
+                  Our modern infrastructure, experienced faculty, and
+                  industry-oriented curriculum prepare students for dynamic
+                  careers in the global pharmaceutical landscape, ensuring they
+                  meet the evolving demands of healthcare.
+                </p>
+              </div>
             </div>
 
-            <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed text-sm text-justify">
-                Swami Vivekanand College of Pharmacy (SVCP), established in 2005, stands as a premier institution under the Swami Vivekanand Group of Institutes (SVGOI). We are committed to delivering value-based education through innovative teaching methods and hands-on training.
-              </p>
-
-              <p className="text-gray-700 leading-relaxed text-sm text-justify">
-                As the oldest college of pharmacy in the region, we offer comprehensive undergraduate and postgraduate programs approved by the Pharmacy Council of India (PCI) and affiliated with IKGPTU and PSBTE.
-              </p>
-
-              <p className="text-gray-700 leading-relaxed text-sm text-justify">
-                Our modern infrastructure, experienced faculty, and industry-oriented curriculum prepare students for dynamic careers in the global pharmaceutical landscape, ensuring they meet the evolving demands of healthcare.
-              </p>
+            {/* Right Half - Image */}
+            <div className="flex justify-center items-center">
+              <img
+                src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwMGSR1MjKT8yFRprHYOzIulXWf1a7xAmCbPhw"
+                alt="SVCP Campus"
+                className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+              />
             </div>
-          </div>
-
-          {/* Right Half - Image */}
-          <div className="flex justify-center items-center">
-            <img
-              src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwMGSR1MjKT8yFRprHYOzIulXWf1a7xAmCbPhw"
-              alt="SVCP Campus"
-              className="rounded-2xl shadow-lg w-full max-w-md object-cover"
-            />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Desk of Management Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-[#fea700]/10 px-4 py-2 rounded-full mb-4">
+              <GraduationCap className="h-4 w-4 text-[#fea700] mr-2" />
+              <span className="text-[#fea700] font-semibold text-sm">
+                Leadership Excellence
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Desk of <span className="text-[#fea700]">Management</span>
+            </h2>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+              Meet our visionary leadership team
+            </p>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded mx-auto mt-6"></div>
+          </div>
+
+          <div className="relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[500px]">
+              {/* Image Side */}
+              <div className="animate-slide-left">
+                <div className="relative group">
+                  <img
+                    src={
+                      managementTeam[currentManagement].image ||
+                      "/placeholder.svg"
+                    }
+                    alt={managementTeam[currentManagement].name}
+                    className="w-full h-[500px] object-cover object-center rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+                  <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg">
+                    <h3 className="text-lg font-bold text-gray-900">
+                      {managementTeam[currentManagement].name}
+                    </h3>
+                    <p className="text-[#fea700] font-semibold text-sm">
+                      {managementTeam[currentManagement].position}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Side */}
+              <div className="animate-slide-up">
+                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-xl shadow-lg">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center bg-[#fea700]/10 px-3 py-1 rounded-full mb-3">
+                      <span className="text-[#fea700] font-semibold text-xs">
+                        Message
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {managementTeam[currentManagement].position}&apos;s
+                      Message
+                    </h3>
+                    <div className="w-16 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded"></div>
+                  </div>
+
+                  <blockquote className="text-gray-600 text-base leading-relaxed italic border-l-4 border-[#fea700] pl-4">
+                    &quot;{managementTeam[currentManagement].message}&quot;
+                  </blockquote>
+
+                  <div className="mt-8 flex items-center justify-between">
+                    <div className="bg-white/70 backdrop-blur-sm p-3 rounded-lg">
+                      <p className="font-bold text-gray-900 text-sm">
+                        {managementTeam[currentManagement].name}
+                      </p>
+                      <p className="text-[#fea700] text-sm">
+                        {managementTeam[currentManagement].position}
+                      </p>
+                    </div>
+
+                    <div className="flex space-x-2">
+                      <Button
+                        onClick={prevManagement}
+                        variant="outline"
+                        size="sm"
+                        className="border-[#fea700] text-[#fea700] hover:bg-[#fea700] hover:text-white bg-transparent transition-all duration-300"
+                      >
+                        <ChevronLeft className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        onClick={nextManagement}
+                        variant="outline"
+                        size="sm"
+                        className="border-[#fea700] text-[#fea700] hover:bg-[#fea700] hover:text-white bg-transparent transition-all duration-300"
+                      >
+                        <ChevronRight className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-8 space-x-3">
+              {managementTeam.map((member, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentManagement(index)}
+                  className={`group relative transition-all duration-300 ${
+                    currentManagement === index ? "w-12" : "w-3"
+                  }`}
+                >
+                  <div
+                    className={`h-3 rounded-full transition-all duration-300 ${
+                      currentManagement === index
+                        ? "bg-gradient-to-r from-[#fea700] to-orange-400"
+                        : "bg-gray-300 group-hover:bg-gray-400"
+                    }`}
+                  ></div>
+                  {currentManagement === index && (
+                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs whitespace-nowrap">
+                      {member.position}
+                    </div>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Principal's Message */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="animate-slide-left">
+              <div className="relative group">
+                <img
+                  src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumjPBSQDFEKYdovOsGfC3D9tNMk6nXaAzRVqy0"
+                  alt="Prof. (Dr.) Sanjeev Mittal"
+                  className="w-full h-[500px] object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+
+            <div className="animate-slide-up">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="flex items-center mb-6">
+                  <div className="bg-gradient-to-br from-[#fea700]/20 to-orange-100 p-4 rounded-2xl mr-4">
+                    <GraduationCap className="h-8 w-8 text-[#fea700]" />
+                  </div>
+                  <div>
+                    <div className="inline-flex items-center bg-[#fea700]/10 px-3 py-1 rounded-full mb-2">
+                      <span className="text-[#fea700] font-semibold text-xs">Academic Leadership</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">Principal &apos;s Message</h3>
+                    <p className="text-[#fea700] font-semibold text-sm">Prof. (Dr.) Sanjeev Mittal</p>
+                  </div>
+                </div>
+
+                <div className="text-gray-600 text-base leading-relaxed space-y-4 border-l-4 border-[#fea700] pl-6">
+                  <p>
+                    &quot;Our institution, inspired by the ideals of Swami Vivekanand Ji, is dedicated to nurturing competent, compassionate, and ethical pharmacy professionals who can contribute meaningfully to society and the healthcare sector.&quot;
+                  </p>
+                  <p>
+                    &quot;At SVCP, we believe that education goes beyond classrooms. Along with academic excellence, we focus on research, innovation, and skill development to prepare our students for the dynamic global pharmaceutical industry. Our state-of-the-art laboratories, well-stocked library, experienced faculty, and vibrant learning environment ensure that every student has the right platform to explore, learn, and excel.&quot;
+                  </p>
+                  <p>
+                    &quot;We encourage our students to imbibe not only professional knowledge but also values of integrity, discipline, and social responsibility. Through co-curricular and extracurricular activities, we strive to shape well-rounded individuals who can adapt to challenges and emerge as leaders in their chosen fields.&quot;
+                  </p>
+                </div>
+
+                <div className="mt-6 flex items-center text-[#fea700] font-semibold text-sm">
+                  <span>Read Full Message</span>
+                  <div className="ml-2 w-6 h-6 rounded-full bg-[#fea700]/10 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-[#fea700]"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
