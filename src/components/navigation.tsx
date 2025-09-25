@@ -1,47 +1,50 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import Link from "next/link"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [openSubmenu, setOpenSubmenu] = useState<number | null>(null)
-  const navRef = useRef<HTMLDivElement>(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<number | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleSubmenu = (index: number) => {
-    setOpenSubmenu(openSubmenu === index ? null : index)
-  }
+    setOpenSubmenu(openSubmenu === index ? null : index);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false)
-        setOpenSubmenu(null)
+        setIsMenuOpen(false);
+        setOpenSubmenu(null);
       }
-    }
-    document.addEventListener("mousedown", handleClickOutside)
+    };
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const navItems = [
     { name: "Home", href: "/" },
     {
       name: "About Us",
-      href: "/about",
+      href: "",
       subItems: [
         { name: "About SVCP", href: "/about/aboutsvcp" },
         { name: "About SVGOI", href: "/about/aboutsvgoi" },
         { name: "About SRNRMECT", href: "/about/aboutSRNRMECT" },
-        { name: "Affiliated College / Affiliating University", href: "/about/AffiliatedCollege" },
+        {
+          name: "Affiliated College / Affiliating University",
+          href: "/about/AffiliatedCollege",
+        },
       ],
     },
     {
       name: "Administration",
-      href: "/adminstrator",
+      href: "",
       subItems: [
         { name: "Chairman", href: "/adminstrator/chairman" },
         { name: "President", href: "/adminstrator/president" },
@@ -50,10 +53,9 @@ export default function Navigation() {
         { name: "Registrar", href: "/adminstrator/registrar" },
       ],
     },
-    { name: "Courses", href: "/courses" },
     {
       name: "Academics",
-      href: "/academics",
+      href: "",
       subItems: [
         { name: "Academic Calendar", href: "/academics/academicCalendar" },
         { name: "IQAC", href: "/academics/iqac" },
@@ -61,10 +63,10 @@ export default function Navigation() {
         { name: "Time Table", href: "/academics/timeTable" },
       ],
     },
-    { name: "Infrastructure", href: "/infrastructure" },
     {
+      // here i want to classify it in diploma ->d.pharmacy, under graduation ->b.pharma and pharma d, post graduation->m.pharmacy
       name: "Programs",
-      href: "/programs",
+      href: "",
       subItems: [
         { name: "D.Pharmacy", href: "/programs/D.Pharmacy" },
         { name: "B.Pharmacy", href: "/programs/B.Pharmacy" },
@@ -74,29 +76,43 @@ export default function Navigation() {
     },
     {
       name: "Admission",
-      href: "/admission",
+      href: "",
       subItems: [
-        { name: "Course Offered", href: "/admission/courseOffered" },
+        { name: "Course Offered", href: "/courses" },
         { name: "Brochure", href: "/admission/brochure" },
-        { name: "Admission Process and guidelines", href: "/admission/admissionProcess" },
+        {
+          name: "Admission Process and guidelines",
+          href: "/admission/admissionProcess",
+        },
         { name: "Fee Structure", href: "/admission/feeStructure" },
       ],
     },
     { name: "Research", href: "/research" },
+
     {
       name: "Placement",
-      href: "/placements",
+      href: "",
       subItems: [
         { name: "About Placements", href: "/placements/aboutPlacements" },
         { name: "Placement Training", href: "/placements/placementTraining" },
-        { name: "Placement Achievements", href: "/placements/placementAchievements" },
-        { name: "Placement Activities", href: "/placements/placementActivities" },
-        { name: "Recruiting Companies", href: "/placements/recruitingCompanies" },
+        {
+          name: "Placement Achievements",
+          href: "/placements/placementAchievements",
+        },
+        {
+          name: "Placement Activities",
+          href: "/placements/placementActivities",
+        },
+        {
+          name: "Recruiting Companies",
+          href: "/placements/recruitingCompanies",
+        },
       ],
     },
+
     {
       name: "Facilities",
-      href: "/facilities",
+      href: "",
       subItems: [
         { name: "ICT Classrooms & LABS", href: "/facilities/ictClassrooms" },
         { name: "Library ", href: "/facilities/library" },
@@ -107,53 +123,77 @@ export default function Navigation() {
     },
     {
       name: "Committees",
-      href: "/committees",
+      href: "",
       subItems: [
-        { name: "Internal Complaint Committee", href: "/committees/internalComplaint" },
+        {
+          name: "Internal Complaint Committee",
+          href: "/committees/internalComplaint",
+        },
         { name: "Anti Ragging Cell ", href: "/committees/antiRagging" },
-        { name: "Student Grievance Redressal Committee (SGRC)", href: "/committees/student" },
+        {
+          name: "Student Grievance Redressal Committee (SGRC)",
+          href: "/committees/student",
+        },
       ],
     },
     {
       name: "Alumni",
-      href: "/alumni",
+      href: "",
       subItems: [
-        { name: "Alumni Association with details", href: "/alumni/alumniAssociation" },
+        {
+          name: "Alumni Association with details",
+          href: "/alumni/alumniAssociation",
+        },
         { name: "Alumni Meets ", href: "/alumni/alumniMeets" },
         { name: "Convocation", href: "/alumni/convocation" },
       ],
     },
     {
       name: "Documents",
-      href: "/documents",
+      href: "",
       subItems: [
         { name: "PCI", href: "/documents/PCI" },
         { name: "Rankings and Information ", href: "/documents/rankings" },
         { name: "BOG Meeting Proceedings", href: "/documents/bogMeeting" },
-        { name: "Minutes Academic Council", href: "/documents/minutesAcademic" },
+        {
+          name: "Minutes Academic Council",
+          href: "/documents/minutesAcademic",
+        },
         { name: "Affiliation from University", href: "/documents/affiliation" },
-        { name: "Rules and Regulations", href: "/documents/rulesAndRegulations" },
+        {
+          name: "Rules and Regulations",
+          href: "/documents/rulesAndRegulations",
+        },
       ],
     },
     {
       name: "Activities",
-      href: "/activities",
+      href: "",
       subItems: [
         { name: "Cultural Activities", href: "/activities/culturalActivities" },
-        { name: "Curricular & Co-curricular Activities ", href: "/activities/curricular" },
+        {
+          name: "Curricular & Co-curricular Activities ",
+          href: "/activities/curricular",
+        },
         { name: "NSS", href: "/activities/Nss" },
         { name: "NCC", href: "/activities/Ncc" },
-        { name: "Departmental Activities", href: "/activities/departmentalActivities" },
+        {
+          name: "Departmental Activities",
+          href: "/activities/departmentalActivities",
+        },
       ],
     },
     {
       name: "Picture Gallery",
-      href: "/gallery",
+      href: "",
       subItems: [
         { name: "Infrastructure", href: "/gallery/infrastructure" },
         { name: "Sports ", href: "/gallery/sports" },
         { name: "Cultural", href: "/gallery/cultural" },
-        { name: "National/Internation Day Celebrations", href: "/gallery/national" },
+        {
+          name: "National/Internation Day Celebrations",
+          href: "/gallery/national",
+        },
         { name: "Industrial Visits", href: "/gallery/industrialVisits" },
         { name: "Seminars/Workshops/Conferences", href: "/gallery/seminars" },
         { name: "Out reach Activities", href: "/gallery/Outreach" },
@@ -161,10 +201,11 @@ export default function Navigation() {
       ],
     },
     { name: "Contact", href: "/contact" },
-  ]
+
+  ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50" ref={navRef}>
+    <nav className="bg-white shadow-lg  top-0 z-50" ref={navRef}>
       {/* 🔹 Banner Section */}
       <div className="flex flex-col items-center py-4 px-2 text-center border-b border-gray-200">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full max-w-7xl px-4">
@@ -183,13 +224,15 @@ export default function Navigation() {
               SWAMI VIVEKANAND COLLEGE OF PHARMACY
             </h2>
             <p className="text-sm md:text-base font-medium text-[#016cb6]">
-              Approved by Pharmacy Council of India - PCI-2443, Government of Punjab.
+              Approved by Pharmacy Council of India - PCI-2443, Government of
+              Punjab.
             </p>
             <p className="text-sm md:text-base font-medium text-[#016cb6]">
               Affiliated to I.K. Gujral Punjab Technical University, Jalandhar
             </p>
             <p className="text-sm md:text-base font-medium text-[#016cb6]">
-              Promoted by: Shri Raghu Nath Rai Memorial Educational & Charitable Trust
+              Promoted by: Shri Raghu Nath Rai Memorial Educational & Charitable
+              Trust
             </p>
             <p className="text-sm md:text-base font-medium text-[#016cb6]">
               Established Year : 2005
@@ -257,7 +300,11 @@ export default function Navigation() {
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none p-2"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -311,5 +358,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }
