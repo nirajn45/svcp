@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Page = () => {
   const [currentManagement, setCurrentManagement] = useState(0);
@@ -84,6 +85,8 @@ const Page = () => {
     );
   };
 
+  const member = managementTeam[currentManagement];
+
   return (
     <>
       {/* About Section */}
@@ -98,8 +101,7 @@ const Page = () => {
                 </h2>
                 <p className="text-base text-gray-600 leading-relaxed">
                   Discover our journey of excellence in pharmaceutical education
-                  and our commitment to shaping future healthcare
-                  professionals.
+                  and our commitment to shaping future healthcare professionals.
                 </p>
               </div>
 
@@ -109,14 +111,10 @@ const Page = () => {
                   2005, stands as a premier institution under the Swami
                   Vivekanand Group of Institutes (SVGOI). We are committed to
                   delivering value-based education through innovative teaching
-                  methods and hands-on training.
-                </p>
-
-                <p className="text-gray-700 leading-relaxed text-sm text-justify">
-                  As the oldest college of pharmacy in the region, we offer
-                  comprehensive undergraduate and postgraduate programs approved
-                  by the Pharmacy Council of India (PCI) and affiliated with
-                  IKGPTU and PSBTE.
+                  methods and hands-on training. As the oldest college of
+                  pharmacy in the region, we offer comprehensive undergraduate
+                  and postgraduate programs approved by the Pharmacy Council of
+                  India (PCI) and affiliated with IKGPTU and PSBTE.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed text-sm text-justify">
@@ -133,7 +131,7 @@ const Page = () => {
               <img
                 src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwMGSR1MjKT8yFRprHYOzIulXWf1a7xAmCbPhw"
                 alt="SVCP Campus"
-                className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+                className="rounded-xl aspect-square shadow-lg object-cover"
               />
             </div>
           </div>
@@ -141,15 +139,9 @@ const Page = () => {
       </section>
 
       {/* Desk of Management Section */}
-      <section className="py-16 bg-white">
+      <section className="pt-10 pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-[#fea700]/10 px-4 py-2 rounded-full mb-4">
-              <GraduationCap className="h-4 w-4 text-[#fea700] mr-2" />
-              <span className="text-[#fea700] font-semibold text-sm">
-                Leadership Excellence
-              </span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Desk of <span className="text-[#fea700]">Management</span>
             </h2>
@@ -159,107 +151,95 @@ const Page = () => {
             <div className="w-20 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded mx-auto mt-6"></div>
           </div>
 
-          <div className="relative">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[500px]">
-              {/* Image Side */}
-              <div className="animate-slide-left">
-                <div className="relative group">
-                  <img
-                    src={
-                      managementTeam[currentManagement].image ||
-                      "/placeholder.svg"
-                    }
-                    alt={managementTeam[currentManagement].name}
-                    className="w-full h-[500px] object-cover object-center rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
-                  <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg">
-                    <h3 className="text-lg font-bold text-gray-900">
-                      {managementTeam[currentManagement].name}
-                    </h3>
-                    <p className="text-[#fea700] font-semibold text-sm">
-                      {managementTeam[currentManagement].position}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Content Side */}
-              <div className="animate-slide-up">
-                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-xl shadow-lg">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center bg-[#fea700]/10 px-3 py-1 rounded-full mb-3">
-                      <span className="text-[#fea700] font-semibold text-xs">
-                        Message
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {managementTeam[currentManagement].position}&apos;s
-                      Message
-                    </h3>
-                    <div className="w-16 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded"></div>
-                  </div>
-
-                  <blockquote className="text-gray-600 text-base leading-relaxed italic border-l-4 border-[#fea700] pl-4">
-                    &quot;{managementTeam[currentManagement].message}&quot;
-                  </blockquote>
-
-                  <div className="mt-8 flex items-center justify-between">
-                    <div className="bg-white/70 backdrop-blur-sm p-3 rounded-lg">
-                      <p className="font-bold text-gray-900 text-sm">
-                        {managementTeam[currentManagement].name}
+          <div className="relative overflow-hidden min-h-[550px] md:min-h-[500px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentManagement}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+              >
+                {/* Image Side */}
+                <div className="w-full h-full">
+                  <div className="relative group w-full h-[400px] md:h-[500px]">
+                    <img
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-center rounded-xl shadow-lg"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+                    <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-900">
+                        {member.name}
+                      </h3>
+                      <p className="text-[#fea700] font-semibold text-sm">
+                        {member.position}
                       </p>
-                      <p className="text-[#fea700] text-sm">
-                        {managementTeam[currentManagement].position}
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-2">
-                      <Button
-                        onClick={prevManagement}
-                        variant="outline"
-                        size="sm"
-                        className="border-[#fea700] text-[#fea700] hover:bg-[#fea700] hover:text-white bg-transparent transition-all duration-300"
-                      >
-                        <ChevronLeft className="h-4 w-4" />
-                      </Button>
-                      <Button
-                        onClick={nextManagement}
-                        variant="outline"
-                        size="sm"
-                        className="border-[#fea700] text-[#fea700] hover:bg-[#fea700] hover:text-white bg-transparent transition-all duration-300"
-                      >
-                        <ChevronRight className="h-4 w-4" />
-                      </Button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+
+                {/* Content Side */}
+                <div className="flex flex-col justify-center">
+                  <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 md:p-8 rounded-xl shadow-lg">
+                    <div className="mb-6">
+                      <div className="inline-flex items-center bg-[#fea700]/10 px-3 py-1 rounded-full mb-3">
+                        <span className="text-[#fea700] font-semibold text-xs uppercase tracking-wider">
+                          Message
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        From the {member.position}
+                      </h3>
+                      <div className="w-16 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded"></div>
+                    </div>
+
+                    <blockquote className="text-gray-600 text-base leading-relaxed italic border-l-4 border-[#fea700] pl-4 max-h-[200px] overflow-y-auto pr-2">
+                      &quot;{member.message}&quot;
+                    </blockquote>
+
+                    <div className="mt-8 flex items-center justify-between">
+                      <div className="flex space-x-2">
+                        <Button
+                          onClick={prevManagement}
+                          variant="outline"
+                          size="icon"
+                          className="border-[#fea700] text-[#fea700] hover:bg-[#fea700] hover:text-white bg-transparent transition-all duration-300 rounded-full"
+                          aria-label="Previous message"
+                        >
+                          <ChevronLeft className="h-5 w-5" />
+                        </Button>
+                        <Button
+                          onClick={nextManagement}
+                          variant="outline"
+                          size="icon"
+                          className="border-[#fea700] text-[#fea700] hover:bg-[#fea700] hover:text-white bg-transparent transition-all duration-300 rounded-full"
+                          aria-label="Next message"
+                        >
+                          <ChevronRight className="h-5 w-5" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
 
             {/* Carousel Indicators */}
-            <div className="flex justify-center mt-8 space-x-3">
-              {managementTeam.map((member, index) => (
+            <div className="flex justify-center mt-8 space-x-2">
+              {managementTeam.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentManagement(index)}
-                  className={`group relative transition-all duration-300 ${
-                    currentManagement === index ? "w-12" : "w-3"
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    currentManagement === index
+                      ? "bg-[#fea700]"
+                      : "bg-gray-300 hover:bg-gray-400"
                   }`}
-                >
-                  <div
-                    className={`h-3 rounded-full transition-all duration-300 ${
-                      currentManagement === index
-                        ? "bg-gradient-to-r from-[#fea700] to-orange-400"
-                        : "bg-gray-300 group-hover:bg-gray-400"
-                    }`}
-                  ></div>
-                  {currentManagement === index && (
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs whitespace-nowrap">
-                      {member.position}
-                    </div>
-                  )}
-                </button>
+                  aria-label={`Go to slide ${index + 1}`}
+                ></button>
               ))}
             </div>
           </div>
@@ -289,31 +269,48 @@ const Page = () => {
                   </div>
                   <div>
                     <div className="inline-flex items-center bg-[#fea700]/10 px-3 py-1 rounded-full mb-2">
-                      <span className="text-[#fea700] font-semibold text-xs">Academic Leadership</span>
+                      <span className="text-[#fea700] font-semibold text-xs">
+                        Academic Leadership
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Principal &apos;s Message</h3>
-                    <p className="text-[#fea700] font-semibold text-sm">Prof. (Dr.) Sanjeev Mittal</p>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      Principal &apos;s Message
+                    </h3>
+                    <p className="text-[#fea700] font-semibold text-sm">
+                      Prof. (Dr.) Sanjeev Mittal
+                    </p>
                   </div>
                 </div>
 
                 <div className="text-gray-600 text-base leading-relaxed space-y-4 border-l-4 border-[#fea700] pl-6">
                   <p>
-                    &quot;Our institution, inspired by the ideals of Swami Vivekanand Ji, is dedicated to nurturing competent, compassionate, and ethical pharmacy professionals who can contribute meaningfully to society and the healthcare sector.&quot;
+                    &quot;Our institution, inspired by the ideals of Swami
+                    Vivekanand Ji, is dedicated to nurturing competent,
+                    compassionate, and ethical pharmacy professionals who can
+                    contribute meaningfully to society and the healthcare
+                    sector.&quot;
                   </p>
                   <p>
-                    &quot;At SVCP, we believe that education goes beyond classrooms. Along with academic excellence, we focus on research, innovation, and skill development to prepare our students for the dynamic global pharmaceutical industry. Our state-of-the-art laboratories, well-stocked library, experienced faculty, and vibrant learning environment ensure that every student has the right platform to explore, learn, and excel.&quot;
+                    &quot;At SVCP, we believe that education goes beyond
+                    classrooms. Along with academic excellence, we focus on
+                    research, innovation, and skill development to prepare our
+                    students for the dynamic global pharmaceutical industry. Our
+                    state-of-the-art laboratories, well-stocked library,
+                    experienced faculty, and vibrant learning environment ensure
+                    that every student has the right platform to explore, learn,
+                    and excel.&quot;
                   </p>
                   <p>
-                    &quot;We encourage our students to imbibe not only professional knowledge but also values of integrity, discipline, and social responsibility. Through co-curricular and extracurricular activities, we strive to shape well-rounded individuals who can adapt to challenges and emerge as leaders in their chosen fields.&quot;
+                    &quot;We encourage our students to imbibe not only
+                    professional knowledge but also values of integrity,
+                    discipline, and social responsibility. Through co-curricular
+                    and extracurricular activities, we strive to shape
+                    well-rounded individuals who can adapt to challenges and
+                    emerge as leaders in their chosen fields.&quot;
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center text-[#fea700] font-semibold text-sm">
-                  <span>Read Full Message</span>
-                  <div className="ml-2 w-6 h-6 rounded-full bg-[#fea700]/10 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-[#fea700]"></div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

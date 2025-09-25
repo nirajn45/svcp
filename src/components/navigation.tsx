@@ -201,7 +201,6 @@ export default function Navigation() {
       ],
     },
     { name: "Contact", href: "/contact" },
-
   ];
 
   return (
