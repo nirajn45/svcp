@@ -301,6 +301,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
+        
           <div className="lg:hidden flex items-center">
             <button
               onClick={toggleMenu}
