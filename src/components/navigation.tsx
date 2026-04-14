@@ -276,15 +276,25 @@ export default function Navigation() {
                     </button>
                     {/* Dropdown */}
                     <div className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-lg rounded-md z-50 border border-gray-200 min-w-[200px]">
-                      {item.subItems.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          href={sub.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 whitespace-nowrap"
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
+                      {item.subItems.map((sub) =>
+                        sub.href.endsWith(".pdf") ? (
+                          <a
+                            key={sub.name}
+                            href={sub.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 whitespace-nowrap"
+                          >
+                            {sub.name}
+                          </a>
+                        ) : (
+                          <Link
+                            key={sub.name}
+                            href={sub.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 whitespace-nowrap"
+                          >
+                            {sub.name}
+                          </Link>
+                        )
+                      )}
                     </div>
                   </div>
                 ) : (
@@ -335,16 +345,27 @@ export default function Navigation() {
                     </button>
                     {openSubmenu === index && (
                       <div className="ml-4 space-y-1 border-l border-gray-200 pl-2 my-1">
-                        {item.subItems.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            href={sub.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
+                        {item.subItems.map((sub) =>
+                          sub.href.endsWith(".pdf") ? (
+                            <a
+                              key={sub.name}
+                              href={sub.href}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {sub.name}
+                            </a>
+                          ) : (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {sub.name}
+                            </Link>
+                          )
+                        )}
                       </div>
                     )}
                   </div>
