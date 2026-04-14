@@ -200,6 +200,13 @@ export default function Navigation() {
         { name: "Library", href: "/gallery/library" },
       ],
     },
+    {
+      name: "NIRF",
+      href: "",
+      subItems: [
+        { name: "NIRF 2026", href: "/nirf-2026.pdf" },
+      ],
+    },
     { name: "Contact", href: "/contact" },
   ];
 
