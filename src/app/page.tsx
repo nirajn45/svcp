@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function HomePage() {
   const stats = [
@@ -32,42 +33,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Video Background */}
-      <section
-        className="relative h-[80vh] text-white overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://www.sviet.ac.in/_next/static/media/Research.52b5d24f.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
-        <div className="relative w-full h-full flex items-center py-12 z-10">
-          <div className="w-10/12 mx-auto flex flex-wrap items-center">
-            <div className="w-full py-12 mt-25">
-              <p className="text-2xl lg:text-4xl font-bold w-4/5 mb-3 pb-3 animate-slide-left">
-                Empowering Pharma Excellence Since 2005: A Trusted Name in
-                Education.
-              </p>
-              <p className="text-md lg:text-lg font-semibold mt-3 mb-3 pb-3 animate-slide-left">
-                SVCP, under SVGOI’s visionary leadership, blends academics,
-                research, and holistic growth in pharmaceutical sciences.
-              </p>
-              {/* <div className="flex gap-3 flex-wrap animate-slide-left">
-                <Link href="https://admission.sviet.ac.in/">
-                  <button className="bg-[#fea700] cursor-pointer text-white text-xl px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:bg-[#e6960a]">
-                    Apply Now
-                  </button>
-                </Link>
-                <Link href="/SVIET-Brochure-2025.pdf">
-                  <button className="bg-[#fea700] cursor-pointer text-white text-xl px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:bg-[#e6960a]">
-                    Download Brochure
-                  </button>
-                </Link>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Premium Hero Slider using Swiper */}
+      <HeroSlider />
 
       {/* Stats Section - Redesigned */}
       <section className="py-24 bg-white">

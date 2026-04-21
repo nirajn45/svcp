@@ -211,7 +211,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white shadow-lg  top-0 z-50" ref={navRef}>
+    <nav className="bg-white shadow-lg top-0 z-[9999] relative" ref={navRef}>
       {/* 🔹 Banner Section */}
       <div className="flex flex-col items-center py-4 px-2 text-center border-b border-gray-200">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full max-w-7xl px-4">
@@ -262,7 +262,8 @@ export default function Navigation() {
       </div>
 
       {/* 🔹 Navigation Tabs */}
-      <div className="max-w-7xl ">
+      <div className="bg-[#0F4C81] w-full">
+        <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center h-14">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center w-full">
@@ -270,17 +271,17 @@ export default function Navigation() {
               {navItems.map((item, index) =>
                 item.subItems ? (
                   <div key={item.name} className="relative group">
-                    <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap">
+                    <button className="flex items-center space-x-1 text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md">
                       <span>{item.name}</span>
                       <ChevronDown className="h-3 w-3" />
                     </button>
                     {/* Dropdown */}
-                    <div className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-lg rounded-md z-50 border border-gray-200 min-w-[200px]">
+                    <div className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[200px]">
                       {item.subItems.map((sub) => (
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 whitespace-nowrap"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
                         >
                           {sub.name}
                         </Link>
@@ -291,7 +292,7 @@ export default function Navigation() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                    className="text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md"
                   >
                     {item.name}
                   </Link>
@@ -305,7 +306,7 @@ export default function Navigation() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none p-2"
+              className="text-white hover:text-yellow-400 focus:outline-none p-2"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -363,6 +364,7 @@ export default function Navigation() {
             </div>
           </div>
         )}
+        </div>
       </div>
     </nav>
   );

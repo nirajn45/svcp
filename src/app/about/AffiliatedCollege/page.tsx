@@ -28,27 +28,27 @@ const Page = () => {
             {[
               {
                 name: "-Affiliation Letter 2021-22",
-                link: "",
+                link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhWwkBp1X8c7IBZyYbRd8MGlO2DUFtnKVSjPJW",
                 color: "#fea700",
               },
               {
                 name: "-Affiliation Letter 2022-23",
-                link: "",
+                link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhFvr6a6cpIAKRQlHguGwMsWTLz6OxPaYJdBjZ",
                 color: "#f59e0b",
               },
               {
                 name: "-Affiliation Letter 2023-24",
-                link: "",
+                link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhFQGsSgcpIAKRQlHguGwMsWTLz6OxPaYJdBjZ",
                 color: "#ea580c",
               },
               {
                 name: "-Affiliation Letter 2024-25",
-                link: "",
+                link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhMCaPGrSLfWmjN8kvzCgeG15rVcP9uqSyJhA4",
                 color: "#d97706",
               },
               {
                 name: "-Affiliation Letter 2025-26",
-                link: "",
+                link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhUhjpM4ELDPe7fJQ0dYxH6AGR5kbzZvLr2T8m",
                 color: "#d97706",
               },
             ].map((course, index) => (
@@ -66,12 +66,27 @@ const Page = () => {
                     SVCP{course.name}
                   </h3>
                   <Button
-                    asChild
-                    className="w-full bg-[#fea700] hover:bg-[#e6960a] text-white text-sm py-2"
+                    asChild={!!course.link}
+                    disabled={!course.link}
+                    className={`w-full text-sm py-2 ${
+                      course.link
+                        ? "bg-[#fea700] hover:bg-[#e6960a] text-white"
+                        : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                    }`}
                   >
-                    <Link href={course.link}>
-                      Download <ArrowRight className="ml-2 h-3 w-3" />
-                    </Link>
+                    {course.link ? (
+                      <Link
+                        href={course.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Download <ArrowRight className="ml-2 h-3 w-3" />
+                      </Link>
+                    ) : (
+                      <span>
+                        Coming Soon <ArrowRight className="ml-2 h-3 w-3" />
+                      </span>
+                    )}
                   </Button>
                 </CardContent>
               </Card>

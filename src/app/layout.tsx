@@ -27,10 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body>
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
+      <body className="max-w-full">
         <Navigation />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen w-full">{children}</main>
         <Footer />
       </body>
     </html>
