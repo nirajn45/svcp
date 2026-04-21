@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,7 +59,6 @@ export default function Navigation() {
       href: "",
       subItems: [
         { name: "Academic Calendar", href: "/academics/academicCalendar" },
-        { name: "IQAC", href: "/academics/iqac" },
         { name: "Syllabus", href: "/academics/syllabus" },
         { name: "Time Table", href: "/academics/timeTable" },
       ],
@@ -87,6 +87,7 @@ export default function Navigation() {
         { name: "Fee Structure", href: "/admission/feeStructure" },
       ],
     },
+    { name: "IQAC", href: "/academics/iqac" },
     { name: "Research", href: "/research" },
 
     {
@@ -111,17 +112,6 @@ export default function Navigation() {
     },
 
     {
-      name: "Facilities",
-      href: "",
-      subItems: [
-        { name: "ICT Classrooms & LABS", href: "/facilities/ictClassrooms" },
-        { name: "Library ", href: "/facilities/library" },
-        { name: "Hostel", href: "/facilities/hostel" },
-        { name: "Sports ", href: "/facilities/sports" },
-        { name: "Counselling Center", href: "/facilities/counsellingCenter" },
-      ],
-    },
-    {
       name: "Committees",
       href: "",
       subItems: [
@@ -133,36 +123,6 @@ export default function Navigation() {
         {
           name: "Student Grievance Redressal Committee (SGRC)",
           href: "/committees/student",
-        },
-      ],
-    },
-    {
-      name: "Alumni",
-      href: "",
-      subItems: [
-        {
-          name: "Alumni Association with details",
-          href: "/alumni/alumniAssociation",
-        },
-        { name: "Alumni Meets ", href: "/alumni/alumniMeets" },
-        { name: "Convocation", href: "/alumni/convocation" },
-      ],
-    },
-    {
-      name: "Documents",
-      href: "",
-      subItems: [
-        { name: "PCI", href: "/documents/PCI" },
-        { name: "Rankings and Information ", href: "/documents/rankings" },
-        { name: "BOG Meeting Proceedings", href: "/documents/bogMeeting" },
-        {
-          name: "Minutes Academic Council",
-          href: "/documents/minutesAcademic",
-        },
-        { name: "Affiliation from University", href: "/documents/affiliation" },
-        {
-          name: "Rules and Regulations",
-          href: "/documents/rulesAndRegulations",
         },
       ],
     },
@@ -184,23 +144,6 @@ export default function Navigation() {
       ],
     },
     {
-      name: "Picture Gallery",
-      href: "",
-      subItems: [
-        { name: "Infrastructure", href: "/gallery/infrastructure" },
-        { name: "Sports ", href: "/gallery/sports" },
-        { name: "Cultural", href: "/gallery/cultural" },
-        {
-          name: "National/Internation Day Celebrations",
-          href: "/gallery/national",
-        },
-        { name: "Industrial Visits", href: "/gallery/industrialVisits" },
-        { name: "Seminars/Workshops/Conferences", href: "/gallery/seminars" },
-        { name: "Out reach Activities", href: "/gallery/Outreach" },
-        { name: "Library", href: "/gallery/library" },
-      ],
-    },
-    {
       name: "NIRF",
       href: "",
       subItems: [
@@ -208,164 +151,182 @@ export default function Navigation() {
       ],
     },
     { name: "Contact", href: "/contact" },
+    { name: "Feedback", href: "/feedback" },
   ];
 
   return (
     <nav className="bg-white shadow-lg top-0 z-[9999] relative" ref={navRef}>
       {/* 🔹 Banner Section */}
-      <div className="flex flex-col items-center py-4 px-2 text-center border-b border-gray-200">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full max-w-7xl px-4">
-          {/* Left Logo */}
-          <div className="flex justify-center md:justify-start mb-4 md:mb-0">
-            <img
-              src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumla9Og3u4P3qMiabZeUz87wrEkVfCgNntQHSJ"
-              alt="SVCP Logo"
-              className="h-20 w-auto"
-            />
-          </div>
+      <div className="w-full bg-gradient-to-r from-white to-blue-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            {/* Left Logo - SVCP */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="flex justify-center md:justify-start"
+            >
+              <img
+                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhdSiWj2HNcorLp7Ez8OqsCkgfTIJDU12B5yix"
+                alt="SVCP Logo"
+                className="h-12 md:h-16 object-contain bg-white p-2 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300"
+              />
+            </motion.div>
 
-          {/* Center Text */}
-          <div className="flex flex-col items-center text-center flex-1">
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-2 text-[#fea700]">
-              SWAMI VIVEKANAND COLLEGE OF PHARMACY
-            </h2>
-            <p className="text-sm md:text-base font-medium text-[#016cb6]">
-              Approved by Pharmacy Council of India - PCI-2443, Government of
-              Punjab.
-            </p>
-            <p className="text-sm md:text-base font-medium text-[#016cb6]">
-              Affiliated to I.K. Gujral Punjab Technical University, Jalandhar
-            </p>
-            <p className="text-sm md:text-base font-medium text-[#016cb6]">
-              Promoted by: Shri Raghu Nath Rai Memorial Educational & Charitable
-              Trust
-            </p>
-            <p className="text-sm md:text-base font-medium text-[#016cb6]">
-              Established Year : 2005
-            </p>
-          </div>
+            {/* Center Text */}
+            <motion.div 
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex flex-col items-center text-center flex-1"
+            >
+              <h2 className="text-2xl md:text-4xl font-extrabold text-[#0F4C81] tracking-wide">
+                SWAMI VIVEKANAND COLLEGE OF <span className="text-[#F59E0B]">PHARMACY</span>
+              </h2>
+              <div className="space-y-1 mt-1">
+                <p className="text-sm md:text-base text-gray-600">
+                  Approved by <span className="font-semibold text-[#0F4C81]">Pharmacy Council of India - PCI-2443</span>, Government of Punjab.
+                </p>
+                <p className="text-sm md:text-base text-gray-600">
+                  Affiliated to <span className="font-semibold text-[#0F4C81]">I.K. Gujral Punjab Technical University, Jalandhar</span>
+                </p>
+                <p className="text-sm md:text-base text-gray-600">
+                  Promoted by: Shri Raghu Nath Rai Memorial Educational & Charitable Trust
+                </p>
+                <p className="text-sm md:text-base text-gray-600">
+                  Established Year : <span className="font-semibold">2005</span>
+                </p>
+              </div>
+            </motion.div>
 
-          {/* Right Logos */}
-          <div className="flex justify-center md:justify-end gap-6 mt-4 md:mt-0">
-            <img
-              src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw5P7EWnPADlNytJvziUwYAZMjFrEn9bXORaHu"
-              alt="PCI Logo"
-              className="h-20 w-auto"
-            />
-            <img
-              src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwauOTamwGZoOXnzJfN1LIQeTcxtBpyg7Pb6EH"
-              alt="PTU Logo"
-              className="h-20 w-auto"
-            />
+            {/* Right Logos - IKGPTU & PCI */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex justify-center md:justify-end gap-6"
+            >
+              <img
+                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh5wFBbeWeAb4xUsD2HtiI9zBhMYVnRZFPdLrQ"
+                alt="PCI Logo"
+                className="h-12 md:h-16 object-contain bg-white p-2 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300"
+              />
+              <img
+                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhhqqNrz0vYTA0HQ4lC3zruVx5eGqtm7IhsDcX"
+                alt="IKGPTU Logo"
+                className="h-12 md:h-16 object-contain bg-white p-2 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* 🔹 Navigation Tabs */}
       <div className="bg-[#0F4C81] w-full">
-        <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center h-14">
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center w-full">
-            <div className="flex justify-between w-full">
-              {navItems.map((item, index) =>
-                item.subItems ? (
-                  <div key={item.name} className="relative group">
-                    <button className="flex items-center space-x-1 text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md">
-                      <span>{item.name}</span>
-                      <ChevronDown className="h-3 w-3" />
-                    </button>
-                    {/* Dropdown */}
-                    <div className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[200px]">
-                      {item.subItems.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          href={sub.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md"
-                  >
-                    {item.name}
-                  </Link>
-                )
-              )}
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-        
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={toggleMenu}
-              className="text-white hover:text-yellow-400 focus:outline-none p-2"
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 max-h-[70vh] overflow-y-auto">
-            <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-              {navItems.map((item, index) =>
-                item.subItems ? (
-                  <div key={item.name}>
-                    <button
-                      onClick={() => toggleSubmenu(index)}
-                      className="flex justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 items-center"
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown
-                        className={`h-4 w-4 transform transition-transform ${
-                          openSubmenu === index ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    {openSubmenu === index && (
-                      <div className="ml-4 space-y-1 border-l border-gray-200 pl-2 my-1">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="flex justify-center items-center h-14">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center">
+              <div className="flex items-center justify-center space-x-1">
+                {navItems.map((item, index) =>
+                  item.subItems ? (
+                    <div key={item.name} className="relative group">
+                      <button className="flex items-center space-x-1 text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md">
+                        <span>{item.name}</span>
+                        <ChevronDown className="h-3 w-3" />
+                      </button>
+                      {/* Dropdown */}
+                      <div className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[200px]">
                         {item.subItems.map((sub) => (
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
-                            onClick={() => setIsMenuOpen(false)}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
                           >
                             {sub.name}
                           </Link>
                         ))}
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md"
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden flex items-center">
+              <button
+                onClick={toggleMenu}
+                className="text-white hover:text-yellow-400 focus:outline-none p-2"
+              >
+                {isMenuOpen ? (
+                  <X className="h-6 w-6" />
                 ) : (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
-              )}
+                  <Menu className="h-6 w-6" />
+                )}
+              </button>
             </div>
           </div>
-        )}
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 max-h-[70vh] overflow-y-auto">
+              <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                {navItems.map((item, index) =>
+                  item.subItems ? (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => toggleSubmenu(index)}
+                        className="flex justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 items-center"
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown
+                          className={`h-4 w-4 transform transition-transform ${
+                            openSubmenu === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      {openSubmenu === index && (
+                        <div className="ml-4 space-y-1 border-l border-gray-200 pl-2 my-1">
+                          {item.subItems.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </nav>
+
   );
 }
