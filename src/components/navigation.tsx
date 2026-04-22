@@ -170,7 +170,7 @@ export default function Navigation() {
               <img
                 src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhdSiWj2HNcorLp7Ez8OqsCkgfTIJDU12B5yix"
                 alt="SVCP Logo"
-                className="h-12 md:h-16 object-contain bg-white p-2 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300"
+                className="h-14 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
 
@@ -205,17 +205,17 @@ export default function Navigation() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex justify-center md:justify-end gap-6"
+              className="flex items-center justify-center md:justify-end gap-4"
             >
               <img
                 src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh5wFBbeWeAb4xUsD2HtiI9zBhMYVnRZFPdLrQ"
                 alt="PCI Logo"
-                className="h-12 md:h-16 object-contain bg-white p-2 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300"
+                className="h-12 md:h-16 object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"
               />
               <img
                 src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhhqqNrz0vYTA0HQ4lC3zruVx5eGqtm7IhsDcX"
                 alt="IKGPTU Logo"
-                className="h-12 md:h-16 object-contain bg-white p-2 rounded-lg shadow-sm hover:scale-105 transition-transform duration-300"
+                className="h-12 md:h-16 object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
           </div>

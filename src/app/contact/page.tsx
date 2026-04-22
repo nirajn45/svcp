@@ -113,8 +113,7 @@ export default function ContactPage() {
                       <p className="text-gray-600">Principal@svcp.org.in</p>
                       <p className="text-gray-600">hod@svcp.org.in</p>
                       <p className="text-gray-600">hr@svcp.org.in</p>
-                      <p className="text-gray-600">registrar@svcp.org.in</p>
-                      <p className="text-gray-600">iqac@svcp.org.in</p>
+                      <p className="text-gray-600">principalsvcop.pharmacy@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>

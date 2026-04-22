@@ -109,8 +109,7 @@ export default function Footer() {
                       <p className="text-gray-300">Principal@svcp.org.in</p>
                       <p className="text-gray-300">hod@svcp.org.in</p>
                       <p className="text-gray-300">hr@svcp.org.in</p>
-                      <p className="text-gray-300">registrar@svcp.org.in</p>
-                      <p className="text-gray-300">iqac@svcp.org.in</p>
+                      <p className="text-gray-300">principalsvcop.pharmacy@gmail.com</p>
                     </div>
               </div>
               {/* <div className="flex items-start space-x-2">
