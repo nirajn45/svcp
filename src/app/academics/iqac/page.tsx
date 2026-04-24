@@ -5,34 +5,35 @@ import { motion } from "framer-motion";
 import { FileText, FileCheck, Download, Users, Lightbulb, Target } from "lucide-react";
 
 const objectives = [
-  "Development and application of quality benchmarks/parameters for various academic and administrative activities of the institution.",
-  "Facilitating the creation of a learner-centric environment conducive to quality education and faculty maturation to adopt the required knowledge and technology for participatory teaching and learning process.",
-  "Collection and analysis of feedback from all stakeholders on quality-related institutional processes.",
-  "Dissemination of information on various quality parameters to all stakeholders.",
-  "Organization of inter and intra institutional workshops, seminars on quality related themes and promotion of quality circles.",
-  "Documentation of the various programmes/activities leading to quality improvement.",
-  "Acting as a nodal agency of the Institution for coordinating quality-related activities, including adoption and dissemination of best practices.",
-  "Development and maintenance of institutional database through MIS for the purpose of maintaining/enhancing the institutional quality.",
-  "Periodical conduct of Academic and Administrative Audit and its follow-up.",
-  "Preparation and submission of the Annual Quality Assurance Report (AQAR) as per guidelines and parameters of NAAC."
+  "To develop a systematic approach for continuous improvement in academic and administrative performance.",
+  "To ensure quality in teaching-learning processes, especially in pharmaceutical education and laboratory practices.",
+  "To promote research, innovation, and industry-oriented training in the pharmacy field.",
+  "To encourage faculty development programs, workshops, and skill enhancement activities.",
+  "To establish effective feedback systems from students, alumni, and stakeholders for quality improvement.",
+  "To enhance student performance through academic monitoring, remedial classes, and mentoring.",
+  "To document and maintain institutional data for accreditation and quality assessment.",
+  "To foster collaborations with pharmaceutical industries, hospitals, and research organizations.",
+  "To create a quality culture within the institution focused on excellence and continuous growth."
 ];
 
 const committeeMembers = [
-  { sr: 1, composition: "Chairperson", name: "Prof. (Dr.) Manish Goswami", designation: "Principal" },
-  { sr: 2, composition: "Nominee from Trust", name: "Sh. Raghu Nath Rai", designation: "Promoter" },
-  { sr: 3, composition: "Member from Local Society", name: "Sh. Ram Gopal Sharma", designation: "Social Worker" },
-  { sr: 4, composition: "Student Representative", name: "Mr. Arshdeep Singh", designation: "Student" },
-  { sr: 5, composition: "Alumni Representative", name: "Ms. Simranjeet Kaur", designation: "Alumni" },
-  { sr: 6, composition: "Employer Nominee", name: "Sh. Satish Sharma", designation: "Registrar" },
-  { sr: 7, composition: "Industrialist Nominee", name: "Sh. Vijay Kumar", designation: "Industry Professional" },
-  { sr: 8, composition: "Parent Nominee", name: "Sh. Gurpreet Singh", designation: "Parent" },
-  { sr: 9, composition: "Senior Administrative Officer", name: "Ms. Renu Bala", designation: "Admin Officer" },
-  { sr: 10, composition: "Teacher Member", name: "Prof. (Dr.) Gurvinder Singh", designation: "Professor" },
-  { sr: 11, composition: "Teacher Member", name: "Dr. Shikha Sharma", designation: "Associate Professor" },
-  { sr: 12, composition: "Teacher Member", name: "Ms. Jyoti Bala", designation: "Assistant Professor" },
-  { sr: 13, composition: "Teacher Member", name: "Mr. Pankaj Sharma", designation: "Assistant Professor" },
-  { sr: 14, composition: "Teacher Member", name: "Ms. Neha Gupta", designation: "Assistant Professor" },
-  { sr: 15, composition: "IQAC Coordinator", name: "Dr. Amit K. Goyal", designation: "Professor" },
+  { sr: "1", composition: "Chairperson", name: "Prof. (Dr.) Manish Goswami", designation: "Principal" },
+  { sr: "2", composition: "Teachers", name: "Dr. A. Pandurangan", designation: "Professor" },
+  { sr: "", composition: "", name: "Dr. Ashok Kumar Tiwary", designation: "Professor" },
+  { sr: "", composition: "", name: "Dr. Swikriti", designation: "Professor" },
+  { sr: "", composition: "", name: "Dr. Satbir Kaur", designation: "Professor" },
+  { sr: "", composition: "", name: "Mr. Anshu Gupta", designation: "Associate Professor" },
+  { sr: "", composition: "", name: "Dr. Damit Kumar", designation: "Associate Professor" },
+  { sr: "3", composition: "Management Member", name: "Er. Vishal Garg", designation: "Director Secretarial & Administration, Management Representative" },
+  { sr: "4", composition: "Senior Administrative Officers", name: "Adv. Shubham Garg", designation: "Director Training & Placement" },
+  { sr: "", composition: "", name: "Er. Ankur Gill", designation: "Director Operations" },
+  { sr: "", composition: "", name: "Ms. Tripta Kumari", designation: "Office Superintendent" },
+  { sr: "5", composition: "Local Society, Students and Alumni", name: "Mr. Gaurav Garg", designation: "Local Society" },
+  { sr: "", composition: "", name: "Ms. Garima", designation: "B. Pharmacy 3rd Semester" },
+  { sr: "", composition: "", name: "Mr. Sagnik Roy", designation: "B. Pharmacy 3rd Semester" },
+  { sr: "", composition: "", name: "Mr. Lal Krishna Kumar", designation: "Alumnus, B.Pharmacy" },
+  { sr: "6", composition: "Nominee from Employers/ Industrialists/ Stakeholders", name: "Mr. Pradeep Sharma", designation: "General Manager, (Katherine & Kyoor Pharmaceuticals)" },
+  { sr: "7", composition: "Coordinator", name: "Dr. Meenakshi Rana", designation: "" },
 ];
 
 const containerVariants = {
@@ -194,7 +195,7 @@ const IQACPage = () => {
                 <tbody className="divide-y divide-gray-100">
                   {committeeMembers.map((member, index) => (
                     <motion.tr 
-                      key={member.sr}
+                      key={index}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: index * 0.05 }}
@@ -217,22 +218,6 @@ const IQACPage = () => {
           </motion.div>
         </section>
 
-        {/* Section 4: Footer Note */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-end text-right mt-16 pb-12"
-        >
-          <p className="text-gray-500 mb-6 font-medium italic border-r-2 border-[#F59E0B] pr-4">
-            This notification shall be effective from 9th February, 2026.
-          </p>
-          <div className="space-y-1">
-            <p className="text-xl font-bold text-[#0F4C81]">Prof. (Dr.) Manish Goswami</p>
-            <p className="text-lg text-gray-600 font-medium">Principal</p>
-            <p className="text-gray-400 text-sm">SVCP, Punjab</p>
-          </div>
-        </motion.div>
 
       </div>
     </div>
