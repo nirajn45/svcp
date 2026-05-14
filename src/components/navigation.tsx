@@ -71,7 +71,14 @@ export default function Navigation() {
         { name: "D.Pharmacy", href: "/programs/D.Pharmacy" },
         { name: "B.Pharmacy", href: "/programs/B.Pharmacy" },
         { name: "Pharm.D", href: "/programs/Pharm.D" },
-        { name: "M.Pharmacy", href: "/programs/M.Pharmacy" },
+        { 
+          name: "M.Pharmacy", 
+          href: "",
+          subItems: [
+            { name: "M.Pharmacy (Pharmacology)", href: "/programs/M.Pharmacy-Pharmacology" },
+            { name: "M.Pharmacy (Pharmaceutics)", href: "/programs/M.Pharmacy-Pharmaceutics" }
+          ]
+        },
       ],
     },
     {
@@ -84,7 +91,7 @@ export default function Navigation() {
           name: "Admission Process and guidelines",
           href: "/admission/admissionProcess",
         },
-        { name: "Fee Structure", href: "/admission/feeStructure" },
+        { name: "Fee Structure", href: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh7pE2OuMuQUA1JMyv94GFVdat0Kq5BHxILhDm" },
       ],
     },
     { name: "IQAC", href: "/academics/iqac" },
@@ -239,24 +246,64 @@ export default function Navigation() {
                       {/* Dropdown */}
                       <div className="absolute left-0 mt-1 hidden group-hover:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[200px]">
                         {item.subItems.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            href={sub.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
-                          >
-                            {sub.name}
-                          </Link>
+                          sub.subItems ? (
+                            <div key={sub.name} className="relative group/nested">
+                              <button className="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap">
+                                <span>{sub.name}</span>
+                                <ChevronDown className="h-3 w-3 -rotate-90" />
+                              </button>
+                              <div className="absolute left-full top-0 hidden group-hover/nested:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[240px]">
+                                {sub.subItems.map((nestedSub) => (
+                                  <Link
+                                    key={nestedSub.name}
+                                    href={nestedSub.href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
+                                  >
+                                    {nestedSub.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ) : (
+                            sub.href.startsWith("http") ? (
+                              <a
+                                key={sub.name}
+                                href={sub.href}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
+                              >
+                                {sub.name}
+                              </a>
+                            ) : (
+                              <Link
+                                key={sub.name}
+                                href={sub.href}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
+                              >
+                                {sub.name}
+                              </Link>
+                            )
+                          )
                         ))}
                       </div>
                     </div>
                   ) : (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md"
-                    >
-                      {item.name}
-                    </Link>
+                    item.href.startsWith("http") ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md"
+                      >
+                        {item.name}
+                      </Link>
+                    )
                   )
                 )}
               </div>
@@ -298,27 +345,67 @@ export default function Navigation() {
                       {openSubmenu === index && (
                         <div className="ml-4 space-y-1 border-l border-gray-200 pl-2 my-1">
                           {item.subItems.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {sub.name}
-                            </Link>
+                            sub.subItems ? (
+                              <div key={sub.name} className="mb-2">
+                                <div className="px-3 py-2 text-sm font-semibold text-gray-800">{sub.name}</div>
+                                <div className="ml-4 space-y-1 border-l border-gray-100 pl-2">
+                                  {sub.subItems.map((nestedSub) => (
+                                    <Link
+                                      key={nestedSub.name}
+                                      href={nestedSub.href}
+                                      className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {nestedSub.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ) : (
+                              sub.href.startsWith("http") ? (
+                                <a
+                                  key={sub.name}
+                                  href={sub.href}
+                                  className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  {sub.name}
+                                </a>
+                              ) : (
+                                <Link
+                                  key={sub.name}
+                                  href={sub.href}
+                                  className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  {sub.name}
+                                </Link>
+                              )
+                            )
                           ))}
                         </div>
                       )}
                     </div>
                   ) : (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors duration-200"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
+                    item.href.startsWith("http") ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    )
                   )
                 )}
               </div>

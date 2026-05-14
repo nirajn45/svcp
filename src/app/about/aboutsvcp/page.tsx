@@ -66,10 +66,10 @@ const Page = () => {
         "Modern education must go beyond preparing students for jobs—it should equip them for lifelong learning, leadership, and meaningful contributions to society. Guided by this belief, Swami Vivekanand College of Pharmacy (SVCP) has built an academic ecosystem where knowledge meets innovation, and values shape vision. Since our establishment in 2005, we have embraced the evolving demands of industry and society, designing academic programs that are practical, relevant, and future-ready. Our academic philosophy places students at the heart of every initiative. Through well-structured curricular, outcome-based teaching, and the integration of modern technology, we equip our learners with the knowledge and skills needed to excel in a competitive global landscape. Our faculty members, serving as mentors and role models, guide students to cultivate professional competence alongside integrity and social responsibility. We complement classroom learning with experiential opportunities—ranging from research projects and industrial training to seminars, cultural fests, and global collaborations—ensuring a well-rounded growth experience. At SVCP, education is not merely about degrees; it is about transforming potential into achievement. We remain dedicated to producing graduates who are not only job-ready but also future leaders, innovators, and change-makers in their chosen fields.",
     },
     {
-      name: "Mr. Himanshu Rao",
+      name: "Mr. Satish Sharma",
       position: "Registrar",
       image:
-        "https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwzyXzaXLn7CWOjAimtbzX4a35RNgJTxvedhHc",
+        "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhXQ5qFNdBwxYedrOI4V6qGjbEHDLtgCS7MiyN",
       message:
         "Swami Vivekanand College of Pharmacy, an institution committed to academic excellence, innovation, and holistic development of students. At SVCP, we nurture future pharmacists with strong professional ethics, scientific knowledge, and practical skills, enabling them to contribute effectively to the healthcare sector. Guided by the vision of Swami Vivekanand Ji, we strive to instill values of discipline, dedication, and service to society. Our dedicated faculty, modern infrastructure, well-equipped laboratories, and a student-centric environment provide the perfect platform for young minds to excel in academics, research, and co-curricular activities. We aim to empower students not only to achieve professional success but also to become responsible citizens who can make a positive difference in the community.",
     },
@@ -205,15 +205,15 @@ const Page = () => {
               >
                 {/* Image Side */}
                 <div className="w-full h-full">
-                  <div className="relative group w-full h-full min-h-100">
+                  <div className="relative group w-full aspect-square lg:aspect-auto lg:h-[650px] overflow-hidden rounded-3xl shadow-2xl">
                     <img
                       src={member.image || "/placeholder.svg"}
                       alt={member.name}
-                      className="w-full h-full object-cover object-center rounded-3xl shadow-2xl hover:scale-105 transition-all duration-500"
+                      className="w-full h-full object-cover object-[center_25%] hover:scale-105 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent rounded-3xl" />
                     {/* Name badge */}
-                    <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-white/80">
+                    <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-white/80 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
                       <h3 className="text-xl font-bold text-[#0F4C81]">
                         {member.name}
                       </h3>
@@ -226,7 +226,7 @@ const Page = () => {
 
                 {/* Message Side */}
                 <div className="flex flex-col h-full">
-                  <div className="bg-white border border-gray-200 rounded-3xl shadow-lg p-8 md:p-10 h-full flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                  <div className="bg-white border border-gray-200 rounded-3xl shadow-lg p-8 md:p-10 h-full lg:h-[650px] flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div>
                       <div className="flex items-center gap-4 mb-6">
                         <div className="inline-flex items-center bg-[#F59E0B]/10 px-4 py-2 rounded-full">
@@ -240,7 +240,7 @@ const Page = () => {
                       </h3>
                       <div className="w-12 h-1 bg-[#F59E0B] rounded-full mb-6" />
 
-                      <blockquote className="text-gray-600 text-lg leading-relaxed italic border-l-4 border-[#F59E0B] pl-6 max-h-50 overflow-y-auto pr-2 scrollbar-thin">
+                      <blockquote className="text-gray-600 text-lg leading-relaxed italic border-l-4 border-[#F59E0B] pl-6 max-h-64 overflow-y-auto pr-2 scrollbar-thin">
                         &quot;{member.message}&quot;
                       </blockquote>
                     </div>
@@ -313,24 +313,24 @@ const Page = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch opacity-0 translate-y-6 animate-[fadeInUp_0.6s_ease-out_forwards] animation-delay-[0.2s]">
             {/* Image */}
-            <div className="relative group h-full">
+            <div className="relative group h-full lg:h-[550px]">
               <div className="absolute -inset-2 bg-linear-to-br from-[#F59E0B]/20 to-[#0F4C81]/10 rounded-3xl blur-sm opacity-60 group-hover:opacity-100 transition-all duration-500" />
               <img
-                src="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumjPBSQDFEKYdovOsGfC3D9tNMk6nXaAzRVqy0"
+                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhx7s1aJTqPzmp1ofYAyVMtEcFNh9bBkJs2Z6j"
                 alt="Prof. (Dr.) Sanjeev Mittal"
-                className="relative w-full h-full min-h-100 object-cover object-center rounded-3xl shadow-2xl hover:scale-105 transition-all duration-500"
+                className="relative w-full h-full object-cover object-top rounded-3xl shadow-2xl hover:scale-105 transition-all duration-500"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent rounded-3xl" />
               {/* Name overlay */}
-              <div className="absolute bottom-6 left-6 right-6 bg-[#0F4C81]/90 backdrop-blur-sm text-white p-6 rounded-2xl">
-                <p className="font-bold text-xl">Prof. (Dr.) Sanjeev Mittal</p>
-                <p className="text-[#F59E0B] text-lg font-medium">Principal, SVCP</p>
+              <div className="absolute bottom-6 left-6 bg-[#0F4C81]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl border border-white/20 shadow-2xl z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                <p className="font-bold text-lg md:text-xl">Dr. Manish Goswami</p>
+                <p className="text-[#F59E0B] text-sm md:text-base font-semibold mt-1">Principal, SVCP</p>
               </div>
             </div>
 
             {/* Content */}
             <div className="h-full flex flex-col">
-              <div className="bg-linear-to-br from-gray-50 to-orange-50/40 border border-gray-200 rounded-3xl shadow-lg p-10 md:p-12 h-full flex flex-col justify-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="bg-linear-to-br from-gray-50 to-orange-50/40 border border-gray-200 rounded-3xl shadow-lg p-10 md:p-12 h-full lg:h-[550px] flex flex-col justify-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 {/* Icon + Label */}
                 <div className="flex items-center gap-4 mb-8">
                   <div className="shrink-0 bg-[#F59E0B]/10 p-4 rounded-2xl">
@@ -346,7 +346,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="text-gray-700 text-lg leading-relaxed space-y-6 border-l-4 border-[#F59E0B] pl-8">
+                <div className="text-gray-700 text-lg leading-relaxed space-y-6 border-l-4 border-[#F59E0B] pl-8 max-h-[280px] overflow-y-auto scrollbar-thin pr-2">
                   <p>
                     &quot;Our institution, inspired by the ideals of Swami
                     Vivekanand Ji, is dedicated to nurturing competent,

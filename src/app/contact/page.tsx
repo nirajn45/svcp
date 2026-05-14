@@ -110,7 +110,6 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-yellow-600" />
                     </div>
                     <div>
-                      <p className="text-gray-600">Principal@svcp.org.in</p>
                       <p className="text-gray-600">hod@svcp.org.in</p>
                       <p className="text-gray-600">hr@svcp.org.in</p>
                       <p className="text-gray-600">principalsvcop.pharmacy@gmail.com</p>

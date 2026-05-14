@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const slides = [
+  "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhlX1x9rQejE7GLX36NmypxdFUHcRSQA0ftBva",
+  "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhqY8dtNPLb1MdDAnEeCuUz7wVXvp4oGxQjya8",
   "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhSui28QgkXizDmJxT0aBjLVsUr63F7G4Oev5K",
   "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhDzzoGIXngp296noYJjdXKVt8bBP4eQvShacs",
   "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhDz96jQ6ngp296noYJjdXKVt8bBP4eQvShacs",

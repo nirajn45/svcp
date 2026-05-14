@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Clock, BookOpen, Users, Award, ArrowRight, GraduationCap, FlaskConical, Microscope } from "lucide-react"
@@ -14,7 +17,7 @@ export default function CoursesPage() {
       description:
         "Comprehensive undergraduate program covering pharmaceutical sciences, drug discovery, development, and healthcare.",
       highlights: ["Industry Internships", "Research Projects", "Clinical Training", "Modern Laboratories"],
-      color: "#fea700",
+      color: "#F59E0B",
       icon: GraduationCap,
     },
     {
@@ -25,7 +28,7 @@ export default function CoursesPage() {
       eligibility: "B.Pharmacy degree",
       description: "Advanced postgraduate program focusing on specialized pharmaceutical research and development.",
       highlights: ["Research Excellence", "Advanced Techniques", "Publication Opportunities", "Industry Connect"],
-      color: "#f59e0b",
+      color: "#F59E0B",
       icon: Award,
     },
     {
@@ -36,7 +39,7 @@ export default function CoursesPage() {
       eligibility: "10+2 with PCM/PCB",
       description: "Professional doctorate program emphasizing clinical pharmacy practice and patient care.",
       highlights: ["Clinical Practice", "Hospital Rotations", "Patient Counseling", "Healthcare Leadership"],
-      color: "#ea580c",
+      color: "#F59E0B",
       icon: Users,
     },
     {
@@ -47,236 +50,274 @@ export default function CoursesPage() {
       eligibility: "10+2 with PCM/PCB",
       description: "Foundational program providing essential pharmaceutical knowledge and practical skills.",
       highlights: ["Quick Entry", "Practical Training", "Community Focus", "Professional Skills"],
-      color: "#d97706",
+      color: "#F59E0B",
       icon: BookOpen,
     },
   ]
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6, ease: "easeOut" },
+  }
+
+  const staggerContainer = {
+    initial: {},
+    whileInView: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+    viewport: { once: true },
+  }
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#f9fafb]">
       {/* Hero Section */}
-      <section className="relative h-[60vh] text-white overflow-hidden">
-        {/* Background Images */}
-        <div className="absolute inset-0 w-full h-80vh ">
-          <img src="https://media.getmyuni.com/azure/college-images-test/swami-vivekanand-institute-of-engineering-technology-sviet-patiala/student-life-e301dcc46c59ed90d23789fe67006d11.jpg" alt="courses background"
-           className="absolute inset-0 w-full object-cover"/>
-          {/* <div className="absolute inset-0 bg-black/20"></div> */}
+      <section className="relative h-[60vh] text-white overflow-hidden group flex items-center">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <motion.img 
+            initial={{ scale: 1.05 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhO3zVPGrVkH31mdhcPLXwlWeNI6y5R04MUoDf" 
+            alt="courses background"
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F4C81]/80 to-black/40"></div>
         </div>
-        <div className="relative w-full h-full flex items-center py-12 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-3xl mt-25">
-              <div className="inline-flex items-center bg-[#fea700]/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                <GraduationCap className="h-5 w-5 text-[#fea700] mr-2" />
-                <span className="text-[#fea700] font-semibold text-sm">Premium Education</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight animate-slide-left">
-                Our <span className="text-[#fea700]">Courses</span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-200 leading-relaxed animate-slide-left mb-6">
-                Comprehensive pharmaceutical education programs designed to meet the evolving demands of healthcare and
-                prepare students for successful careers in the pharmaceutical industry.
-              </p>
-              {/* <div className="flex gap-4 animate-slide-left">
-                <Button className="bg-[#fea700] hover:bg-[#e6960a] text-white px-6 py-3">
-                  Explore Programs
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 bg-transparent"
-                >
-                  Download Brochure
-                </Button>
-              </div> */}
+        
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl"
+          >
+            <div className="inline-flex items-center bg-[#F59E0B]/20 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-[#F59E0B]/30 shadow-sm">
+              <GraduationCap className="h-5 w-5 text-[#F59E0B] mr-2" />
+              <span className="text-[#F59E0B] font-semibold text-sm">Premium Education</span>
             </div>
-          </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight">
+              Our <span className="text-[#F59E0B]">Courses</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl">
+              Comprehensive pharmaceutical education programs designed to meet the evolving demands of healthcare and
+              prepare students for successful careers in the pharmaceutical industry.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Courses Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-[#fea700]/10 px-4 py-2 rounded-full mb-4">
-              <BookOpen className="h-4 w-4 text-[#fea700] mr-2" />
-              <span className="text-[#fea700] font-semibold text-sm">Academic Excellence</span>
+          <motion.div 
+            {...fadeInUp}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center bg-[#F59E0B]/10 px-4 py-2 rounded-full mb-4">
+              <BookOpen className="h-4 w-4 text-[#F59E0B] mr-2" />
+              <span className="text-[#F59E0B] font-semibold text-sm">Academic Excellence</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Academic <span className="text-[#fea700]">Programs</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-6 tracking-tight">
+              Academic <span className="text-[#F59E0B]">Programs</span>
             </h2>
-            <p className="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">
               Choose from our comprehensive range of pharmacy programs, each designed to provide specialized knowledge
               and practical skills for your career advancement.
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded mx-auto mt-6"></div>
-          </div>
+            <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto mt-6"></div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {courses.map((course, index) => {
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          >
+            {courses.map((course) => {
               const Icon = course.icon
               return (
-                <Card
-                  key={course.id}
-                  className="group border-0 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up bg-white overflow-hidden"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <div className="h-1 bg-gradient-to-r transition-all duration-300 group-hover:h-2" style={{ background: `linear-gradient(90deg, ${course.color}, ${course.color}80)` }}></div>
-                  <CardHeader className="bg-gradient-to-br from-white to-gray-50 group-hover:from-gray-50 group-hover:to-white transition-all duration-300">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        <div className="p-3 rounded-xl bg-white shadow-sm group-hover:shadow-md transition-all duration-300" style={{ backgroundColor: `${course.color}15` }}>
-                          <Icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" style={{ color: course.color }} />
-                        </div>
-                        <div>
-                          <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-gray-800 transition-colors">{course.name}</CardTitle>
-                          <p className="text-gray-600 text-sm">{course.fullName}</p>
-                        </div>
-                      </div>
-                      <div
-                        className="px-3 py-1 rounded-full text-white text-xs font-semibold shadow-sm"
-                        style={{ backgroundColor: course.color }}
-                      >
-                        {course.duration}
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <div className="flex flex-wrap gap-3 mb-4">
-                      <div className="flex items-center space-x-2 bg-gray-50 px-3 py-1 rounded-full">
-                        <Clock className="h-3 w-3" style={{ color: course.color }} />
-                        <span className="text-xs font-medium text-gray-600">{course.duration}</span>
-                      </div>
-                      <div className="flex items-center space-x-2 bg-gray-50 px-3 py-1 rounded-full">
-                        <BookOpen className="h-3 w-3" style={{ color: course.color }} />
-                        <span className="text-xs font-medium text-gray-600">{course.eligibility}</span>
-                      </div>
-                    </div>
-
-                    <p className="text-gray-600 mb-6 leading-relaxed text-sm">{course.description}</p>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3 text-sm">Key Highlights:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {course.highlights.map((highlight, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: course.color }}></div>
-                            <span className="text-xs text-gray-600">{highlight}</span>
+                <motion.div key={course.id} variants={fadeInUp}>
+                  <Card
+                    className="group border border-gray-100 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white rounded-2xl overflow-hidden h-full flex flex-col"
+                  >
+                    <div className="h-1.5 bg-[#F59E0B] transition-all duration-300 group-hover:h-2"></div>
+                    <CardHeader className="bg-gradient-to-br from-white to-gray-50/50 group-hover:from-gray-50 group-hover:to-white transition-all duration-300 pb-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4">
+                          <div className="p-3 rounded-xl bg-[#0F4C81]/5 shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:bg-[#F59E0B]/10">
+                            <Icon className="h-6 w-6 text-[#0F4C81] group-hover:text-[#F59E0B] transition-colors duration-300" />
                           </div>
-                        ))}
+                          <div>
+                            <CardTitle className="text-2xl font-bold text-[#0F4C81] group-hover:text-[#F59E0B] transition-colors tracking-tight">{course.name}</CardTitle>
+                            <p className="text-gray-500 text-sm font-medium mt-1">{course.fullName}</p>
+                          </div>
+                        </div>
+                        <div
+                          className="px-3 py-1.5 rounded-lg text-white text-xs font-bold shadow-sm bg-[#0F4C81]"
+                        >
+                          {course.duration}
+                        </div>
                       </div>
-                    </div>
+                    </CardHeader>
+                    <CardContent className="p-6 pt-2 flex-grow flex flex-col">
+                      <div className="flex flex-wrap gap-3 mb-5">
+                        <div className="flex items-center space-x-2 bg-gray-50 border border-gray-100 px-3 py-1.5 rounded-lg">
+                          <Clock className="h-4 w-4 text-[#F59E0B]" />
+                          <span className="text-xs font-semibold text-gray-600">{course.duration}</span>
+                        </div>
+                        <div className="flex items-center space-x-2 bg-gray-50 border border-gray-100 px-3 py-1.5 rounded-lg">
+                          <BookOpen className="h-4 w-4 text-[#F59E0B]" />
+                          <span className="text-xs font-semibold text-gray-600">{course.eligibility}</span>
+                        </div>
+                      </div>
 
-                    <Button asChild className="w-full text-white group-hover:shadow-lg transition-all duration-300" style={{ backgroundColor: course.color }}>
-                      <Link href={`/courses/${course.id}`}>
-                        Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
+                      <p className="text-gray-600 mb-6 leading-relaxed text-sm flex-grow">{course.description}</p>
+
+                      <div className="mb-8">
+                        <h4 className="font-bold text-[#0F4C81] mb-3 text-sm uppercase tracking-wide">Key Highlights</h4>
+                        <div className="grid grid-cols-2 gap-3">
+                          {course.highlights.map((highlight, idx) => (
+                            <div key={idx} className="flex items-start space-x-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-1.5 shrink-0"></div>
+                              <span className="text-sm font-medium text-gray-600 leading-tight">{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <Button asChild className="w-full bg-[#F59E0B] hover:bg-[#d97706] text-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 font-bold h-12">
+                        <Link href={`/programs/${course.name === "M.Pharmacy" ? "M.Pharmacy-Pharmacology" : course.name}`}>
+                          Learn More <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               )
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Research & Innovation Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-[#fea700]/10 px-4 py-2 rounded-full mb-4">
-              <FlaskConical className="h-4 w-4 text-[#fea700] mr-2" />
-              <span className="text-[#fea700] font-semibold text-sm">Innovation Hub</span>
+          <motion.div 
+            {...fadeInUp}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center bg-[#F59E0B]/10 px-4 py-2 rounded-full mb-4">
+              <FlaskConical className="h-4 w-4 text-[#F59E0B] mr-2" />
+              <span className="text-[#F59E0B] font-semibold text-sm">Innovation Hub</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Research & <span className="text-[#fea700]">Innovation</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-6 tracking-tight">
+              Research & <span className="text-[#F59E0B]">Innovation</span>
             </h2>
-            <p className="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">
               Cutting-edge research facilities and opportunities that drive pharmaceutical innovation and discovery
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded mx-auto mt-6"></div>
-          </div>
+            <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto mt-6"></div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
             {[
               {
                 title: "Advanced Research Labs",
                 description:
                   "State-of-the-art laboratories equipped with modern instruments for pharmaceutical research and drug development.",
                 icon: FlaskConical,
-                image: "https://www.sviet.ac.in/Courses/pharmacy/pharm/lab/QA.jpg",
-                gradient: "from-blue-500 to-purple-600"
+                image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhSVF7x6gkXizDmJxT0aBjLVsUr63F7G4Oev5K",
               },
               {
                 title: "Clinical Research",
                 description:
                   "Comprehensive clinical research programs focusing on drug safety, efficacy, and patient care optimization.",
                 icon: Microscope,
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_ArxUNNeQdI9gcdVGj05z9d5FUCQ_6g6I0g&s",
-                gradient: "from-green-500 to-teal-600"
+                image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhCjksPJAdUZEkx3JDvuRN8tSP2f5hLGVgpz7y",
               },
               {
                 title: "Industry Collaboration",
                 description:
                   "Strong partnerships with pharmaceutical companies for research projects and technology transfer initiatives.",
                 icon: Award,
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRqsGtznDlpDaWEDY1kniYlQrfviyzxjR2LQ&s",
-                gradient: "from-[#fea700] to-red-500"
+                image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhJQYAi2Oymi2th8Iu3GUzrRV70wBqXWOvsblk",
               },
             ].map((facility, index) => {
               const Icon = facility.icon
               return (
-                <Card
-                  key={index}
-                  className="group border-0 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up bg-white overflow-hidden"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={facility.image || "/placeholder.svg"}
-                      alt={facility.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${facility.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-2 rounded-xl shadow-sm">
-                      <Icon className="h-5 w-5 text-[#fea700]" />
+                <motion.div key={index} variants={fadeInUp}>
+                  <Card
+                    className="group border border-gray-100 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white rounded-2xl overflow-hidden h-full flex flex-col"
+                  >
+                    <div className="relative overflow-hidden h-56">
+                      <img
+                        src={facility.image || "/placeholder.svg"}
+                        alt={facility.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F4C81]/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2.5 rounded-xl shadow-sm">
+                        <Icon className="h-5 w-5 text-[#F59E0B]" />
+                      </div>
+                      <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md shadow-sm">
+                        <span className="text-xs font-bold text-[#0F4C81] tracking-wide uppercase">Research</span>
+                      </div>
                     </div>
-                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                      <span className="text-xs font-semibold text-gray-700">Research</span>
-                    </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#fea700] transition-colors">{facility.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">{facility.description}</p>
-                    <div className="mt-4 flex items-center text-[#fea700] font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                      <span>Learn More</span>
-                      <ArrowRight className="h-4 w-4 ml-1" />
-                    </div>
-                  </CardContent>
-                </Card>
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-[#0F4C81] mb-3 group-hover:text-[#F59E0B] transition-colors tracking-tight">{facility.title}</h3>
+                      <p className="text-gray-500 leading-relaxed text-sm flex-grow">{facility.description}</p>
+                      <div className="mt-6 flex items-center text-[#F59E0B] font-bold text-sm group-hover:translate-x-2 transition-transform duration-300 cursor-pointer">
+                        <span>Learn More</span>
+                        <ArrowRight className="h-4 w-4 ml-1.5" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               )
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Infrastructure Preview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-[#fea700]/10 px-4 py-2 rounded-full mb-4">
-              <Users className="h-4 w-4 text-[#fea700] mr-2" />
-              <span className="text-[#fea700] font-semibold text-sm">Modern Facilities</span>
+          <motion.div 
+            {...fadeInUp}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center bg-[#F59E0B]/10 px-4 py-2 rounded-full mb-4">
+              <Users className="h-4 w-4 text-[#F59E0B] mr-2" />
+              <span className="text-[#F59E0B] font-semibold text-sm">Modern Facilities</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              World-Class <span className="text-[#fea700]">Infrastructure</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-6 tracking-tight">
+              World-Class <span className="text-[#F59E0B]">Infrastructure</span>
             </h2>
-            <p className="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">
               Modern facilities and infrastructure designed to support comprehensive pharmaceutical education and
               research
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#fea700] to-yellow-500 rounded mx-auto mt-6"></div>
-          </div>
+            <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto mt-6"></div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
             {[
               {
                 title: "Modern Laboratories",
@@ -285,7 +326,6 @@ export default function CoursesPage() {
                 icon: BookOpen,
                 image: "https://www.sviet.ac.in/Courses/pharmacy/pharm/lab/practical.jpg",
                 stats: "15+ Labs",
-                color: "bg-blue-500"
               },
               {
                 title: "Digital Library",
@@ -294,59 +334,60 @@ export default function CoursesPage() {
                 icon: Award,
                 image: "https://images.shiksha.com/mediadata/images/1674026405phpPWWGmA.jpeg",
                 stats: "10,000+ Books",
-                color: "bg-green-500"
               },
               {
                 title: "Smart Classrooms",
                 description:
                   "Technology-enabled classrooms with modern audio-visual equipment for interactive learning.",
                 icon: Users,
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjJL4PPWsgmgPaKG_sXemxpj-UyLV0jeijHXGfWEzHVv7zYV4Vf-pO8sRd5N3Q5JU43A0&usqp=CAU",
+                image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh3GpffcXWcBCPbjL5ves4TuYMKaSJxRA8NGUp",
                 stats: "20+ Rooms",
-                color: "bg-purple-500"
               },
             ].map((facility, index) => {
               const Icon = facility.icon
               return (
-                <Card
-                  key={index}
-                  className="group border-0 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up bg-white overflow-hidden"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={facility.image || "/placeholder.svg"}
-                      alt={facility.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-2 rounded-xl shadow-sm">
-                      <Icon className="h-5 w-5 text-[#fea700]" />
+                <motion.div key={index} variants={fadeInUp}>
+                  <Card
+                    className="group border border-gray-100 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white rounded-2xl overflow-hidden h-full flex flex-col"
+                  >
+                    <div className="relative overflow-hidden h-56">
+                      <img
+                        src={facility.image || "/placeholder.svg"}
+                        alt={facility.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F4C81]/90 via-black/30 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2.5 rounded-xl shadow-sm">
+                        <Icon className="h-5 w-5 text-[#F59E0B]" />
+                      </div>
+                      <div className="absolute bottom-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 text-white px-3 py-1 rounded-md shadow-sm">
+                        <span className="text-xs font-bold tracking-wide uppercase">{facility.stats}</span>
+                      </div>
                     </div>
-                    <div className={`absolute bottom-4 left-4 ${facility.color} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
-                      {facility.stats}
-                    </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#fea700] transition-colors">{facility.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">{facility.description}</p>
-                    <div className="mt-4 flex items-center text-[#fea700] font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                      <span>Explore</span>
-                      <ArrowRight className="h-4 w-4 ml-1" />
-                    </div>
-                  </CardContent>
-                </Card>
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-[#0F4C81] mb-3 group-hover:text-[#F59E0B] transition-colors tracking-tight">{facility.title}</h3>
+                      <p className="text-gray-500 leading-relaxed text-sm flex-grow">{facility.description}</p>
+                      <div className="mt-6 flex items-center text-[#F59E0B] font-bold text-sm group-hover:translate-x-2 transition-transform duration-300 cursor-pointer">
+                        <span>Explore</span>
+                        <ArrowRight className="h-4 w-4 ml-1.5" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               )
             })}
-          </div>
+          </motion.div>
 
-          <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-[#fea700] hover:bg-[#e6960a] text-white px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300">
+          <motion.div 
+            {...fadeInUp}
+            className="text-center mt-16 flex justify-center"
+          >
+            <Button asChild size="lg" className="bg-[#F59E0B] hover:bg-[#d97706] text-white px-10 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 font-bold text-lg">
               <Link href="/infrastructure">
-                Explore Infrastructure <ArrowRight className="ml-2 h-5 w-5" />
+                Explore Infrastructure <ArrowRight className="ml-2 h-6 w-6" />
               </Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

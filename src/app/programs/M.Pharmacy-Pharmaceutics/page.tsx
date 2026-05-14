@@ -6,17 +6,21 @@ import {
   Download,
   Clock,
   GraduationCap,
-  CheckCircle,
-  Award,
   FlaskConical,
-  Briefcase,
   Target,
   Users,
   Building2,
-  Settings,
-  Factory,
-  Store,
+  Award,
+  Microscope,
+  BookOpen,
+  Briefcase,
+  PenTool,
   ShieldCheck,
+  Stethoscope,
+  Lightbulb,
+  Factory,
+  Search,
+  FileCheck
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -26,7 +30,7 @@ import LabCarousel from "@/components/LabCarousel";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const DPharmacyPage = () => {
+const MPharmacyPharmaceuticsPage = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
@@ -45,54 +49,46 @@ const DPharmacyPage = () => {
   };
 
   const quickInfo = [
-    { icon: Clock, label: "Duration", value: "2 Years" },
-    { icon: GraduationCap, label: "Program Name", value: "Diploma in Pharmacy" },
+    { icon: Clock, label: "Program Duration", value: "2 Years (4 Semesters)" },
+    { icon: GraduationCap, label: "Program Name", value: "M.Pharmacy (Pharmaceutics)" },
     { icon: Target, label: "Mode of Admission", value: "Merit / Entrance" },
   ];
 
-  const careerRoles = [
-    {
-      title: "Pharmacy Technician",
-      desc: "Assist pharmacists in dispensing medications and managing pharmacy operations.",
-      image: "/images/dpharm/career_tech.png",
-    },
-    {
-      title: "Drug Store Manager",
-      desc: "Oversee the day-to-day operations of a pharmacy, including inventory management and customer service.",
-      image: "/images/dpharm/drug_manager.png",
-    },
-    {
-      title: "Hospital Pharmacist",
-      desc: "Provide pharmaceutical care to patients in hospital settings, including dispensing medications and monitoring drug therapy.",
-      image: "/images/dpharm/hospital_pharmacist.png",
-    },
-    {
-      title: "Retail/Wholesale Pharmacist",
-      desc: "Manage retail or wholesale pharmacy operations, including dispensing medications and counseling patients.",
-      image: "/images/dpharm/retail_pharmacist.png",
-    },
+  const careerOpportunities = [
+    { name: "Formulation Scientist", icon: FlaskConical },
+    { name: "Production/Manufacturing Pharmacist", icon: Factory },
+    { name: "Quality Control (QC) Analyst", icon: Search },
+    { name: "Quality Assurance (QA) Officer", icon: ShieldCheck },
+    { name: "Research & Development (R&D) Scientist", icon: Microscope },
+    { name: "Regulatory Affairs Associate", icon: FileCheck },
+    { name: "Academician", icon: BookOpen },
   ];
 
-  const highlights = [
+  const whyChooseUs = [
     {
-      title: "Practical Training",
+      title: "Advanced Facilities",
       icon: FlaskConical,
-      desc: "Hands-on experience in pharmaceutical operations.",
+      desc: "Well-equipped pharmaceutics laboratories",
     },
     {
-      title: "Industry Exposure",
-      icon: Briefcase,
-      desc: "Internship opportunities in retail and hospital pharmacy settings.",
+      title: "Expert Faculty",
+      icon: Users,
+      desc: "Experienced and research-oriented faculty",
     },
     {
-      title: "Skill Development",
-      icon: Target,
-      desc: "Enhance skills in drug dispensing and patient care.",
+      title: "Relevant Curriculum",
+      icon: BookOpen,
+      desc: "Industry-relevant curriculum",
     },
     {
-      title: "Career Opportunities",
-      icon: GraduationCap,
-      desc: "Pathways to employment in various pharmacy sectors.",
+      title: "Modern Tech",
+      icon: Microscope,
+      desc: "Exposure to modern formulation technologies",
+    },
+    {
+      title: "Innovation Focus",
+      icon: Lightbulb,
+      desc: "Strong focus on innovation and research",
     },
   ];
 
@@ -104,11 +100,11 @@ const DPharmacyPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhhqLZO0vYTA0HQ4lC3zruVx5eGqtm7IhsDcXg"
-            alt="D.Pharmacy Hero"
+            src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhDd7LrLngp296noYJjdXKVt8bBP4eQvShacsH"
+            alt="M.Pharmacy Hero"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.h1
@@ -117,7 +113,7 @@ const DPharmacyPage = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight"
           >
-            Diploma in <span className="text-[#F59E0B]">Pharmacy</span> (D.Pharm)
+            M.Pharmacy <span className="text-[#F59E0B]">(Pharmaceutics)</span> – 2 Years
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -125,13 +121,12 @@ const DPharmacyPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-2xl text-gray-200 font-medium leading-relaxed"
           >
-            Build your career in pharmaceutical sciences with practical knowledge
-            and industry exposure.
+            Focus on the design, development, and evaluation of pharmaceutical dosage forms.
           </motion.p>
         </div>
       </section>
 
-      {/* ── Section 2: Program Overview ───────────────────────────── */}
+      {/* ── Section 2: Program Overview & About the Course ─────────── */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -142,23 +137,18 @@ const DPharmacyPage = () => {
                 </span>
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] leading-tight">
-                The Foundation of Your <br />
-                <span className="text-[#F59E0B]">Pharmacy Career</span>
+                About the <span className="text-[#F59E0B]">Course</span>
               </h2>
               <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full" />
-              <div className="space-y-6">
+              <div className="space-y-6 max-h-[400px] overflow-y-auto pr-4 custom-scrollbar">
                 <p className="text-lg text-gray-700 leading-relaxed text-justify">
-                  The 2-year Diploma in Pharmacy program under Swami Vivekanand
-                  College of Pharmacy is a comprehensive and compact qualification
-                  for understanding the basics of Human Physiology, Disease,
-                  Therapeutic Compounds & drugs in use, their pharmacology &
-                  formulations, drug store management and Pharmaceutical
-                  Jurisprudence.
+                  The M.Pharmacy in Pharmaceutics at Swami Vivekanand College of Pharmacy is a postgraduate program focused on the design, development, and evaluation of pharmaceutical dosage forms. The course equips students with advanced knowledge in drug delivery systems, formulation development, and modern pharmaceutical technologies, preparing them for dynamic roles in the pharmaceutical and healthcare industries.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed text-justify">
-                  The course provides the minimum essential qualification to get
-                  registered as a Pharmacist in India & operate Retail/Wholesale &
-                  Community Pharmacy and to get employed as Hospital Pharmacist.
+                  The program provides comprehensive training in Advanced Drug Delivery Systems, Pharmaceutical Formulation Development, Biopharmaceutics and Pharmacokinetics, Novel Drug Delivery Technologies, Industrial Pharmacy and Scale-Up Techniques, Quality Assurance and Validation.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                  Students gain practical exposure through laboratory work, industrial training, seminars, and a research dissertation in the final year.
                 </p>
               </div>
             </motion.div>
@@ -169,9 +159,9 @@ const DPharmacyPage = () => {
             >
               <div className="absolute -inset-4 bg-[#F59E0B]/10 rounded-[2rem] blur-xl group-hover:bg-[#F59E0B]/20 transition-all duration-500" />
               <img
-                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhSNd9EsgkXizDmJxT0aBjLVsUr63F7G4Oev5K"
+                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhP1v82UWjrQvG0KLAdV3Hxg1Dhf72XyU8ElwF"
                 alt="Pharmacy Students"
-                className="relative w-full rounded-2xl shadow-lg object-cover hover:scale-[1.02] transition-transform duration-500"
+                className="relative w-full h-full min-h-[400px] rounded-2xl shadow-lg object-cover hover:scale-[1.02] transition-transform duration-500"
               />
             </motion.div>
           </div>
@@ -209,13 +199,16 @@ const DPharmacyPage = () => {
         </div>
       </section>
 
-      {/* ── Section 4: Major Tracks ───────────────────────────────── */}
+      {/* ── Section 4: Career Opportunities ───────────────────────────────── */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-6">
-              Major <span className="text-[#F59E0B]">Tracks</span>
+              Career <span className="text-[#F59E0B]">Opportunities</span>
             </h2>
+            <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+              Graduates can pursue careers as:
+            </p>
             <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto" />
           </motion.div>
           <motion.div
@@ -223,15 +216,9 @@ const DPharmacyPage = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
+            className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6"
           >
-            {[
-              { name: "Process Control", icon: Settings },
-              { name: "Manufacturing", icon: Factory },
-              { name: "Quality Control", icon: ShieldCheck },
-              { name: "Medical Representative", icon: Users },
-              { name: "Retail/Wholesale Pharmacy Outlet", icon: Store },
-            ].map((track, idx) => (
+            {careerOpportunities.map((track, idx) => (
               <motion.div
                 key={idx}
                 variants={fadeInUp}
@@ -254,21 +241,30 @@ const DPharmacyPage = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <motion.div {...fadeInUp} className="max-w-4xl">
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-12">
-              Eligibility <span className="text-[#F59E0B]">Criteria</span>
+              Eligibility Criteria <span className="text-[#F59E0B]">for Admission</span>
             </h2>
-            <div className="space-y-8 border-l-4 border-[#F59E0B] pl-8 py-2">
-              <p className="text-xl text-gray-700 leading-relaxed text-justify">
-                Candidate shall have passed 10+2 examination conducted by the
-                respective state/central government authorities recognized as
-                equivalent to 10+2 examination by the Association of Indian
-                Universities (AIU) with English as one of the subjects and
-                Physics, Chemistry, Mathematics (P.C.M) and or Biology
-                (P.C.B/P.C.M.B.) as optional subjects individually.
-              </p>
-              <p className="text-xl text-gray-700 leading-relaxed text-justify">
-                Any other qualification approved by the Pharmacy Council of India
-                as equivalent to any of the above examinations.
-              </p>
+            <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
+              Candidates seeking admission to the M.Pharmacy (Pharmaceutics) program must fulfill the following criteria:
+            </p>
+            <div className="space-y-4 border-l-4 border-[#F59E0B] pl-8 py-2">
+              <div className="flex items-start">
+                <div className="w-2 h-2 mt-2 mr-3 bg-[#F59E0B] rounded-full"></div>
+                <p className="text-xl text-gray-700 leading-relaxed text-justify">
+                  Must have passed B.Pharmacy from a recognized university
+                </p>
+              </div>
+              <div className="flex items-start">
+                <div className="w-2 h-2 mt-2 mr-3 bg-[#F59E0B] rounded-full"></div>
+                <p className="text-xl text-gray-700 leading-relaxed text-justify">
+                  Should have secured minimum 55% marks in B.Pharmacy.
+                </p>
+              </div>
+              <div className="flex items-start">
+                <div className="w-2 h-2 mt-2 mr-3 bg-[#F59E0B] rounded-full"></div>
+                <p className="text-xl text-gray-700 leading-relaxed text-justify">
+                  Admission will be granted as per the norms of PCI, State Government, and the affiliated university
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -299,55 +295,18 @@ const DPharmacyPage = () => {
               className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 min-w-[280px]"
             >
               <Award className="w-10 h-10 text-[#F59E0B] mx-auto mb-4" />
-              <h4 className="text-xl font-bold">Approved by AICTE</h4>
+              <h4 className="text-xl font-bold">Approved by PCI</h4>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── Section 7: Downloads ──────────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-          <motion.div {...fadeInUp} className="mb-12">
-            <h3 className="text-3xl font-bold text-[#0F4C81] mb-4">Downloads</h3>
-          </motion.div>
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-6"
-          >
-            <motion.a
-              variants={fadeInUp}
-              href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh7pE2OuMuQUA1JMyv94GFVdat0Kq5BHxILhDm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 bg-[#F59E0B] hover:bg-[#d97706] text-white px-8 py-4 rounded-lg shadow-md transition-all duration-300 font-bold text-lg"
-            >
-              <Download className="w-6 h-6 group-hover:animate-bounce" />
-              Fee Structure
-            </motion.a>
-            <motion.a
-              variants={fadeInUp}
-              href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhay584yVC8K1GnFqt93VfM5zvdpiEZWeNRxrI"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 bg-[#F59E0B] hover:bg-[#d97706] text-white px-8 py-4 rounded-lg shadow-md transition-all duration-300 font-bold text-lg"
-            >
-              <Download className="w-6 h-6 group-hover:animate-bounce" />
-              SVIET Brochure
-            </motion.a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Section 8: Career Roles ───────────────────────────────── */}
-      <section className="py-20 md:py-28">
+      {/* ── Section 7: Why Choose This Course? ────────────────────────── */}
+      <section className="py-20 md:py-28 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-6">
-              Future <span className="text-[#F59E0B]">Career Roles</span>
+              Why Choose <span className="text-[#F59E0B]">This Course?</span>
             </h2>
             <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto" />
           </motion.div>
@@ -356,55 +315,18 @@ const DPharmacyPage = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-5 gap-6"
           >
-            {careerRoles.map((role, idx) => (
+            {whyChooseUs.map((item, idx) => (
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="relative h-80 rounded-xl overflow-hidden group shadow-md"
-              >
-                <img
-                  src={role.image}
-                  alt={role.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-colors" />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <h4 className="text-white font-bold text-2xl mb-2">
-                    {role.title}
-                  </h4>
-                  <p className="text-gray-200 font-medium leading-relaxed">
-                    {role.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Section 9: Program Highlights ────────────────────────── */}
-      <section className="py-12 md:py-16 bg-gray-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {highlights.map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeInUp}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col items-center text-center"
               >
                 <div className="bg-[#F59E0B]/10 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
                   <item.icon className="w-7 h-7 text-[#F59E0B]" />
                 </div>
-                <h4 className="text-[#0F4C81] text-xl font-bold mb-3">{item.title}</h4>
-                <p className="text-gray-600 font-medium leading-relaxed">
+                <p className="text-gray-700 font-bold leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>
@@ -413,10 +335,10 @@ const DPharmacyPage = () => {
         </div>
       </section>
 
-      {/* ── Section 10: Laboratories Carousel ────────────────────── */}
+      {/* ── Section 8: Laboratories Carousel ────────────────────── */}
       <LabCarousel />
     </div>
   );
 };
 
-export default DPharmacyPage;
+export default MPharmacyPharmaceuticsPage;
