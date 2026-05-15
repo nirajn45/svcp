@@ -17,20 +17,14 @@ import {
   Microscope,
   Search,
 } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
 import LabCarousel from "@/components/LabCarousel";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const BPharmacyPage = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
   const staggerContainer = {

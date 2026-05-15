@@ -25,20 +25,14 @@ import {
   Truck,
   BookOpen
 } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
 import LabCarousel from "@/components/LabCarousel";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
 
 const PharmDPage = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
   const staggerContainer = {
@@ -236,7 +230,7 @@ const PharmDPage = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-6">
-              Program's <span className="text-[#F59E0B]">Major Tracks</span>
+              Program&apos;s <span className="text-[#F59E0B]">Major Tracks</span>
             </h2>
             <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto" />
           </motion.div>

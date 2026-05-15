@@ -18,20 +18,14 @@ import {
   Store,
   ShieldCheck,
 } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
 import LabCarousel from "@/components/LabCarousel";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
 
 const DPharmacyPage = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
   const staggerContainer = {

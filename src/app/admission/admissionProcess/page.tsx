@@ -38,7 +38,7 @@ const AdmissionProcessPage = () => {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
   const staggerContainer = {
@@ -175,7 +175,7 @@ const AdmissionProcessPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F4C81]">SVGOI Experience</h2>
               <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full" />
               <p className="text-gray-600 leading-relaxed text-justify">
-                Experience a world of opportunities at SVGOI, where we boast a vibrant campus spanning over 25 acres and house a diverse faculty of over 250 professionals. With a global alumni network exceeding 25,000 and over 1,000 international students, we've garnered recognition through 25+ national and international awards.
+                Experience a world of opportunities at SVGOI, where we boast a vibrant campus spanning over 25 acres and house a diverse faculty of over 250 professionals. With a global alumni network exceeding 25,000 and over 1,000 international students, we&apos;ve garnered recognition through 25+ national and international awards.
               </p>
               <button className="bg-[#F59E0B] hover:bg-[#d97706] text-white px-8 py-3 rounded-lg font-bold shadow-md hover:shadow-xl transition-all duration-300 flex items-center group">
                 Apply Now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -432,7 +432,7 @@ const AdmissionProcessPage = () => {
               </h2>
               <div className="w-20 h-1.5 bg-[#F59E0B] rounded-full" />
               <p className="text-lg text-gray-700 leading-relaxed text-justify">
-                At SVGOI, we don't just educate—we <span className="text-[#F59E0B] font-bold">inspire, nurture, and empower</span>. With a focus on holistic development, industry-aligned curricula, and state-of-the-art facilities, we create an environment where students can unlock their true potential.
+                At SVGOI, we don&apos;t just educate—we <span className="text-[#F59E0B] font-bold">inspire, nurture, and empower</span>. With a focus on holistic development, industry-aligned curricula, and state-of-the-art facilities, we create an environment where students can unlock their true potential.
               </p>
               <button className="bg-[#0F4C81] hover:bg-[#0c3c66] text-white px-8 py-3 rounded-lg font-bold shadow-md hover:shadow-xl transition-all duration-300">
                 Learn More

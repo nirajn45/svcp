@@ -59,7 +59,7 @@ export default function CoursesPage() {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   }
 
   const staggerContainer = {
@@ -80,7 +80,7 @@ export default function CoursesPage() {
           <motion.img 
             initial={{ scale: 1.05 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            transition={{ duration: 1.5, ease: "easeOut" as const }}
             src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhO3zVPGrVkH31mdhcPLXwlWeNI6y5R04MUoDf" 
             alt="courses background"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
