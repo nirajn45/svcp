@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -60,11 +61,14 @@ const Page = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="h-full max-h-[70vh]"
           >
-            <div className="h-full">
-              <img
+            <div className="h-full relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200 hover:scale-[1.02] transition-transform duration-500">
+              <Image
                 src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhXQ5qFNdBwxYedrOI4V6qGjbEHDLtgCS7MiyN"
                 alt="Mr. Satish Sharma"
-                className="w-full h-full object-cover object-[center_25%] rounded-2xl shadow-xl border border-gray-200 hover:scale-[1.02] transition-transform duration-500"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+                className="object-cover object-[center_25%]"
               />
             </div>
           </motion.div>

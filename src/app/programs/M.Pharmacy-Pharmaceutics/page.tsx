@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Download,
@@ -93,14 +94,17 @@ const MPharmacyPharmaceuticsPage = () => {
       {/* ── Section 1: Hero ──────────────────────────────────────── */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhDd7LrLngp296noYJjdXKVt8bBP4eQvShacsH"
             alt="M.Pharmacy Hero"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/60 z-10" />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -149,14 +153,18 @@ const MPharmacyPharmaceuticsPage = () => {
             <motion.div
               {...fadeInUp}
               transition={{ delay: 0.2 }}
-              className="relative group"
+              className="relative group h-full"
             >
               <div className="absolute -inset-4 bg-[#F59E0B]/10 rounded-[2rem] blur-xl group-hover:bg-[#F59E0B]/20 transition-all duration-500" />
-              <img
-                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhP1v82UWjrQvG0KLAdV3Hxg1Dhf72XyU8ElwF"
-                alt="Pharmacy Students"
-                className="relative w-full h-full min-h-[400px] rounded-2xl shadow-lg object-cover hover:scale-[1.02] transition-transform duration-500"
-              />
+              <div className="relative w-full min-h-[400px] h-full rounded-2xl shadow-lg overflow-hidden">
+                <Image
+                  src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhP1v82UWjrQvG0KLAdV3Hxg1Dhf72XyU8ElwF"
+                  alt="Pharmacy Students"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
             </motion.div>
           </div>
         </div>

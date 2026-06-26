@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -110,15 +111,17 @@ const LabCarousel = () => {
               <SwiperSlide key={idx}>
                 <div className="relative h-[320px] rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-500 cursor-pointer">
                   {/* Image */}
-                  <img
+                  <Image
                     src={lab.image}
                     alt={lab.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/45 group-hover:bg-black/60 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-black/45 group-hover:bg-black/60 transition-colors duration-500 z-10" />
                   {/* Content */}
-                  <div className="absolute bottom-8 left-8 flex gap-4 items-start">
+                  <div className="absolute bottom-8 left-8 flex gap-4 items-start z-20">
                     {/* Accent line */}
                     <div className="w-1 h-10 bg-[#F59E0B] rounded-full shrink-0 mt-1" />
                     <div>

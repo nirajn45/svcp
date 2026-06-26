@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { GraduationCap, ChevronLeft, ChevronRight, Building2, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const Page = () => {
   const [currentManagement, setCurrentManagement] = useState(0);
@@ -155,17 +156,21 @@ const Page = () => {
               </div>
             </div>
 
-            {/* Right — Image */}
             <div className="flex justify-center items-center opacity-0 translate-y-6 animate-[fadeInUp_0.6s_ease-out_forwards] animation-delay-[0.4s]">
               <div className="relative group w-full max-w-lg">
                 <div className="absolute -inset-2 bg-linear-to-br from-[#F59E0B]/30 to-[#0F4C81]/20 rounded-3xl blur-sm opacity-70 group-hover:opacity-100 transition-all duration-500" />
-                <img
-                  src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwMGSR1MjKT8yFRprHYOzIulXWf1a7xAmCbPhw"
-                  alt="SVCP Campus"
-                  className="relative w-full aspect-4/3 rounded-3xl shadow-2xl object-cover object-center hover:scale-105 transition-all duration-500"
-                />
+                <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwMGSR1MjKT8yFRprHYOzIulXWf1a7xAmCbPhw"
+                    alt="SVCP Campus"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center hover:scale-105 transition-all duration-500"
+                    priority
+                  />
+                </div>
                 {/* Corner badge */}
-                <div className="absolute -bottom-6 -right-6 bg-[#0F4C81] text-white rounded-2xl px-6 py-3 shadow-xl text-sm font-semibold">
+                <div className="absolute -bottom-6 -right-6 bg-[#0F4C81] text-white rounded-2xl px-6 py-3 shadow-xl text-sm font-semibold z-10">
                   Premier Pharmacy Institute
                 </div>
               </div>
@@ -206,12 +211,14 @@ const Page = () => {
                 {/* Image Side */}
                 <div className="w-full h-full">
                   <div className="relative group w-full aspect-square lg:aspect-auto lg:h-[650px] overflow-hidden rounded-3xl shadow-2xl">
-                    <img
+                    <Image
                       src={member.image || "/placeholder.svg"}
                       alt={member.name}
-                      className="w-full h-full object-cover object-[center_25%] hover:scale-105 transition-all duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover object-[center_25%] hover:scale-105 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent rounded-3xl" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent rounded-3xl z-10" />
                     {/* Name badge */}
                     <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-white/80 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
                       <h3 className="text-xl font-bold text-[#0F4C81]">
@@ -315,12 +322,16 @@ const Page = () => {
             {/* Image */}
             <div className="relative group h-full lg:h-[550px]">
               <div className="absolute -inset-2 bg-linear-to-br from-[#F59E0B]/20 to-[#0F4C81]/10 rounded-3xl blur-sm opacity-60 group-hover:opacity-100 transition-all duration-500" />
-              <img
-                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhx7s1aJTqPzmp1ofYAyVMtEcFNh9bBkJs2Z6j"
-                alt="Prof. (Dr.) Sanjeev Mittal"
-                className="relative w-full h-full object-cover object-top rounded-3xl shadow-2xl hover:scale-105 transition-all duration-500"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent rounded-3xl" />
+              <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhx7s1aJTqPzmp1ofYAyVMtEcFNh9bBkJs2Z6j"
+                  alt="Prof. (Dr.) Sanjeev Mittal"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-top hover:scale-105 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent z-10" />
+              </div>
               {/* Name overlay */}
               <div className="absolute bottom-6 left-6 bg-[#0F4C81]/95 backdrop-blur-md text-white px-6 py-4 rounded-2xl border border-white/20 shadow-2xl z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
                 <p className="font-bold text-lg md:text-xl">Dr. Manish Goswami</p>

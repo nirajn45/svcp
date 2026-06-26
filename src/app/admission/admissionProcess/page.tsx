@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import {
@@ -132,12 +133,15 @@ const AdmissionProcessPage = () => {
       {/* ── SECTION 1: HERO / BANNER ────────────────────────────────── */}
       <section className="relative h-[55vh] md:h-[65vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://media.getmyuni.com/azure/college-images-test/swami-vivekanand-institute-of-engineering-technology-sviet-patiala/student-life-e301dcc46c59ed90d23789fe67006d11.jpg"
             alt="Campus"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F4C81]/80 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F4C81]/80 to-black/40 z-10" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
           <motion.h1
@@ -298,10 +302,12 @@ const AdmissionProcessPage = () => {
               {programs.map((prog, idx) => (
                 <SwiperSlide key={idx}>
                   <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer shadow-lg">
-                    <img
+                    <Image
                       src={prog.image}
                       alt={prog.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity group-hover:opacity-90" />
                     <div className="absolute bottom-0 left-0 p-8 w-full transform transition-transform duration-300 group-hover:-translate-y-2">
@@ -385,10 +391,12 @@ const AdmissionProcessPage = () => {
                 variants={fadeInUp}
                 className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer shadow-lg"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50 group-hover:bg-[#0F4C81]/80 transition-colors duration-500" />
                 <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
@@ -413,12 +421,16 @@ const AdmissionProcessPage = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="absolute -inset-4 bg-[#F59E0B]/10 rounded-[2rem] blur-xl" />
-              <img
-                src="https://media.getmyuni.com/azure/college-images-test/swami-vivekanand-institute-of-engineering-technology-sviet-patiala/student-life-e301dcc46c59ed90d23789fe67006d11.jpg"
-                alt="Why choose SVGOI"
-                className="relative rounded-2xl shadow-xl w-full object-cover h-[400px]"
-              />
+              <div className="absolute -inset-4 bg-[#F59E0B]/10 rounded-[2rem] blur-xl z-0" />
+              <div className="relative rounded-2xl shadow-xl w-full h-[400px] overflow-hidden z-10">
+                <Image
+                  src="https://media.getmyuni.com/azure/college-images-test/swami-vivekanand-institute-of-engineering-technology-sviet-patiala/student-life-e301dcc46c59ed90d23789fe67006d11.jpg"
+                  alt="Why choose SVGOI"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -38,11 +39,16 @@ const Page = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <img
-                src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhmMegZalDScLQPBuAt5h3kTeNqXa79jFEGKnb"
-                alt="SVCP Campus"
-                className="rounded-2xl shadow-lg w-full max-w-md object-cover hover:scale-105 transition-transform duration-300"
-              />
+              <div className="relative w-full max-w-md aspect-4/3 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhmMegZalDScLQPBuAt5h3kTeNqXa79jFEGKnb"
+                  alt="SVCP Campus"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </motion.div>
           </div>
         </motion.div>

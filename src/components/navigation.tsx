@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -174,10 +175,12 @@ export default function Navigation() {
               transition={{ duration: 0.5 }}
               className="flex justify-center md:justify-start"
             >
-              <img
+              <Image
                 src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhdSiWj2HNcorLp7Ez8OqsCkgfTIJDU12B5yix"
                 alt="SVCP Logo"
-                className="h-14 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
+                width={200}
+                height={80}
+                className="h-14 md:h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
 
@@ -214,15 +217,19 @@ export default function Navigation() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex items-center justify-center md:justify-end gap-4"
             >
-              <img
+              <Image
                 src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh5wFBbeWeAb4xUsD2HtiI9zBhMYVnRZFPdLrQ"
                 alt="PCI Logo"
-                className="h-12 md:h-16 object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"
+                width={80}
+                height={64}
+                className="h-12 md:h-16 w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"
               />
-              <img
+              <Image
                 src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhhqqNrz0vYTA0HQ4lC3zruVx5eGqtm7IhsDcX"
                 alt="IKGPTU Logo"
-                className="h-12 md:h-16 object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"
+                width={80}
+                height={64}
+                className="h-12 md:h-16 w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
           </div>

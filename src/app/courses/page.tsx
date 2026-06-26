@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -77,14 +78,21 @@ export default function CoursesPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] text-white overflow-hidden group flex items-center">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <motion.img 
+          <motion.div 
             initial={{ scale: 1.05 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" as const }}
-            src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhO3zVPGrVkH31mdhcPLXwlWeNI6y5R04MUoDf" 
-            alt="courses background"
-            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-          />
+            className="w-full h-full relative"
+          >
+            <Image 
+              src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhO3zVPGrVkH31mdhcPLXwlWeNI6y5R04MUoDf" 
+              alt="courses background"
+              fill
+              sizes="100vw"
+              priority
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+          </motion.div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#0F4C81]/80 to-black/40"></div>
         </div>
         
@@ -260,11 +268,13 @@ export default function CoursesPage() {
                   <Card
                     className="group border border-gray-100 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white rounded-2xl overflow-hidden h-full flex flex-col"
                   >
-                    <div className="relative overflow-hidden h-56">
-                      <img
+                    <div className="relative overflow-hidden h-56 w-full">
+                      <Image
                         src={facility.image || "/placeholder.svg"}
                         alt={facility.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0F4C81]/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                       <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2.5 rounded-xl shadow-sm">
@@ -350,11 +360,13 @@ export default function CoursesPage() {
                   <Card
                     className="group border border-gray-100 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white rounded-2xl overflow-hidden h-full flex flex-col"
                   >
-                    <div className="relative overflow-hidden h-56">
-                      <img
+                    <div className="relative overflow-hidden h-56 w-full">
+                      <Image
                         src={facility.image || "/placeholder.svg"}
                         alt={facility.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0F4C81]/90 via-black/30 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
                       <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2.5 rounded-xl shadow-sm">

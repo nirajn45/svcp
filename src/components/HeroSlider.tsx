@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -47,13 +48,16 @@ export default function HeroSlider() {
       >
         {slides.map((src, i) => (
           <SwiperSlide key={i} className="w-full h-full relative overflow-hidden">
-            <img
+            <Image
               src={src}
               alt={`Slide ${i + 1}`}
-              className="w-full h-full object-cover object-center"
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              priority={i === 0}
             />
             {/* subtle cinematic overlay */}
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-black/20 z-10" />
           </SwiperSlide>
         ))}
       </Swiper>

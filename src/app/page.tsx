@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Users,
@@ -450,11 +451,15 @@ export default function HomePage() {
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
                 <CardContent className="p-1">
-                  <img
-                    src={src}
-                    alt={`Recruiter ${i + 1}`}
-                    className="w-full h-24 object-contain"
-                  />
+                  <div className="relative w-full h-24">
+                    <Image
+                      src={src}
+                      alt={`Recruiter ${i + 1}`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                      className="object-contain"
+                    />
+                  </div>
                 </CardContent>
               </Card>
             ))}

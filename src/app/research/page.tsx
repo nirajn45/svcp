@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Search, Download, BookOpen, FlaskConical, Microscope, Brain, Leaf, Activity, Users, FileText, BookMarked, Globe } from "lucide-react";
 
 const fadeInUp = {
@@ -122,10 +123,13 @@ export default function ResearchPage() {
       {/* ── HERO ── */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1600"
             alt="Research"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#0F4C81]/85 via-[#0F4C81]/70 to-black/60" />
           {/* Floating blur blobs */}

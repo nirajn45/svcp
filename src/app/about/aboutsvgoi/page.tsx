@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -58,27 +59,34 @@ const Page = () => {
             {/* Right Half - Image Collage */}
             <div className="grid grid-cols-2 gap-6 opacity-0 translate-y-6 animate-[fadeInRight_0.6s_ease-out_forwards] animation-delay-[0.2s]">
               {/* Main Large Image */}
-              <div className="col-span-2">
-                <img
-                  src="https://www.sviet.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FbannerImage.070729b1.jpg&w=1920&q=75"
+              <div className="col-span-2 relative w-full h-62 md:h-75 rounded-3xl shadow-2xl overflow-hidden group">
+                <Image
+                  src="/images/auditorium.avif"
                   alt="SVCP Campus"
-                  className="rounded-3xl shadow-2xl w-full h-62 md:h-75 object-cover hover:scale-105 transition-all duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-all duration-500"
+                  priority
                 />
               </div>
 
               {/* Two Smaller Images */}
-              <div>
-                <img
+              <div className="relative w-full h-32.5 md:h-37.5 rounded-2xl shadow-xl overflow-hidden group">
+                <Image
                   src="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh282XyUBQhouO4sXci71GvtEdxUSqLIHy5RYD"
                   alt="SVGOI Campus"
-                  className="rounded-2xl shadow-xl w-full h-32.5 md:h-37.5 object-cover hover:scale-105 transition-all duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-all duration-500"
                 />
               </div>
-              <div>
-                <img
+              <div className="relative w-full h-32.5 md:h-37.5 rounded-2xl shadow-xl overflow-hidden group">
+                <Image
                   src="https://media.licdn.com/dms/image/v2/D5622AQGMNlIF3bFRug/feedshare-shrink_800/feedshare-shrink_800/0/1716264953480?e=2147483647&v=beta&t=SW5XSIq6sdr81MouNa4hePlOhhQM1-aka4kQ4bt3V5g"
                   alt="Students at SVGOI"
-                  className="rounded-2xl shadow-xl w-full h-32.5 md:h-37.5 object-cover hover:scale-105 transition-all duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-all duration-500"
                 />
               </div>
             </div>
@@ -133,26 +141,32 @@ const Page = () => {
             {/* Right — Image Grid */}
             <div className="grid grid-cols-2 gap-6 opacity-0 translate-y-6 animate-[fadeInRight_0.6s_ease-out_forwards] animation-delay-[0.2s]">
               {/* Top full-width image */}
-              <div className="col-span-2">
-                <img
+              <div className="col-span-2 relative w-full h-62 md:h-75 rounded-3xl shadow-2xl overflow-hidden group">
+                <Image
                   src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwjBF7PNYk5fvqY4IeSRsWVaAx69TnoMhpyLgF"
                   alt="Campus View"
-                  className="w-full h-62 md:h-75 object-cover rounded-3xl shadow-2xl hover:scale-105 transition-all duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-all duration-500"
                 />
               </div>
               {/* Bottom two images */}
-              <div>
-                <img
+              <div className="relative w-full h-37.5 md:h-45 rounded-2xl shadow-xl overflow-hidden group">
+                <Image
                   src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1UwFU07M8tMu1UwgfYlpenRs0ZdQEHGLJcr4oth"
                   alt="Classroom"
-                  className="w-full h-37.5 md:h-45 object-cover rounded-2xl shadow-xl hover:scale-105 transition-all duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-all duration-500"
                 />
               </div>
-              <div>
-                <img
+              <div className="relative w-full h-37.5 md:h-45 rounded-2xl shadow-xl overflow-hidden group">
+                <Image
                   src="https://gvu57hqxi3.ufs.sh/f/FOd38ztMu1Uw4zfeAmOBX0faVIbuKU7Ps5zpcOgxlwGjnmJ9"
                   alt="Students"
-                  className="w-full h-37.5 md:h-45 object-cover rounded-2xl shadow-xl hover:scale-105 transition-all duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-all duration-500"
                 />
               </div>
             </div>
