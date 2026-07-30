@@ -134,23 +134,63 @@ export default function Navigation() {
         },
       ],
     },
+   {
+  name: "Activities",
+  href: "",
+  subItems: [
     {
-      name: "Activities",
+      name: "Cultural Activities",
+      href: "/Activity/CulturalActivities",
+    },
+    {
+      name: "Curricular & Co-curricular Activities",
+      href: "/Activity/curricularActivities",
+    },
+    {
+      name: "NSS",
+      href: "/Activity/Nss",
+    },
+    {
+      name: "NCC",
+      href: "/Activity/Ncc",
+    },
+    {
+      name: "OutreachActivities",
+      href: "/Activity/OutreachActivities",
+    },
+    {
+      name: "National / International Day Celebrations",
+      href: "/Activity/nationalActivities",
+    },
+    {
+      name: "Industrial Visits",
+      href: "/Activity/Industrial-Visit",
+    },
+    {
+      name: "Seminars / Workshops / Conferences/ FDPs",
+      href: "/Activity/seminars",
+    },
+    {
+      name: "Alumni Activities",
       href: "",
       subItems: [
-        { name: "Cultural Activities", href: "/activities/culturalActivities" },
         {
-          name: "Curricular & Co-curricular Activities ",
-          href: "/activities/curricular",
+          name: "Alumni Association",
+          href: "/Activity/AlumniActivities/alumni-association",
         },
-        { name: "NSS", href: "/activities/Nss" },
-        { name: "NCC", href: "/activities/Ncc" },
         {
-          name: "Departmental Activities",
-          href: "/activities/departmentalActivities",
+          name: "Alumni Meets",
+          href: "/Activity/AlumniActivities/alumni-meets",
+        },
+        {
+          name: "Convocation",
+          href: "/Activity/AlumniActivities/Convocation",
         },
       ],
+    
     },
+  ],
+},
     {
       name: "NIRF",
       href: "",
@@ -259,7 +299,7 @@ export default function Navigation() {
                                 <span>{sub.name}</span>
                                 <ChevronDown className="h-3 w-3 -rotate-90" />
                               </button>
-                              <div className="absolute left-full top-0 hidden group-hover/nested:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[240px]">
+                              <div className="absolute right-full top-0 hidden group-hover/nested:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[240px]">
                                 {sub.subItems.map((nestedSub) => (
                                   <Link
                                     key={nestedSub.name}
@@ -333,7 +373,7 @@ export default function Navigation() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 max-h-[70vh] overflow-y-auto">
+            <div className="lg:hidden absolute top-full right -0 right-0 bg-white shadow-lg border-t border-gray-200 max-h-[70vh] overflow-y-auto">
               <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
                 {navItems.map((item, index) =>
                   item.subItems ? (

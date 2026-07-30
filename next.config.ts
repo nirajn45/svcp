@@ -1,7 +1,17 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   /* config options here */
+
+  // ── Turbopack root ───────────────────────────────────────────────────────────
+  // The parent directory (pharmacy/) contains a stray package-lock.json which
+  // causes Turbopack to infer the WRONG workspace root. This line pins it to the
+  // actual project root so all routes under src/app are discovered correctly.
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
+
   images: {
     unoptimized: true,
     remotePatterns: [
