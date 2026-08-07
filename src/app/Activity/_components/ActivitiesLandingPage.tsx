@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import LocalActivityImage from '@/components/activities/LocalActivityImage';
 import { motion } from 'framer-motion';
@@ -10,7 +9,7 @@ import CounterSection from '@/components/activities/CounterSection';
 import CTASection from '@/components/activities/CTASection';
 import Breadcrumb from '@/components/activities/Breadcrumb';
 import { staggerContainer, cardVariant, fadeUp, scaleIn } from '@/components/activities/animation';
-import { getLocalCategoryCover } from '@/components/activities/localImageUtils';
+import { getLocalCategoryCover, getLocalActivityListingCover } from '@/components/activities/localImageUtils';
 import type { CategoryMeta, StatItem } from '@/app/Activity/Data/types';
 
 interface ActivitiesLandingClientProps {
@@ -252,8 +251,8 @@ export default function ActivitiesLandingpage({
                   variants={cardVariant}
                   className="group relative overflow-hidden rounded-xl aspect-video shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-0"
                 >
-                  <Image
-                    src={featured.image}
+                  <LocalActivityImage
+                    src={getLocalActivityListingCover(featured.categorySlug, featured.slug)}
                     alt={featured.title}
                     fill
                     loading="lazy"

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { CalendarDays, Image as ImageIcon, Phone, ArrowRight } from 'lucide-react';
+import { CalendarDays, Phone, ArrowRight } from 'lucide-react';
 import { staggerContainer, cardVariant } from './animation';
 
 const CTA_CARDS = [
@@ -13,14 +13,6 @@ const CTA_CARDS = [
       `Be a part of SVCP's vibrant campus life. Register for upcoming events, workshops, and celebrations.`,
     href: '/Activity',
     cta: 'View All Activities',
-  },
-  {
-    icon: ImageIcon,
-    title: 'Explore Our Gallery',
-    description:
-      'Relive the highlights of past activities through our rich photo gallery, capturing unforgettable moments.',
-    href: '/gallery',
-    cta: 'Open Gallery',
   },
   {
     icon: Phone,
