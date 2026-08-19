@@ -198,8 +198,21 @@ export default function Navigation() {
         { name: "NIRF 2026", href: "/nirf-2026.pdf" },
       ],
     },
+
+    {name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
-    { name: "Feedback", href: "/feedback" },
+
+    {
+      name : "Feedback" ,
+      href : "" ,
+      subItems : [
+        { name: "Student Feedback", href: "/feedback/student" },
+        { name: "Parent Feedback", href: "/feedback/parent" },
+        { name: "Alumni Feedback", href: "/feedback/alumni" },
+      ]
+    },
+   
+    
   ];
 
   return (
