@@ -162,19 +162,23 @@ export default function ActivityDetailLayout({
           )}
 
           {/* Gallery */}
-          {(galleryImages?.length ?? activity.gallery.length) > 0 && (
-            <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <h2 className="border-l-4 border-[#F59E0B] pl-3 text-xl font-bold text-gray-900 mb-4">Photo Gallery</h2>
-              <GalleryGrid
-                images={galleryImages && galleryImages.length > 0
-                  ? galleryImages.map((src, index) => ({
-                      src,
-                      fallbackSrc: activity.gallery[index] ?? src,
-                    }))
-                  : activity.gallery}
-              />
-            </motion.div>
-          )}
+          {(() => {
+            const filteredGallery = activity.gallery.filter((g) => typeof g === 'string' && g.trim() !== '');
+            const gallerySource = galleryImages && galleryImages.length > 0
+              ? galleryImages.map((src, index) => ({
+                  src,
+                  fallbackSrc: filteredGallery[index] ?? src,
+                }))
+              : filteredGallery;
+            return gallerySource.length > 0 ? (
+              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                <h2 className="border-l-4 border-[#F59E0B] pl-3 text-xl font-bold text-gray-900 mb-4">Photo Gallery</h2>
+                <GalleryGrid
+                  images={gallerySource}
+                />
+              </motion.div>
+            ) : null;
+          })()}
 
           {/* Tags */}
           {activity.tags.length > 0 && (

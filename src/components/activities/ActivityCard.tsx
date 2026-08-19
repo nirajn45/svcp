@@ -54,12 +54,7 @@ export default function ActivityCard({ activity, index = 0 }: ActivityCardProps)
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
         />
-        {/* Year badge */}
-        <div className="absolute top-3 right-3">
-          <span className="bg-[#0F4C81] text-white text-xs font-semibold px-2.5 py-1 rounded-md shadow">
-            {activity.year}
-          </span>
-        </div>
+
       </div>
 
       {/* Body */}

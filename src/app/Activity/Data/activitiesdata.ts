@@ -12,7 +12,7 @@ import { CategoryMeta, Activity, StatItem } from './types';
 
 // ─── Image helpers ────────────────────────────────────────────────────────────
 /** Safe local fallback photo */
-const img = (id: string, w = 800) => '/images/dpharm/students.png';
+const img = (_id: string, _w = 800) => '';
 
 /** Local photo stored in public/activity-images/{path} */
 const localImg = (path: string) => `/activity-images/${path}`;  // eslint-disable-line @typescript-eslint/no-unused-vars
