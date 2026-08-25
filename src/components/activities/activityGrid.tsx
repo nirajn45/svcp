@@ -20,7 +20,7 @@ interface ActivityGridProps {
 export default function ActivityGrid({ activities, hideFilters = false }: ActivityGridProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedYear, setSelectedYear] = useState('');
-  const [selectedSort, setSelectedSort] = useState('newest');
+  const [selectedSort, setSelectedSort] = useState('default');
   const [page, setPage] = useState(1);
 
   // Unique years available in the dataset

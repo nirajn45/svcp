@@ -27,16 +27,17 @@ const localGallery = (...paths: string[]) => paths.map(localImg);  // eslint-dis
 // 1. CULTURAL ACTIVITIES
 // ─────────────────────────────────────────────────────────────────────────────
 const culturalActivities: Activity[] = [
+  // ── 1. Spontania 2026 ──────────────────────────────────────────────────────
   {
-    id: 'ca-001',
-    slug: 'spontaina-youth-festival',
-    title: 'Spontaina & Youth Festival',
+    id: 'ca-026',
+    slug: 'spontania-2026',
+    title: 'Spontania 2026',
     shortDescription:
       `SVCP's flagship annual cultural festival celebrating student talent in dance, music, drama, and fine arts.`,
     description:
-      'Spontaina is the annual cultural extravaganza of Swami Vivekanand College of Pharmacy, bringing together hundreds of students from across departments to showcase their artistic brilliance. From classical dance recitals and live band performances to stand-up comedy, theatre acts, and painting exhibitions, the festival is a vibrant celebration of creativity. The two-day event transforms the campus into a kaleidoscope of colour, music, and energy, drawing faculty, alumni, and guests from neighbouring institutions.',
-    date: '2024-11-20',
-    year: 2024,
+      'Spontania 2026 is the annual cultural extravaganza of Swami Vivekanand College of Pharmacy, bringing together students from across departments to showcase their artistic brilliance. From classical dance recitals and live musical performances to theatre acts and painting exhibitions, the two-day festival transforms the campus into a vibrant celebration of creativity and community spirit.',
+    date: '2026-04-17',
+    year: 2026,
     location: 'SVCP Main Auditorium & Open-Air Stage',
     category: 'Cultural Activities',
     categorySlug: 'culturalActivities',
@@ -50,27 +51,92 @@ const culturalActivities: Activity[] = [
     objectives: [
       'Provide a platform for students to express artistic talent',
       'Foster inter-department bonding and team spirit',
-      'Celebrate the rich cultural diversity of India',
-      'Encourage healthy competition and sportsmanship',
+      'Celebrate cultural diversity and creative expression',
     ],
     highlights: [
-      '500+ students participated across 30+ events',
-      'Live music concerts featuring student bands',
-      'Fine arts and photography exhibition',
-      'Best Cultural Troupe Trophy awarded',
+      'Two-day cultural celebration across music, dance, and drama',
+      'Art and creative exhibitions',
+      'Inter-department cultural performances',
     ],
-    tags: ['festival', 'culture', 'talent', 'annual'],
+    tags: ['festival', 'culture', 'talent', 'annual', 'spontania', '2026'],
   },
+  // ── 2. Inkspire 1.0 ────────────────────────────────────────────────────────
   {
-    id: 'ca-002',
-    slug: 'national-festival-celebrations',
-    title: 'National Festival Celebrations',
+    id: 'ca-027',
+    slug: 'inkspire-1-0',
+    title: 'Inkspire 1.0',
     shortDescription:
-      'Grand celebrations of national festivals fostering patriotism and unity among students.',
+      'A creative literary and arts festival providing a platform for student writers, poets, and artists.',
     description:
-      `SVCP commemorates all major national festivals with great enthusiasm and pride. Independence Day, Republic Day, and Gandhi Jayanti are celebrated with flag hoisting ceremonies, cultural programmes, patriotic speeches, and community service initiatives. Students actively participate in organising events that honour the nation's heritage and remind the college community of its civic responsibilities.`,
-    date: '2024-08-15',
-    year: 2024,
+      'Inkspire 1.0 is a two-day literary and creative arts festival organised at Swami Vivekanand College of Pharmacy. The festival provides students with an engaging platform to express themselves through poetry, creative writing, storytelling, and visual arts, encouraging literary appreciation and creative thinking across the campus.',
+    date: '2026-02-26',
+    year: 2026,
+    location: 'SVCP Campus',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1516450360452-9312f5e86fc7'),
+    gallery: gallery(
+      '1514525253161-7a46d19cd819',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Promote literature, creative writing, and artistic expression',
+      'Encourage students to share original poetry and stories',
+      'Foster cultural appreciation and literary skills',
+    ],
+    highlights: [
+      'Creative writing and poetry sessions',
+      'Student art and literary displays',
+      'Interactive workshops and performances',
+    ],
+    tags: ['inkspire', 'literary', 'arts', 'creative', 'writing', '2026'],
+  },
+  // ── 3. SPORTIVA – Faculty Sports Meet ─────────────────────────────────────
+  {
+    id: 'ca-028',
+    slug: 'sportiva-faculty-sports-meet',
+    title: 'SPORTIVA – Faculty Sports Meet',
+    shortDescription:
+      'Annual faculty sports meet promoting wellness, teamwork, and healthy recreation among staff.',
+    description:
+      'SPORTIVA is the annual Faculty Sports Meet of Swami Vivekanand College of Pharmacy, organised to promote physical fitness, wellness, and camaraderie among teaching and non-teaching faculty members. The event features friendly athletic and recreational competitions, fostering team spirit and an active lifestyle.',
+    date: '2026-02-07',
+    year: 2026,
+    location: 'SVCP Sports Ground',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1514525253161-7a46d19cd819'),
+    gallery: gallery(
+      '1516450360452-9312f5e86fc7',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Promote physical fitness and wellness among faculty members',
+      'Strengthen teamwork and mutual support across departments',
+      'Provide an enjoyable platform for recreational sports',
+    ],
+    highlights: [
+      'Track and field and recreational games',
+      'Active participation across teaching and staff departments',
+      'Prize and recognition distribution',
+    ],
+    tags: ['sportiva', 'faculty', 'sports meet', 'wellness', '2026'],
+  },
+  // ── 4. 77th Republic Day Celebration ──────────────────────────────────────
+  {
+    id: 'ca-029',
+    slug: '77th-republic-day-celebration',
+    title: '77th Republic Day Celebration',
+    shortDescription:
+      'Commemoration of the 77th Republic Day with ceremonial flag hoisting and patriotic cultural presentations.',
+    description:
+      "Swami Vivekanand College of Pharmacy celebrated the 77th Republic Day with patriotic fervour. The event featured ceremonial flag hoisting, national anthem recital, and student cultural performances celebrating India's constitutional heritage, unity in diversity, and democratic values.",
+    date: '2026-01-26',
+    year: 2026,
     location: 'SVCP College Grounds',
     category: 'Cultural Activities',
     categorySlug: 'culturalActivities',
@@ -82,92 +148,290 @@ const culturalActivities: Activity[] = [
       '1514525253161-7a46d19cd819'
     ),
     objectives: [
-      'Instil patriotism and national pride among students',
-      'Honour the sacrifices of freedom fighters',
-      'Promote civic responsibility and community service',
+      'Commemorate the adoption of the Constitution of India',
+      'Instil patriotic values and civic awareness in students',
+      'Celebrate the unity and diversity of the nation',
     ],
     highlights: [
-      'Flag hoisting with guard of honour by NCC cadets',
-      'Patriotic song and dance performances',
-      'Cultural parade with state-themed tableaux',
-      'Prize distribution for essay and quiz competitions',
+      'Ceremonial flag hoisting ceremony',
+      'Patriotic cultural songs and recitations',
+      'Address on constitutional values and citizenship',
     ],
-    tags: ['national', 'patriotism', 'republic day', 'independence day'],
+    tags: ['republic day', 'national', 'patriotism', '2026'],
   },
-  {
-    id: 'ca-003',
-    slug: 'diwali-celebration',
-    title: 'Diwali Celebration',
-    shortDescription:
-      'Festival of lights celebrated with lamp-lighting, rangoli, sweets, and cultural performances.',
-    description:
-      'The Diwali celebration at SVCP is a magical evening filled with the warmth of diyas, vibrant rangoli designs, and the sweet fragrance of festive sweets. Students decorate the campus with traditional motifs, perform folk dances, and participate in a grand lamp-lighting ceremony. The event reinforces cultural roots and provides a joyful break from academic rigour, bringing the entire college family together.',
-    date: '2024-10-31',
-    year: 2024,
-    location: 'SVCP Campus Courtyard',
-    category: 'Cultural Activities',
-    categorySlug: 'culturalActivities',
-    image: img('1574117024526-b82cba0d0085'),
-    gallery: gallery(
-      '1509391366-6f86f74b0bc5',
-      '1514525253161-7a46d19cd819',
-      '1578662996442-48f60103fc96',
-      '1516450360452-9312f5e86fc7'
-    ),
-    objectives: [
-      'Celebrate the festival of lights with joy and unity',
-      'Showcase traditional rangoli and decorative art',
-      'Promote eco-friendly Diwali practices',
-    ],
-    highlights: [
-      'Campus decorated with 1000+ earthen diyas',
-      'Rangoli competition with 50+ entries',
-      'Cultural dance performance – Garba & Dandiya',
-      'Distribution of sweets and gifts',
-    ],
-    tags: ['diwali', 'festival', 'lights', 'celebration'],
-  },
-  {
-    id: 'ca-004',
-    slug: 'holi-celebration',
-    title: 'Holi Celebration',
-    shortDescription:
-      'Festival of colours embraced with organic colours, music, and traditional sweets.',
-    description:
-      'Holi at SVCP is a riot of colour, laughter, and energy. The college organises a safe and eco-friendly celebration using organic, skin-friendly colours. Students drench each other in festive cheer while folk music fills the air. The event promotes unity across all backgrounds and serves as a wonderful stress-buster before the examination season.',
-    date: '2024-03-25',
-    year: 2024,
-    location: 'SVCP Outdoor Sports Ground',
-    category: 'Cultural Activities',
-    categorySlug: 'culturalActivities',
-    image: img('1521478706270-4ec88dce7cc7'),
-    gallery: gallery(
-      '1540575467063-178a50c2df87',
-      '1578662996442-48f60103fc96',
-      '1514525253161-7a46d19cd819',
-      '1493225457124-a3eb161ffa5f'
-    ),
-    objectives: [
-      'Celebrate the spirit of Holi in a safe and inclusive manner',
-      'Promote the use of eco-friendly and organic colours',
-      'Strengthen the bond among students and faculty',
-    ],
-    highlights: [
-      'Organic colour play with 400+ participants',
-      'Live dhol performance and folk songs',
-      'Thandai and traditional snacks for all',
-      'Holi photography contest',
-    ],
-    tags: ['holi', 'colours', 'festival', 'spring'],
-  },
+  // ── 5. Lohri Celebration ──────────────────────────────────────────────────
   {
     id: 'ca-005',
     slug: 'lohri-celebration',
     title: 'Lohri Celebration',
     shortDescription:
-      'Harvest festival celebrated with bonfire, folk music, bhangra, and traditional treats.',
+      'Harvest festival celebrated with traditional bonfire, folk music, bhangra, and festive treats.',
     description:
-      'Lohri, the vibrant harvest festival of Punjab, is celebrated at SVCP with a grand bonfire, energetic bhangra and gidda performances, and the sharing of traditional treats like rewri, peanuts, and popcorn. The event brings the spirit of Punjab alive on campus and fosters a deep connection to the cultural heritage of the region. Students and faculty gather around the fire, singing folk songs and rejoicing in the festive warmth.',
+      'Lohri, the vibrant harvest festival of Punjab, is celebrated at SVCP with a traditional bonfire, energetic bhangra and gidda performances, and the sharing of traditional treats like rewri, peanuts, and popcorn. The celebration brings the cultural spirit of the region alive on campus and fosters warmth and togetherness among students and faculty.',
+    date: '2026-01-13',
+    year: 2026,
+    location: 'SVCP Campus Grounds',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1574126054271-0d4b3a8a5745'),
+    gallery: gallery(
+      '1516450360452-9312f5e86fc7',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344',
+      '1493225457124-a3eb161ffa5f'
+    ),
+    objectives: [
+      'Celebrate the rich harvest tradition of Punjab',
+      'Promote folk dance and traditional performing arts',
+      'Strengthen community spirit among students and faculty',
+    ],
+    highlights: [
+      'Traditional bonfire lighting ceremony',
+      'Bhangra and Gidda folk performances',
+      'Distribution of traditional festive sweets',
+    ],
+    tags: ['lohri', 'punjab', 'folk', 'bonfire', 'harvest', '2026'],
+  },
+  // ── 6. Christmas Day Celebration ──────────────────────────────────────────
+  {
+    id: 'ca-031',
+    slug: 'christmas-day-celebration-2025',
+    title: 'Christmas Day Celebration',
+    shortDescription:
+      'Festive Christmas gathering celebrating joy, goodwill, and multicultural harmony on campus.',
+    description:
+      'Swami Vivekanand College of Pharmacy observed Christmas Day with festive warmth and cheer. Students and faculty participated in carol singing, cultural presentations, and friendly exchanges, fostering an inclusive environment that honours diverse traditions and shared values of compassion.',
+    date: '2025-12-25',
+    year: 2025,
+    location: 'SVCP Campus',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1514525253161-7a46d19cd819'),
+    gallery: gallery(
+      '1516450360452-9312f5e86fc7',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Celebrate the spirit of peace, harmony, and togetherness',
+      'Encourage appreciation of diverse cultural festivities',
+      'Promote community bonding among students and staff',
+    ],
+    highlights: [
+      'Carol singing and musical performances',
+      'Festive campus decorations',
+      'Cultural exchange and community gathering',
+    ],
+    tags: ['christmas', 'festival', 'celebration', 'harmony', '2025'],
+  },
+  // ── 7. Garba Night ────────────────────────────────────────────────────────
+  {
+    id: 'ca-008',
+    slug: 'garba-night',
+    title: 'Garba Night',
+    shortDescription:
+      'Vibrant Navratri Garba evening featuring traditional attire, rhythmic music, and dandiya dance.',
+    description:
+      'Garba Night at SVCP is a joyful celebration of Navratri. Students and staff dress in colourful traditional attire to celebrate the rhythm and grace of Garba and Dandiya folk dances. The lively evening brings the campus together in an energetic cultural celebration of folk arts and community.',
+    date: '2025-09-27',
+    year: 2025,
+    location: 'SVCP Open-Air Stage',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1573307023826-0ba8c5f96d12'),
+    gallery: gallery(
+      '1612872087720-bb876e2e67d1',
+      '1493225457124-a3eb161ffa5f',
+      '1516450360452-9312f5e86fc7',
+      '1578662996442-48f60103fc96'
+    ),
+    objectives: [
+      'Celebrate the traditional folk dances of Navratri',
+      'Encourage cultural participation in traditional arts',
+      'Foster joy and campus camaraderie through dance',
+    ],
+    highlights: [
+      'Traditional Garba and Dandiya circles',
+      'Festive traditional attire showcase',
+      'Rhythmic folk music and group dancing',
+    ],
+    tags: ['garba', 'navratri', 'dance', 'tradition', '2025'],
+  },
+  // ── 8. Prerna 2025 (Teachers Day) ─────────────────────────────────────────
+  {
+    id: 'ca-033',
+    slug: 'prerna-2025-teachers-day',
+    title: 'Prerna 2025 (Teachers Day)',
+    shortDescription:
+      'Special Teachers Day celebration honouring the guidance, dedication, and inspiration of educators.',
+    description:
+      "Prerna 2025 is SVCP's Teachers Day celebration dedicated to expressing gratitude to the faculty. Organised by students, the programme features cultural tributes, speeches, and presentations acknowledging the mentorship and guidance of teachers in shaping future healthcare professionals.",
+    date: '2025-09-05',
+    year: 2025,
+    location: 'SVCP Auditorium',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1516450360452-9312f5e86fc7'),
+    gallery: gallery(
+      '1514525253161-7a46d19cd819',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Express gratitude to faculty for academic and personal mentorship',
+      'Strengthen teacher-student relationships on campus',
+      'Celebrate the noble role of educators in society',
+    ],
+    highlights: [
+      'Student cultural tributes and musical items',
+      'Felicitation and appreciation of teachers',
+      'Interactive student-faculty sessions',
+    ],
+    tags: ['teachers day', 'prerna', 'faculty', 'tribute', '2025'],
+  },
+  // ── 9. Music Workshop ─────────────────────────────────────────────────────
+  {
+    id: 'ca-034',
+    slug: 'music-workshop-2025',
+    title: 'Music Workshop',
+    shortDescription:
+      'An interactive music workshop exploring vocal training, instrumental techniques, and musical expression.',
+    description:
+      'The Music Workshop at SVCP provided students with an enriching opportunity to explore vocal modulation, rhythm, and instrumental music. Conducted in a supportive learning environment, the workshop enabled students to hone their musical talents and discover the expressive and stress-relieving power of music.',
+    date: '2025-02-25',
+    year: 2025,
+    location: 'SVCP Seminar Hall',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1478720568477-152d9b92543f'),
+    gallery: gallery(
+      '1493225457124-a3eb161ffa5f',
+      '1516450360452-9312f5e86fc7',
+      '1511632765486-142679e5e344',
+      '1514525253161-7a46d19cd819'
+    ),
+    objectives: [
+      'Develop foundational vocal and instrumental skills',
+      'Encourage musical expression as a creative outlet',
+      'Promote participation in college cultural events',
+    ],
+    highlights: [
+      'Vocal and instrumental practice sessions',
+      'Rhythm and pitch training exercises',
+      'Student jam and performance segment',
+    ],
+    tags: ['music', 'workshop', 'vocals', 'instruments', '2025'],
+  },
+  // ── 10. Spontania ─────────────────────────────────────────────────────────
+  {
+    id: 'ca-001',
+    slug: 'spontaina-youth-festival',
+    title: 'Spontania',
+    shortDescription:
+      `SVCP's flagship annual cultural extravaganza with multi-department competitions in dance, drama, and music.`,
+    description:
+      'Spontania 2025 brought the SVCP campus alive with two days of dynamic cultural events. Students from various departments showcased their talents across music, dance, theatre, and visual arts, fostering healthy competition, creative collaboration, and campus-wide enthusiasm.',
+    date: '2025-04-11',
+    year: 2025,
+    location: 'SVCP Main Auditorium & Open-Air Stage',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1514525253161-7a46d19cd819'),
+    gallery: gallery(
+      '1493225457124-a3eb161ffa5f',
+      '1516450360452-9312f5e86fc7',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Showcase student talents in performing and fine arts',
+      'Encourage inter-departmental collaboration and spirit',
+      'Celebrate the cultural richness of the student body',
+    ],
+    highlights: [
+      'Multi-category cultural competitions',
+      'Live dance and musical stage performances',
+      'Fine arts and photography exhibition',
+    ],
+    tags: ['festival', 'culture', 'talent', 'annual', 'spontania', '2025'],
+  },
+  // ── 11. Quest for Talent 2025 ────────────────────────────────────────────
+  {
+    id: 'ca-035',
+    slug: 'quest-for-talent-2025',
+    title: 'Quest for Talent 2025',
+    shortDescription:
+      'Talent competition encouraging students to discover and showcase abilities in singing, dance, and drama.',
+    description:
+      'Quest for Talent 2025 provided an inclusive platform for SVCP students to present their unique talents. From solo singing and group dance to dramatic skits and poetry recitation, the event encouraged creative confidence and recognised budding artistic performers.',
+    date: '2025-02-14',
+    year: 2025,
+    location: 'SVCP Auditorium',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1516450360452-9312f5e86fc7'),
+    gallery: gallery(
+      '1493225457124-a3eb161ffa5f',
+      '1511632765486-142679e5e344',
+      '1578662996442-48f60103fc96',
+      '1514525253161-7a46d19cd819'
+    ),
+    objectives: [
+      'Discover and nurture emerging artistic talent',
+      'Provide stage exposure to boost student confidence',
+      'Promote healthy cultural competition across years',
+    ],
+    highlights: [
+      'Solo and group talent rounds',
+      'Diverse performances in singing, dance, and arts',
+      'Constructive feedback and recognition',
+    ],
+    tags: ['talent', 'competition', 'singing', 'dance', '2025'],
+  },
+  // ── 12. Basant Panchmi ────────────────────────────────────────────────────
+  {
+    id: 'ca-036',
+    slug: 'basant-panchmi-2025',
+    title: 'Basant Panchmi',
+    shortDescription:
+      'Celebration marking the arrival of spring with Saraswati Puja and traditional cultural activities.',
+    description:
+      'Basant Panchmi was celebrated at SVCP to welcome the spring season and seek the blessings of Goddess Saraswati for knowledge and wisdom. Students and staff participated in traditional rituals, yellow-themed celebrations, and devotional cultural songs.',
+    date: '2025-02-02',
+    year: 2025,
+    location: 'SVCP Campus',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1514525253161-7a46d19cd819'),
+    gallery: gallery(
+      '1516450360452-9312f5e86fc7',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Celebrate traditional Indian seasonal and cultural festivities',
+      'Promote cultural values and reverence for education',
+      'Encourage community participation and unity',
+    ],
+    highlights: [
+      'Saraswati Puja and prayer ceremony',
+      'Traditional attire and festive celebration',
+      'Folk songs and cultural recitations',
+    ],
+    tags: ['basant panchmi', 'spring', 'festival', 'tradition', '2025'],
+  },
+  // ── 13. Lohri Celebrations ────────────────────────────────────────────────
+  {
+    id: 'ca-005b',
+    slug: 'lohri-celebrations-2025',
+    title: 'Lohri Celebrations',
+    shortDescription:
+      'Harvest festival celebrated with traditional bonfire, folk songs, bhangra, and winter delicacies.',
+    description:
+      'The 2025 Lohri Celebrations at SVCP brought the warmth of Punjabi folk traditions to the campus grounds. Students and faculty gathered around the sacred bonfire to celebrate the winter harvest season with energetic bhangra, gidda, and festive delicacies.',
     date: '2025-01-13',
     year: 2025,
     location: 'SVCP Campus Grounds',
@@ -181,281 +445,280 @@ const culturalActivities: Activity[] = [
       '1493225457124-a3eb161ffa5f'
     ),
     objectives: [
-      'Celebrate the rich Punjabi harvest tradition',
-      'Promote folk arts like Bhangra and Gidda',
-      'Build community spirit among the college family',
+      'Uphold the rich regional harvest traditions of Punjab',
+      'Encourage student engagement in folk performing arts',
+      'Foster warmth and community bonding',
     ],
     highlights: [
-      'Grand bonfire with traditional rituals',
-      'Bhangra and Gidda performances by students',
-      'Folk music and live dhol beats',
-      'Distribution of Lohri sweets and savouries',
+      'Traditional bonfire lighting and offerings',
+      'Student folk dance performances',
+      'Sharing of traditional Lohri treats',
     ],
-    tags: ['lohri', 'punjab', 'folk', 'bonfire', 'harvest'],
+    tags: ['lohri', 'punjab', 'folk', 'bonfire', 'harvest', '2025'],
   },
+  // ── 14. Christmas Day Celebrations ────────────────────────────────────────
   {
-    id: 'ca-006',
-    slug: 'baisakhi-celebration',
-    title: 'Baisakhi Celebration',
+    id: 'ca-037',
+    slug: 'christmas-day-celebrations-2024',
+    title: 'Christmas Day Celebrations',
     shortDescription:
-      'The Punjabi New Year celebrated with Bhangra, Gidda, traditional attire, and festive food.',
+      'Campus Christmas celebrations spreading goodwill, festive joy, and cultural inclusivity.',
     description:
-      `Baisakhi, marking the Punjabi New Year and the harvest season, is celebrated at SVCP with tremendous enthusiasm. Students dress in traditional Punjabi attire, perform folk dances, and participate in cultural competitions. The event is a tribute to Punjab's agrarian heritage and the Khalsa tradition, bringing students together in a spirit of joy and gratitude.`,
-    date: '2024-04-13',
+      'SVCP commemorated Christmas Day 2024 with a warm cultural programme bringing students together to celebrate the spirit of joy and generosity. The event featured carol singing, seasonal displays, and community celebration.',
+    date: '2024-12-25',
     year: 2024,
-    location: 'SVCP Auditorium',
+    location: 'SVCP Campus',
     category: 'Cultural Activities',
     categorySlug: 'culturalActivities',
-    image: img('1612872087720-bb876e2e67d1'),
+    image: img('1514525253161-7a46d19cd819'),
     gallery: gallery(
-      '1514525253161-7a46d19cd819',
-      '1493225457124-a3eb161ffa5f',
       '1516450360452-9312f5e86fc7',
-      '1511632765486-142679e5e344'
-    ),
-    objectives: [
-      'Honour the cultural and historical significance of Baisakhi',
-      'Promote traditional Punjabi arts and crafts',
-      'Encourage students to celebrate their heritage proudly',
-    ],
-    highlights: [
-      'Traditional dress competition – 100+ participants',
-      'Bhangra competition with inter-department teams',
-      'Folk art and craft exhibition',
-      'Langar seva organised by student volunteers',
-    ],
-    tags: ['baisakhi', 'punjabi', 'new year', 'folk dance'],
-  },
-  {
-    id: 'ca-007',
-    slug: 'international-womens-day-celebration',
-    title: "International Women's Day Celebration",
-    shortDescription:
-      "Honouring women's achievements with panel discussions, cultural performances, and felicitation ceremonies.",
-    description:
-      "International Women's Day at SVCP is a day of empowerment, recognition, and celebration. The college organises inspiring panel discussions featuring accomplished women from healthcare and academia, cultural performances spotlighting women's contribution to the arts, and a felicitation ceremony for outstanding women achievers from the college community. The event reinforces SVCP's commitment to gender equality and women's empowerment.",
-    date: '2024-03-08',
-    year: 2024,
-    location: 'SVCP Conference Hall & Auditorium',
-    category: 'Cultural Activities',
-    categorySlug: 'culturalActivities',
-    image: img('1591522810850-58128c5fb089'),
-    gallery: gallery(
-      '1518611012356-e1e4c2c23a9f',
-      '1573497019236-c5f77cd58888',
+      '1493225457124-a3eb161ffa5f',
       '1578662996442-48f60103fc96',
       '1511632765486-142679e5e344'
     ),
     objectives: [
-      "Celebrate and honour women's achievements in pharmacy and healthcare",
-      'Promote gender equality and women empowerment on campus',
-      'Inspire the next generation of women leaders',
+      'Promote mutual respect and cultural harmony',
+      'Celebrate the festive season with goodwill and joy',
+      'Encourage creative participation in campus events',
     ],
     highlights: [
-      'Panel discussion with women leaders from healthcare sector',
-      'Cultural performances by women students',
-      'Felicitation of outstanding women achievers',
-      "Photography exhibition – Women in Pharmacy",
+      'Festive musical presentations',
+      'Campus seasonal decorations',
+      'Community celebration',
     ],
-    tags: ["women's day", 'empowerment', 'gender equality', 'celebration'],
+    tags: ['christmas', 'festival', 'celebration', '2024'],
   },
+  // ── 15. Zimfest ───────────────────────────────────────────────────────────
   {
-    id: 'ca-008',
-    slug: 'garba-night',
-    title: 'Garba Night',
+    id: 'ca-038',
+    slug: 'zimfest-2024',
+    title: 'Zimfest',
     shortDescription:
-      'Vibrant Navratri Garba night with traditional attire, live music, and energetic dance performances.',
+      'Cultural celebration showcasing Zimbabwean heritage and fostering international diversity at SVCP.',
     description:
-      'Garba Night at SVCP is a spectacular celebration of the Navratri festival. Students adorn traditional Gujarati and Rajasthani attire, and the campus resonates with the rhythm of garba and dandiya. The event features live music, a costume competition, and energetic circle dances late into the night. It is one of the most eagerly awaited events in the college calendar.',
-    date: '2024-10-05',
+      'Zimfest is an international cultural day at SVCP celebrating the heritage, arts, and traditions of Zimbabwe. The event features traditional music, dance presentations, and cultural displays, highlighting the vibrant global diversity and welcoming environment of the college.',
+    date: '2024-11-23',
     year: 2024,
-    location: 'SVCP Open-Air Stage',
+    location: 'SVCP Campus',
     category: 'Cultural Activities',
     categorySlug: 'culturalActivities',
-    image: img('1573307023826-0ba8c5f96d12'),
+    image: img('1514525253161-7a46d19cd819'),
     gallery: gallery(
-      '1612872087720-bb876e2e67d1',
       '1493225457124-a3eb161ffa5f',
       '1516450360452-9312f5e86fc7',
-      '1578662996442-48f60103fc96'
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
     ),
     objectives: [
-      'Celebrate the spirit of Navratri with cultural authenticity',
-      'Promote traditional dance and music of Gujarat and Rajasthan',
-      'Encourage students to participate in cultural festivities',
+      'Celebrate Zimbabwean culture and heritage',
+      'Foster cross-cultural understanding and friendships',
+      'Enhance global awareness among the student community',
     ],
     highlights: [
-      '700+ students participated in Garba circles',
-      'Best traditional attire contest',
-      'Live music by a college cultural band',
-      'Dandiya sticks distributed to all participants',
+      'Traditional music and dance performances',
+      'Cultural displays and heritage exchange',
+      'Cross-cultural interaction among Indian and international students',
     ],
-    tags: ['garba', 'navratri', 'dance', 'tradition'],
+    tags: ['zimfest', 'zimbabwe', 'international', 'culture', '2024'],
   },
+  // ── 16. Diwali Celebration ────────────────────────────────────────────────
   {
-    id: 'ca-009',
-    slug: 'talent-hunt',
-    title: 'Talent Hunt',
+    id: 'ca-003',
+    slug: 'diwali-celebration',
+    title: 'Diwali Celebration',
     shortDescription:
-      'Annual competition to discover and celebrate hidden talents among SVCP students.',
+      'Festival of lights celebrated with lamp-lighting, rangoli, sweets, and cultural performances.',
     description:
-      'The SVCP Talent Hunt is a sought-after annual competition that gives every student the chance to shine. From singing and dancing to poetry, stand-up comedy, magic performances, and instrumental music, this event leaves no talent unrecognised. Expert judges evaluate each performance, and winners receive trophies, certificates, and scholarships. The event is a launchpad for many students who later excel in national-level competitions.',
-    date: '2024-09-14',
+      'The Diwali celebration at SVCP is a festive evening filled with the warmth of diyas, vibrant rangoli designs, and festive sweets. Students decorate the campus with traditional motifs, perform cultural dances, and participate in a ceremonial lamp-lighting, celebrating unity and light over darkness.',
+    date: '2024-10-29',
+    year: 2024,
+    location: 'SVCP Campus Courtyard',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1574117024526-b82cba0d0085'),
+    gallery: gallery(
+      '1509391366-6f86f74b0bc5',
+      '1514525253161-7a46d19cd819',
+      '1578662996442-48f60103fc96',
+      '1516450360452-9312f5e86fc7'
+    ),
+    objectives: [
+      'Celebrate the festival of lights with joy and harmony',
+      'Showcase traditional rangoli and decorative art forms',
+      'Promote cultural traditions and community spirit',
+    ],
+    highlights: [
+      'Campus diya lighting and rangoli displays',
+      'Cultural dance and musical performances',
+      'Festive greetings and sweets distribution',
+    ],
+    tags: ['diwali', 'festival', 'lights', 'celebration', '2024'],
+  },
+  // ── 17. World Tourism Day ─────────────────────────────────────────────────
+  {
+    id: 'ca-039',
+    slug: 'world-tourism-day-2024',
+    title: 'World Tourism Day',
+    shortDescription:
+      'Awareness event highlighting the cultural, educational, and economic significance of travel and heritage.',
+    description:
+      'SVCP observed World Tourism Day to broaden student perspectives on the cultural richness, geographical diversity, and historical heritage of India and the world. Activities encouraged students to appreciate cultural heritage and sustainable tourism.',
+    date: '2024-09-27',
+    year: 2024,
+    location: 'SVCP Campus',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1514525253161-7a46d19cd819'),
+    gallery: gallery(
+      '1516450360452-9312f5e86fc7',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Raise awareness on the cultural and educational value of tourism',
+      'Promote understanding of diverse regional and global heritage',
+      'Encourage responsible and sustainable travel practices',
+    ],
+    highlights: [
+      'Heritage and tourism presentations',
+      'Student cultural discussions',
+      'Awareness on historical conservation',
+    ],
+    tags: ['world tourism day', 'tourism', 'culture', 'heritage', '2024'],
+  },
+  // ── 18. Elevate 2024 ──────────────────────────────────────────────────────
+  {
+    id: 'ca-040',
+    slug: 'elevate-2024',
+    title: 'Elevate 2024',
+    shortDescription:
+      'A multi-day student festival featuring creative, cultural, and competitive events.',
+    description:
+      'Elevate 2024 was a vibrant three-day student fest at Swami Vivekanand College of Pharmacy designed to inspire creativity, team collaboration, and artistic expression. Students participated in a series of engaging cultural, creative, and performance events across departments.',
+    date: '2024-09-11',
+    year: 2024,
+    location: 'SVCP Campus',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1514525253161-7a46d19cd819'),
+    gallery: gallery(
+      '1493225457124-a3eb161ffa5f',
+      '1516450360452-9312f5e86fc7',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Provide a platform for multifaceted student creativity',
+      'Encourage collaboration and inter-department teamwork',
+      'Enhance campus cultural engagement',
+    ],
+    highlights: [
+      'Three-day student festival schedule',
+      'Cultural and artistic competitions',
+      'Interactive student activities',
+    ],
+    tags: ['elevate', 'festival', 'culture', 'competition', '2024'],
+  },
+  // ── 19. Teachers Day ──────────────────────────────────────────────────────
+  {
+    id: 'ca-041',
+    slug: 'teachers-day-2024',
+    title: 'Teachers Day',
+    shortDescription:
+      'Celebration honouring the dedicated faculty of SVCP with student cultural tributes.',
+    description:
+      'SVCP celebrated Teachers Day 2024 to honour the guidance and commitment of the teaching faculty. Students organized heartfelt cultural performances, speeches, and presentations to express their appreciation for the educators shaping their professional journey.',
+    date: '2024-09-05',
     year: 2024,
     location: 'SVCP Auditorium',
     category: 'Cultural Activities',
     categorySlug: 'culturalActivities',
     image: img('1516450360452-9312f5e86fc7'),
     gallery: gallery(
-      '1493225457124-a3eb161ffa5f',
-      '1511632765486-142679e5e344',
-      '1578662996442-48f60103fc96',
-      '1514525253161-7a46d19cd819'
-    ),
-    objectives: [
-      'Discover and nurture hidden talent among students',
-      'Provide a professional stage experience',
-      'Motivate students through recognition and awards',
-    ],
-    highlights: [
-      '120+ individual and group entries',
-      'Categories: Solo Singing, Dance, Comedy, Instrumentals',
-      'Expert judges from the entertainment industry',
-      'Grand Prize: Certificate of Excellence + Cash Award',
-    ],
-    tags: ['talent', 'competition', 'singing', 'dance', 'comedy'],
-  },
-  {
-    id: 'ca-010',
-    slug: 'open-mic',
-    title: 'Open Mic Night',
-    shortDescription:
-      'An open platform for students to share poetry, spoken word, comedy, and musical performances.',
-    description:
-      'Open Mic Night at SVCP is an inclusive celebration of free expression. Students take the stage without auditions to share their poetry, spoken-word pieces, original songs, jokes, and short stories. The intimate setting encourages even the most introverted performers to find their voice. The event has become a monthly tradition, building a vibrant campus arts culture and serving as a stress-relieving creative outlet.',
-    date: '2024-08-30',
-    year: 2024,
-    location: 'SVCP Seminar Hall',
-    category: 'Cultural Activities',
-    categorySlug: 'culturalActivities',
-    image: img('1478720568477-152d9b92543f'),
-    gallery: gallery(
-      '1493225457124-a3eb161ffa5f',
-      '1516450360452-9312f5e86fc7',
-      '1511632765486-142679e5e344',
-      '1514525253161-7a46d19cd819'
-    ),
-    objectives: [
-      'Provide an inclusive platform for all forms of creative expression',
-      'Build confidence and public speaking skills',
-      'Foster an arts-friendly campus culture',
-    ],
-    highlights: [
-      '40+ performers across one evening',
-      'Genres: Poetry, Comedy, Original Music, Spoken Word',
-      'Audience favourite voted by popular applause',
-      'Open to all students without registration',
-    ],
-    tags: ['open mic', 'poetry', 'comedy', 'music', 'expression'],
-  },
-  {
-    id: 'ca-011',
-    slug: 'fashion-show',
-    title: 'Fashion Show',
-    shortDescription:
-      'Annual fashion show where students design and model outfits themed around pharmacy and culture.',
-    description:
-      "SVCP's Annual Fashion Show is a creative spectacle that blends fashion, culture, and social messaging. Each edition is themed — past themes have included 'Colours of India', 'Sustainable Fashion', and 'Women in Healthcare'. Student designers create original outfits, and models walk the ramp to music choreographed by the participants themselves. The show is a testament to the multifaceted talent within the college.",
-    date: '2024-02-10',
-    year: 2024,
-    location: 'SVCP Auditorium',
-    category: 'Cultural Activities',
-    categorySlug: 'culturalActivities',
-    image: img('1585751695841-0c6ab43bc7c9'),
-    gallery: gallery(
-      '1612872087720-bb876e2e67d1',
-      '1573307023826-0ba8c5f96d12',
-      '1578662996442-48f60103fc96',
-      '1516450360452-9312f5e86fc7'
-    ),
-    objectives: [
-      'Express creativity through fashion design and performance',
-      'Build confidence, stage presence, and teamwork',
-      'Promote cultural and social themes through fashion',
-    ],
-    highlights: [
-      'Theme: "Colours of India" — 10 states represented',
-      '60 student models on the ramp',
-      'Best Design Award and Best Walk Award',
-      'Student-created music and choreography',
-    ],
-    tags: ['fashion', 'design', 'ramp walk', 'creativity'],
-  },
-  {
-    id: 'ca-012',
-    slug: 'freshers-party',
-    title: "Fresher's Party",
-    shortDescription:
-      'A warm welcome for first-year students with performances, titles, and celebration.',
-    description:
-      "The Fresher's Party is one of the most memorable events for incoming students at SVCP. Organised entirely by second-year and senior students, the event includes dazzling performances, fun games, dance acts, and a title distribution ceremony crowning the freshest faces of the college. The party helps break the ice, helps new students integrate into the campus community, and creates lifelong friendships.",
-    date: '2024-09-05',
-    year: 2024,
-    location: 'SVCP Auditorium',
-    category: 'Cultural Activities',
-    categorySlug: 'culturalActivities',
-    image: img('1529156069898-49953e39b3ac'),
-    gallery: gallery(
       '1514525253161-7a46d19cd819',
       '1493225457124-a3eb161ffa5f',
-      '1516450360452-9312f5e86fc7',
-      '1578662996442-48f60103fc96'
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
     ),
     objectives: [
-      'Welcome new students into the SVCP community',
-      'Help freshers integrate socially and feel comfortable',
-      'Showcase senior talent and inspire first-year students',
+      'Honour and express gratitude to faculty members',
+      'Celebrate the essential role of mentors in student life',
+      'Strengthen teacher-student rapport on campus',
     ],
     highlights: [
-      '250+ freshers welcomed',
-      'Mr. and Miss Fresher crowns awarded',
-      'Senior student performances: dance, music, and skits',
-      'Networking dinner following the programme',
+      'Student cultural performances and tributes',
+      'Felicitation of faculty members',
+      'Expressions of student appreciation',
     ],
-    tags: ["fresher's", 'welcome', 'first year', 'celebration'],
+    tags: ['teachers day', 'faculty', 'tribute', 'celebration', '2024'],
   },
+  // ── 20. Ratri Rhythms ─────────────────────────────────────────────────────
   {
-    id: 'ca-013',
-    slug: 'farewell-party',
-    title: 'Farewell Party',
+    id: 'ca-042',
+    slug: 'ratri-rhythms-2024',
+    title: 'Ratri Rhythms',
     shortDescription:
-      'An emotional send-off celebrating the graduating batch with memories, awards, and wishes.',
+      'An evening of cultural music, dance, and performing arts celebrating campus vibrancy.',
     description:
-      'The Farewell Party at SVCP is a heartfelt celebration honouring the outgoing batch. Junior students organise a memorable programme of performances, video tributes, nostalgic slide shows, and emotional speeches. The evening features a candlelight ceremony, "Most Likely To..." awards, and a formal dinner. It is an evening that leaves every graduating student with cherished memories of their years at SVCP.',
-    date: '2024-04-20',
+      'Ratri Rhythms was an energetic evening cultural celebration at SVCP. The event brought students and faculty together for an evening filled with musical acts, rhythmic dance performances, and creative stage presentations celebrating youth and artistic spirit.',
+    date: '2024-08-31',
     year: 2024,
-    location: 'SVCP Banquet Hall',
+    location: 'SVCP Open-Air Stage',
     category: 'Cultural Activities',
     categorySlug: 'culturalActivities',
-    image: img('1541339907198-e08756dedf3f'),
+    image: img('1514525253161-7a46d19cd819'),
     gallery: gallery(
-      '1523050854058-8df90110c9f1',
-      '1528605248644-14dd04022da1',
-      '1514525253161-7a46d19cd819',
-      '1516450360452-9312f5e86fc7'
+      '1516450360452-9312f5e86fc7',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
     ),
     objectives: [
-      'Celebrate the achievements of the graduating batch',
-      'Create lasting memories for outgoing students',
-      'Strengthen the bond between juniors and seniors',
+      'Provide a platform for evening performing arts',
+      'Foster student participation in music and dance',
+      'Build campus camaraderie through cultural entertainment',
     ],
     highlights: [
-      'Nostalgic video tribute — "4 Years in 4 Minutes"',
-      'Fun awards: Best Couple, Class Comedian, Campus Star',
-      'Candlelight ceremony and memory sharing',
-      'Formal farewell dinner with alumni presence',
+      'Live musical and instrumental performances',
+      'Group and solo dance acts',
+      'Vibrant open-air campus evening',
     ],
-    tags: ['farewell', 'graduation', 'seniors', 'memories'],
+    tags: ['ratri rhythms', 'music', 'dance', 'evening', '2024'],
+  },
+  // ── 21. Teej Celebrations ─────────────────────────────────────────────────
+  {
+    id: 'ca-043',
+    slug: 'teej-celebrations-2024',
+    title: 'Teej Celebrations',
+    shortDescription:
+      'Traditional Teej festival celebrated with folk songs, traditional attire, and cultural festivities.',
+    description:
+      'SVCP celebrated the traditional festival of Teej with great enthusiasm. Students and staff donned traditional attire to celebrate the monsoon festival with folk songs, traditional swings, gidda performances, and festive delicacies, honouring the rich cultural heritage of the region.',
+    date: '2024-08-09',
+    year: 2024,
+    location: 'SVCP Campus',
+    category: 'Cultural Activities',
+    categorySlug: 'culturalActivities',
+    image: img('1514525253161-7a46d19cd819'),
+    gallery: gallery(
+      '1516450360452-9312f5e86fc7',
+      '1493225457124-a3eb161ffa5f',
+      '1578662996442-48f60103fc96',
+      '1511632765486-142679e5e344'
+    ),
+    objectives: [
+      'Celebrate the traditional monsoon festival of Teej',
+      'Promote regional folk traditions, attire, and music',
+      'Strengthen cultural pride and togetherness',
+    ],
+    highlights: [
+      'Traditional attire and cultural dress showcase',
+      'Folk songs and Gidda performances',
+      'Traditional festive swings and delicacies',
+    ],
+    tags: ['teej', 'festival', 'tradition', 'punjab', '2024'],
   },
 ];
 
@@ -1994,15 +2257,36 @@ export const CATEGORIES: CategoryMeta[] = [
 // HELPER FUNCTIONS
 // ─────────────────────────────────────────────────────────────────────────────
 export function getCategoryBySlug(slug: string): CategoryMeta | undefined {
-  return CATEGORIES.find((c) => c.slug === slug);
+  const norm = slug.toLowerCase().replace(/[-_]/g, '');
+  return CATEGORIES.find(
+    (c) =>
+      c.slug === slug ||
+      c.routeFolder === slug ||
+      c.id === slug ||
+      c.slug.toLowerCase() === slug.toLowerCase() ||
+      c.routeFolder.toLowerCase() === slug.toLowerCase() ||
+      c.id.toLowerCase() === slug.toLowerCase() ||
+      c.slug.toLowerCase().replace(/[-_]/g, '') === norm ||
+      c.routeFolder.toLowerCase().replace(/[-_]/g, '') === norm ||
+      c.id.toLowerCase().replace(/[-_]/g, '') === norm
+  );
 }
 
 export function getActivityBySlug(
   categorySlug: string,
   activitySlug: string
 ): Activity | undefined {
+  const decodedActivitySlug = decodeURIComponent(activitySlug);
   const category = getCategoryBySlug(categorySlug);
-  return category?.activities.find((a) => a.slug === activitySlug);
+  if (category) {
+    const found = category.activities.find(
+      (a) => a.slug === decodedActivitySlug || a.slug.toLowerCase() === decodedActivitySlug.toLowerCase()
+    );
+    if (found) return found;
+  }
+  return getAllActivities().find(
+    (a) => a.slug === decodedActivitySlug || a.slug.toLowerCase() === decodedActivitySlug.toLowerCase()
+  );
 }
 
 export function getAllActivities(): Activity[] {

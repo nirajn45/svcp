@@ -94,6 +94,7 @@ export default function FilterBar({
             className="w-full sm:w-auto px-3 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0F4C81]/30 focus:border-[#0F4C81] bg-white transition-all cursor-pointer"
             aria-label="Sort activities"
           >
+            <option value="default">Default Order</option>
             <option value="newest">Newest First</option>
             <option value="oldest">Oldest First</option>
             <option value="az">A → Z</option>

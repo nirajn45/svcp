@@ -34,21 +34,29 @@ export default function LocalActivityImage({
   }, [src, fallbackSrc]);
 
   const [candidateIndex, setCandidateIndex] = useState<number>(0);
+  const [hasError, setHasError] = useState(false);
 
   // Reset index when candidates array reference changes
   const [prevCandidates, setPrevCandidates] = useState(candidates);
   if (prevCandidates !== candidates) {
     setPrevCandidates(candidates);
     setCandidateIndex(0);
+    setHasError(false);
   }
 
   const currentSrc = candidates[candidateIndex];
 
   const handleError = () => {
-    setCandidateIndex((prev) => (prev + 1 < candidates.length ? prev + 1 : prev));
+    setCandidateIndex((prev) => {
+      if (prev + 1 < candidates.length) {
+        return prev + 1;
+      }
+      setHasError(true);
+      return prev;
+    });
   };
 
-  if (!currentSrc) {
+  if (!currentSrc || hasError) {
     return null;
   }
 
