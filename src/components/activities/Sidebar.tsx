@@ -12,6 +12,7 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import type { Activity, CategoryMeta } from '@/app/Activity/Data/types';
+import { sortActivitiesByYearAndDateDesc } from '@/app/Activity/Data/activitiesdata';
 
 interface SidebarProps {
   category: CategoryMeta;
@@ -36,8 +37,7 @@ export default function Sidebar({ category, currentSlug, onSearch }: SidebarProp
     onSearch?.(v);
   };
 
-  const recentActivities: Activity[] = [...category.activities]
-    .sort((a, b) => b.date.localeCompare(a.date))
+  const recentActivities: Activity[] = sortActivitiesByYearAndDateDesc(category.activities)
     .filter((a) => a.slug !== currentSlug)
     .slice(0, 4);
 

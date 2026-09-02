@@ -8,6 +8,7 @@ import FilterBar from './FilterBar';
 import Pagination from './pagination';
 import { staggerContainer } from './animation';
 import type { Activity } from '@/app/Activity/Data/types';
+import { parseActivityDate, sortActivitiesByYearAndDateDesc } from '@/app/Activity/Data/activitiesdata';
 
 const PAGE_SIZE = 9;
 
@@ -48,10 +49,19 @@ export default function ActivityGrid({ activities, hideFilters = false }: Activi
       result = result.filter((a) => a.year === Number(selectedYear));
     }
 
-    if (selectedSort === 'newest') result.sort((a, b) => b.date.localeCompare(a.date));
-    else if (selectedSort === 'oldest') result.sort((a, b) => a.date.localeCompare(b.date));
-    else if (selectedSort === 'az') result.sort((a, b) => a.title.localeCompare(b.title));
-    else if (selectedSort === 'za') result.sort((a, b) => b.title.localeCompare(a.title));
+    if (selectedSort === 'default' || selectedSort === 'newest') {
+      result = sortActivitiesByYearAndDateDesc(result);
+    } else if (selectedSort === 'oldest') {
+      result.sort((a, b) => {
+        const yearDiff = (a.year ?? 0) - (b.year ?? 0);
+        if (yearDiff !== 0) return yearDiff;
+        return parseActivityDate(a.date) - parseActivityDate(b.date);
+      });
+    } else if (selectedSort === 'az') {
+      result.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (selectedSort === 'za') {
+      result.sort((a, b) => b.title.localeCompare(a.title));
+    }
 
     return result;
   }, [activities, searchQuery, selectedYear, selectedSort]);

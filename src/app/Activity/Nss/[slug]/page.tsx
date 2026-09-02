@@ -14,6 +14,8 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const category = getCategoryBySlug('Nss');
   return (category?.activities ?? []).map((a) => ({ slug: a.slug }));

@@ -46,7 +46,7 @@ export default async function CulturalActivityDetailPage({ params }: Props) {
         subtitle={activity.shortDescription}
         breadcrumbs={[
           { label: 'Activities', href: '/Activity' },
-          { label: 'Cultural Activities', href: '/Activity/CulturalActivities' },
+          { label: 'Cultural Activity', href: '/Activity/CulturalActivities' },
           { label: activity.title },
         ]}
         imageSrc={getLocalActivityDetailHero('culturalActivities', slug)}

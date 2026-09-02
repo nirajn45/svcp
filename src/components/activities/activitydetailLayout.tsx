@@ -18,7 +18,7 @@ import {
 import GalleryGrid from './GalleryGrid';
 import ActivityCard from './ActivityCard';
 import LocalActivityImage from './LocalActivityImage';
-import { getLocalActivityDetailHero } from './localImageUtils';
+import { getLocalActivityDetailHero, getCategoryDisplayLabel } from './localImageUtils';
 import { staggerContainer, cardVariant, fadeUp, fadeLeft } from './animation';
 import type { Activity } from '@/app/Activity/Data/types';
 
@@ -95,7 +95,7 @@ export default function ActivityDetailLayout({
             <span
               className="inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md text-white bg-[#0F4C81] mb-3"
             >
-              {activity.category}
+              {getCategoryDisplayLabel(activity.category)}
             </span>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F4C81] leading-tight mb-4">
               {activity.title}
@@ -265,7 +265,7 @@ export default function ActivityDetailLayout({
               </div>
               <div>
                 <dt className="text-white/60 uppercase text-xs tracking-wider">Category</dt>
-                <dd className="font-semibold mt-0.5">{activity.category}</dd>
+                <dd className="font-semibold mt-0.5">{getCategoryDisplayLabel(activity.category)}</dd>
               </div>
               <div>
                 <dt className="text-white/60 uppercase text-xs tracking-wider">Year</dt>

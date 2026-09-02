@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 import { cardVariant } from './animation';
 import LocalActivityImage from './LocalActivityImage';
-import { getLocalActivityListingCover } from './localImageUtils';
+import { getLocalActivityListingCover, getCategoryDisplayLabel } from './localImageUtils';
 import type { Activity } from '@/app/Activity/Data/types';
 import { CATEGORIES } from '@/app/Activity/Data/activitiesdata';
 
@@ -61,7 +61,7 @@ export default function ActivityCard({ activity, index = 0 }: ActivityCardProps)
       <div className="p-5 flex flex-col flex-1">
         {/* Category badge */}
         <span className="inline-block text-xs bg-[#F59E0B]/10 text-[#F59E0B] font-bold px-2 py-0.5 rounded-md mb-3 w-fit border border-[#F59E0B]/20">
-          {activity.category}
+          {getCategoryDisplayLabel(activity.category)}
         </span>
 
         {/* Title */}

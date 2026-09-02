@@ -8,6 +8,8 @@ import ActivityDetailLayout from '@/components/activities/activitydetailLayout';
 
 interface Props { params: Promise<{ slug: string }> }
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const category = getCategoryBySlug('national-days');
   return (category?.activities ?? []).map((a: { slug: string }) => ({ slug: a.slug }));
