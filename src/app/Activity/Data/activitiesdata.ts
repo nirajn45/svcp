@@ -1644,9 +1644,14 @@ const alumniActivities: Activity[] = [
     categorySlug: 'alumni',
     image: '/activity-images/alumni/alumni-association/listing/cover.jpeg',
     gallery: [
-      '/activity-images/alumni/alumni-association/detail/gallery/01.jpg',
-      '/activity-images/alumni/alumni-association/detail/gallery/02.jpg',
-      '/activity-images/alumni/alumni-association/detail/gallery/3.jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/1..jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/2..jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/3..jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/4..jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/5..jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/6..jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/7..jpeg',
+      '/activity-images/alumni/alumni-association/detail/gallery/8..jpeg',
     ],
     objectives: [
       'Foster lifelong connections among alumni',
@@ -1706,6 +1711,7 @@ const alumniActivities: Activity[] = [
       '/activity-images/alumni/convocation/detail/gallery/2..jpeg',
       '/activity-images/alumni/convocation/detail/gallery/3..jpeg',
       '/activity-images/alumni/convocation/detail/gallery/4..jpeg',
+      '/activity-images/alumni/convocation/detail/gallery/5..jpeg',
     ],
     objectives: [
       'Confer degrees upon graduating batches of B.Pharm, D.Pharm, and M.Pharm',

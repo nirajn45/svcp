@@ -112,6 +112,20 @@ export default function ConvocationClient({ galleryImages }: ConvocationClientPr
           </div>
         </motion.div>
 
+        {/* Photo Gallery */}
+        {displayGallery.length > 0 && (
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="border-l-4 border-[#F59E0B] pl-4 text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Photo <span className="text-[#F59E0B]">Gallery</span>
+            </h2>
+            <GalleryGrid images={displayGallery} title="Convocation Gallery" />
+          </motion.div>
+        )}
 
       </div>
 

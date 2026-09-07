@@ -191,7 +191,7 @@ export const KNOWN_ACTIVITY_COVER_MAP: Record<string, string> = {
   'incubation-patent-tech-transfer-visit': '/activity-images/industrical visit/Incubation -Units visit/listing/cover.jpeg',
 
   // Alumni
-  'alumni-association': '/activity-images/alumni/alumni-association/listing/cover.jpg',
+  'alumni-association': '/activity-images/alumni/alumni-association/listing/cover.jpeg',
   'alumni-meets': '/activity-images/alumni/alumni-meets/listing/cover.jpeg',
   'convocation': '/activity-images/alumni/convocation/listing/cover.jpeg',
 };
@@ -289,7 +289,7 @@ export const KNOWN_ACTIVITY_HERO_MAP: Record<string, string> = {
   'incubation-patent-tech-transfer-visit': '/activity-images/industrical visit/Incubation -Units visit/detail/hero.jpeg',
 
   // Alumni
-  'alumni-association': '/activity-images/alumni/alumni-association/detail/hero.jpg',
+  'alumni-association': '/activity-images/alumni/alumni-association/detail/hero.jpeg',
   'alumni-meets': '/activity-images/alumni/alumni-meets/detail/hero.jpeg',
   'convocation': '/activity-images/alumni/convocation/detail/hero.jpeg',
 };
