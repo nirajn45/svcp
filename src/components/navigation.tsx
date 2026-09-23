@@ -123,10 +123,7 @@ export default function Navigation() {
       name: "Committees",
       href: "",
       subItems: [
-        {
-          name: "Internal Complaint Committee",
-          href: "/committees/internalComplaint",
-        },
+        
         { name: "Anti Ragging Cell ", href: "/committees/antiRagging" },
         {
           name: "Student Grievance Redressal Committee (SGRC)",
