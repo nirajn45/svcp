@@ -74,7 +74,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="gir " className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="  /Internal%20Complaint%20Committee%201.pdf    " className="text-gray-300 hover:text-white transition-colors text-sm">
                   Internal Complaint Committee
                 </a>
               </li>
