@@ -12,7 +12,7 @@ const Page = () => {
       description: "Bachelor of Pharmacy comprehensive curriculum and academic standards.",
     },
      {
-      name: "B. pharmacy 2026",
+      name: "B. Pharmacy 2026",
       link: "/documents/B.Pharm_Syllabus_2026_NEP2020.pdf",
       description: "Bachelor of Pharmacy curriculum for the academic session 2026.",
     },
