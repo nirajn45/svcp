@@ -145,7 +145,7 @@ const BPharmacyPage = () => {
               
               <div className="space-y-4 max-h-[350px] overflow-y-auto scrollbar-thin pr-4 text-gray-700 leading-relaxed text-justify">
                 <p>
-                  In SVGOI, SVCP is a pioneer institution in the field of Pharmaceutical Education and Research in Punjab since 2005. The Institute comprises of every element desired for the academic and professional excellence. Our mission is to build leaders through holistic, transformative, and innovative learning in the pharmaceutical sector. Bachelor of Pharmacy is a 4 Year Graduate program program in which students study the methods and process of formulating dosage forms and dispensing of medicines.
+                  In SVGOI, SVCP is a pioneer institution in the field of Pharmaceutical Education and Research in Punjab since 2005. The Institute comprises of every element desired for the academic and professional excellence. Our mission is to build leaders through holistic, transformative, and innovative learning in the pharmaceutical sector. Bachelor of Pharmacy is a 4 Year Graduate program  in which students study the methods and process of formulating dosage forms and dispensing of medicines.
                 </p>
                 <h4 className="font-bold text-[#0F4C81] text-lg mt-4 mb-2">Scope of Course</h4>
                 <p>

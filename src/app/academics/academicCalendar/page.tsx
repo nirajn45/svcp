@@ -10,8 +10,11 @@ const Page = () => {
       title: "Academic Calendar for Session 2025-2026",
       link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhTvMy9BpKlkFuAROSjc63sigMztyCVdIZ9nE7",
     },
+    {
+      title: "Academic Calendar for Session 2026-2027",
+      link: "/documents/IKGPTU_Academic-Calendar-2026-27.pdf",
+    }
   ];
-
   return (
     <div className="min-h-screen bg-slate-50/50 py-16 px-4 md:px-8">
       <div className="max-w-5xl mx-auto">

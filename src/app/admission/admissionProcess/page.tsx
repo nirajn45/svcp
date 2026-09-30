@@ -91,6 +91,7 @@ const AdmissionProcessPage = () => {
       title: "Diploma",
       image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhTFq1cqpKlkFuAROSjc63sigMztyCVdIZ9nE7",
     },
+    
   ];
 
   const opportunities = [
@@ -150,7 +151,7 @@ const AdmissionProcessPage = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight"
           >
-            Admissions at <span className="text-[#F59E0B]">SVIET</span>
+            Admissions at <span className="text-[#F59E0B]">SVCP</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -158,7 +159,7 @@ const AdmissionProcessPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-[#F59E0B] font-bold mb-4"
           >
-            Simplified, Compehensive & Transparent
+            Simplified, Comprehensive  & Transparent
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

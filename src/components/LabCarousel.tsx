@@ -27,7 +27,7 @@ const labs = [
     image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhfWAADIFxK4JFqQODBl0s6A2YzcVa1CPeTMyh",
   },
   {
-    name: "Pharma Chemistry Lab",
+    name: "Pharmaceutical Chemistry Lab",
     desc: "Explore pharmaceutical chemistry and compound synthesis.",
     image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhNAPxfwzLPBF2lpUHSbiJz36vD58Tat1fEhG9",
   },

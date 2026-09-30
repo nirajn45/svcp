@@ -115,7 +115,7 @@ export default function AntiRaggingPage() {
               className="flex flex-col sm:flex-row gap-3 shrink-0"
             >
               <motion.a
-                href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhiZ0cjDoDX9oCEJ5eNzMc3t4BSZxbduIQWKOT"
+                href="/documents/anti-ragging.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.04, y: -2 }}
@@ -360,7 +360,7 @@ export default function AntiRaggingPage() {
               {/* Download Buttons */}
               <motion.div {...fadeInUp} className="space-y-3">
                 <a
-                  href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhiZ0cjDoDX9oCEJ5eNzMc3t4BSZxbduIQWKOT"
+                  href="/documents/anti-ragging.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-5 py-4 rounded-xl shadow-md transition-all duration-300 group w-full"

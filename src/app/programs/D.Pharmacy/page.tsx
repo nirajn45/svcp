@@ -301,7 +301,7 @@ const DPharmacyPage = () => {
               className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 min-w-[280px]"
             >
               <Award className="w-10 h-10 text-[#F59E0B] mx-auto mb-4" />
-              <h4 className="text-xl font-bold">Approved by AICTE</h4>
+              <h4 className="text-xl font-bold">Approved by Pharmacy council of India</h4>
             </motion.div>
           </motion.div>
         </div>
@@ -338,7 +338,7 @@ const DPharmacyPage = () => {
               className="group flex items-center gap-4 bg-[#F59E0B] hover:bg-[#d97706] text-white px-8 py-4 rounded-lg shadow-md transition-all duration-300 font-bold text-lg"
             >
               <Download className="w-6 h-6 group-hover:animate-bounce" />
-              SVIET Brochure
+              Brochure
             </motion.a>
           </motion.div>
         </div>

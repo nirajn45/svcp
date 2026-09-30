@@ -54,6 +54,17 @@ export default function CoursesPage() {
       color: "#F59E0B",
       icon: BookOpen,
     },
+    {
+      id: "mpharmacy-pharmacology",
+      name: "M.Pharmacy (Pharmacology)",
+      fullName: "Master of Pharmacy (Pharmacology)",
+      duration: "2 Years",
+      eligibility: "B.Pharmacy degree",
+      description: "Advanced postgraduate program focusing on drug action, experimental pharmacology, clinical research, toxicology, and pharmacological research.",
+      highlights: ["Experimental Pharmacology", "Clinical Research", "Toxicology Studies", "Research & Development"],
+      color: "#F59E0B",
+      icon: Award,
+    }
   ]
 
   const fadeInUp = {
@@ -199,7 +210,7 @@ export default function CoursesPage() {
                       </div>
 
                       <Button asChild className="w-full bg-[#F59E0B] hover:bg-[#d97706] text-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 font-bold h-12">
-                        <Link href={`/programs/${course.name === "M.Pharmacy" ? "M.Pharmacy-Pharmacology" : course.name}`}>
+                        <Link href={course.name === "M.Pharmacy (Pharmacology)" ? "/programs/M.Pharmacy-Pharmacology" : `/programs/${course.name === "M.Pharmacy" ? "M.Pharmacy-Pharmacology" : course.name}`}>
                           Learn More <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Link>
                       </Button>

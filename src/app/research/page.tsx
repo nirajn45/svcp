@@ -70,17 +70,35 @@ const books = [
     pdf: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhJ7tyzZOymi2th8Iu3GUzrRV70wBqXWOvsblk",
   },
   {
-    title: "Ratan Tata: The Architect of Modern India",
-    authors: "Mr. Ankur Gill, Mr. Vishal Garg",
-    isbn: "978-93-584777-2-6",
-    pdf: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhGFeVRkeHeM3jI6xvG9gSTOLs1dHDcKUZrXAf",
+    title: "Medicinal Biochemistry For Pharm D ",
+    authors: "Dr. Swikriti , Ms. Diksha Soni , Ms. Sukhmanjot Kaur ,",
+    isbn: " 978-93-7185-932-5 ",
+    pdf: " https://doi.org/10.70593/978-93-7185-932-5  ",
   },
   {
-    title: "Empowering Youth: Swami Vivekananda&apos;s Timeless Teachings for Today&apos;s Generation",
-    authors: "Mr. Ankur Gill",
-    isbn: "978-93-5847-264-6",
-    pdf: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhHVH8zlfagpVsDiBn59ZOyNJ6fc2HYhFXSWqz",
+    title: "Book of Pharmacotherapeutics-III (Pharm.D) ",
+    authors: "Dr. Nikita Khera , Ms. Himani Dhiman ",
+    isbn: "978-93-7185-742-0 ",
+    pdf: "https://doi.org/10.70593/978-93-7185-742-0",
   },
+  {
+    title: "Emerging Advances in Molecular Modelling, Docking, and Dynamics",
+    authors: "Dr. Meenakshi Rana , Mr. Ritam Mondal , Ms. Priya ",
+    isbn: " 978-81-688386-7-3 ",
+    pdf: "https://mantrapublicationservices.com/wp-content/uploads/2026/07/Mantra-Publication-1002.pdf"
+  },
+  {
+    title: "Cosmetics and Cosmeceuticals Theory (BP702T)",
+    authors: "Dr. Damit Kumar , Mr. Almaz Kamran" ,
+    isbn: "978-81-689152-3-7" ,
+    pdf: "https://mantrapublicationservices.com/wp-content/uploads/2026/07/MPS-26-F-9236371090.pdf",
+  },
+  {
+    title: "Pharmacognosy and Phytochemistry - II",
+    authors: "Ms.Tamanna Dhiman , Ms. Priyanka Kumari , Mr. Rahul Kumar ",
+    isbn: "978-93-7185-624-9" ,
+    pdf: "https://doi.org/10.70593/978-93-7185-624-9",
+  }
 ];
 
 const domains = [

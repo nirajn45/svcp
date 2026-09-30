@@ -51,6 +51,11 @@ const Page = () => {
                 link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhUhjpM4ELDPe7fJQ0dYxH6AGR5kbzZvLr2T8m",
                 color: "#d97706",
               },
+               {
+                name: "-Affiliation Letter 2026-27",
+                link: "",
+                color: "#d97706",
+              },
             ].map((course, index) => (
               <Card
                 key={course.name}

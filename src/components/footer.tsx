@@ -64,7 +64,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://bmnmsbiymz.ufs.sh/f/1V3V2P4kpAumZaZfSp8nLS41ZsWrz2yX9qNdG5vVC7FuBlfa" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="/documents/anti-ragging.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Anti-Ragging Committee
                 </a>
               </li>
@@ -74,7 +74,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="  /Internal%20Complaint%20Committee%201.pdf    " className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="/documents/Internal%20Complaint%20Committee%201.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Internal Complaint Committee
                 </a>
               </li>

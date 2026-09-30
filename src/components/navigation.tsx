@@ -192,7 +192,7 @@ export default function Navigation() {
       name: "NIRF",
       href: "",
       subItems: [
-        { name: "NIRF 2026", href: "/nirf-2026.pdf" },
+        { name: "NIRF 2026", href: "/documents/nirf-2026.pdf" },
       ],
     },
 

@@ -7,9 +7,14 @@ import { motion } from "framer-motion";
 const Page = () => {
   const syllabusData = [
     {
-      name: "B. Pharmacy",
+      name: "B. Pharmacy 2017 Onwards",
       link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh23uTAtBQhouO4sXci71GvtEdxUSqLIHy5RYD",
       description: "Bachelor of Pharmacy comprehensive curriculum and academic standards.",
+    },
+     {
+      name: "B. pharmacy 2026",
+      link: "/documents/B.Pharm_Syllabus_2026_NEP2020.pdf",
+      description: "Bachelor of Pharmacy curriculum for the academic session 2026.",
     },
     {
       name: "Pharm. D",
@@ -31,6 +36,7 @@ const Page = () => {
       link: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrh20VrYnBQhouO4sXci71GvtEdxUSqLIHy5RYD",
       description: "Diploma in Pharmacy fundamental courses and professional guidelines.",
     },
+   
   ];
 
   return (
