@@ -53,7 +53,7 @@ const Page = () => {
               },
                {
                 name: "-Affiliation Letter 2026-27",
-                link: "",
+                link: "/documents/pci-approval-letter-2026-27.pdf",
                 color: "#d97706",
               },
             ].map((course, index) => (

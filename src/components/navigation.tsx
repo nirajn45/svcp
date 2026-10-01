@@ -71,7 +71,6 @@ export default function Navigation() {
       subItems: [
         { name: "D.Pharmacy", href: "/programs/D.Pharmacy" },
         { name: "B.Pharmacy", href: "/programs/B.Pharmacy" },
-        { name: "Pharm.D", href: "/programs/Pharm.D" },
         { 
           name: "M.Pharmacy", 
           href: "",
@@ -80,13 +79,15 @@ export default function Navigation() {
             { name: "M.Pharmacy (Pharmaceutics)", href: "/programs/M.Pharmacy-Pharmaceutics" }
           ]
         },
+        { name: "Pharm.D", href: "/programs/Pharm.D" },
+        
       ],
     },
     {
       name: "Admission",
       href: "",
       subItems: [
-        { name: "Course Offered", href: "/courses" },
+        { name: " Programmes Offered ", href: "/courses" },
         { name: "Brochure", href: "/admission/brochure" },
         {
           name: "Admission Process and guidelines",

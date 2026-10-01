@@ -301,7 +301,7 @@ const DPharmacyPage = () => {
               className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 min-w-[280px]"
             >
               <Award className="w-10 h-10 text-[#F59E0B] mx-auto mb-4" />
-              <h4 className="text-xl font-bold">Approved by Pharmacy council of India</h4>
+              <h4 className="text-xl font-bold">Approved by Pharmacy Council of India</h4>
             </motion.div>
           </motion.div>
         </div>

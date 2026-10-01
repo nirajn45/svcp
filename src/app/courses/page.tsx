@@ -10,13 +10,24 @@ import { Clock, BookOpen, Users, Award, ArrowRight, GraduationCap, FlaskConical,
 export default function CoursesPage() {
   const courses = [
     {
+      id: "dpharmacy",
+      name: "D.Pharmacy",
+      fullName: "Diploma in Pharmacy",
+      duration: "2 Years",
+      eligibility: "10+2 with PCM/PCB",
+      description: "Foundational program providing essential pharmaceutical knowledge and practical skills.",
+      highlights: ["Quick Entry", "Practical Training", "Community Focus", "Professional Skills"],
+      color: "#F59E0B",
+      icon: BookOpen,
+    },
+    {
       id: "bpharmacy",
       name: "B.Pharmacy",
       fullName: "Bachelor of Pharmacy",
       duration: "4 Years",
       eligibility: "10+2 with PCM/PCB",
       description:
-        "Comprehensive undergraduate program covering pharmaceutical sciences, drug discovery, development, and healthcare.",
+        "Comprehensive undergraduate Programmes covering pharmaceutical sciences, drug discovery, development, and healthcare.",
       highlights: ["Industry Internships", "Research Projects", "Clinical Training", "Modern Laboratories"],
       color: "#F59E0B",
       icon: GraduationCap,
@@ -33,6 +44,17 @@ export default function CoursesPage() {
       icon: Award,
     },
     {
+      id: "mpharmacy-pharmacology",
+      name: "M.Pharmacy (Pharmacology)",
+      fullName: "Master of Pharmacy (Pharmacology)",
+      duration: "2 Years",
+      eligibility: "B.Pharmacy degree",
+      description: "Advanced postgraduate program focusing on drug action, experimental pharmacology, clinical research, toxicology, and pharmacological research.",
+      highlights: ["Experimental Pharmacology", "Clinical Research", "Toxicology Studies", "Research & Development"],
+      color: "#F59E0B",
+      icon: Award,
+    },
+    {
       id: "pharmd",
       name: "Pharm.D",
       fullName: "Doctor of Pharmacy",
@@ -43,28 +65,6 @@ export default function CoursesPage() {
       color: "#F59E0B",
       icon: Users,
     },
-    {
-      id: "dpharmacy",
-      name: "D.Pharmacy",
-      fullName: "Diploma in Pharmacy",
-      duration: "2 Years",
-      eligibility: "10+2 with PCM/PCB",
-      description: "Foundational program providing essential pharmaceutical knowledge and practical skills.",
-      highlights: ["Quick Entry", "Practical Training", "Community Focus", "Professional Skills"],
-      color: "#F59E0B",
-      icon: BookOpen,
-    },
-    {
-      id: "mpharmacy-pharmacology",
-      name: "M.Pharmacy (Pharmacology)",
-      fullName: "Master of Pharmacy (Pharmacology)",
-      duration: "2 Years",
-      eligibility: "B.Pharmacy degree",
-      description: "Advanced postgraduate program focusing on drug action, experimental pharmacology, clinical research, toxicology, and pharmacological research.",
-      highlights: ["Experimental Pharmacology", "Clinical Research", "Toxicology Studies", "Research & Development"],
-      color: "#F59E0B",
-      icon: Award,
-    }
   ]
 
   const fadeInUp = {
@@ -119,10 +119,10 @@ export default function CoursesPage() {
               <span className="text-[#F59E0B] font-semibold text-sm">Premium Education</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight">
-              Our <span className="text-[#F59E0B]">Courses</span>
+             Our   <span className="text-[#F59E0B]">Programmes</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl">
-              Comprehensive pharmaceutical education programs designed to meet the evolving demands of healthcare and
+              Comprehensive pharmaceutical education Programmes designed to meet the evolving demands of healthcare and
               prepare students for successful careers in the pharmaceutical industry.
             </p>
           </motion.div>
@@ -141,10 +141,10 @@ export default function CoursesPage() {
               <span className="text-[#F59E0B] font-semibold text-sm">Academic Excellence</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-6 tracking-tight">
-              Academic <span className="text-[#F59E0B]">Programs</span>
+              Academic <span className="text-[#F59E0B]"> Programmes </span>
             </h2>
             <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">
-              Choose from our comprehensive range of pharmacy programs, each designed to provide specialized knowledge
+              Choose from our comprehensive range of pharmacy  Programmes, each designed to provide specialized knowledge
               and practical skills for your career advancement.
             </p>
             <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto mt-6"></div>
@@ -261,7 +261,7 @@ export default function CoursesPage() {
               {
                 title: "Clinical Research",
                 description:
-                  "Comprehensive clinical research programs focusing on drug safety, efficacy, and patient care optimization.",
+                  "Comprehensive clinical research Programmes  focusing on drug safety, efficacy, and patient care optimization.",
                 icon: Microscope,
                 image: "https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhCjksPJAdUZEkx3JDvuRN8tSP2f5hLGVgpz7y",
               },
