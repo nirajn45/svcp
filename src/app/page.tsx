@@ -197,54 +197,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {[
               {
-                name: "B.Pharmacy",
-                fullName: "Bachelor of Pharmacy",
-                duration: "4 Years",
-                description:
-                  "Comprehensive undergraduate program covering pharmaceutical sciences, drug development, and healthcare systems.",
-                highlights: [
-                  "Industry Internships",
-                  "Research Projects",
-                  "Clinical Training",
-                  "Modern Labs",
-                ],
-                link: "/courses/bpharmacy",
-                color: "#fea700",
-              },
-              {
-                name: "M.Pharmacy",
-                fullName: "Master of Pharmacy (Pharmaceutics)",
-                duration: "2 Years",
-                description:
-                  "Advanced postgraduate program focusing on specialized pharmaceutical research and development.",
-                highlights: [
-                  "Research Excellence",
-                  "Advanced Techniques",
-                  "Publication Opportunities",
-                  "Industry Connect",
-                ],
-                link: "/courses/mpharmacy",
-                color: "#f59e0b",
-              },
-              {
-                name: "Pharm.D",
-                fullName: "Doctor of Pharmacy",
-                duration: "6 Years",
-                description:
-                  "Professional doctorate program emphasizing clinical pharmacy practice and patient care.",
-                highlights: [
-                  "Clinical Practice",
-                  "Hospital Rotations",
-                  "Patient Counseling",
-                  "Healthcare Leadership",
-                ],
-                link: "/courses/pharmd",
-                color: "#ea580c",
-              },
-              {
                 name: "D.Pharmacy",
                 fullName: "Diploma in Pharmacy",
                 duration: "2 Years",
+                eligibility: "10+2 with PCM/PCB",
                 description:
                   "Foundational program providing essential pharmaceutical knowledge and practical skills.",
                 highlights: [
@@ -253,8 +209,72 @@ export default function HomePage() {
                   "Community Focus",
                   "Professional Skills",
                 ],
-                link: "/courses/dpharmacy",
+                link: "/programs/D.Pharmacy",
                 color: "#d97706",
+              },
+              {
+                name: "B.Pharmacy",
+                fullName: "Bachelor of Pharmacy",
+                duration: "4 Years",
+                eligibility: "10+2 with PCM/PCB",
+                description:
+                  "Comprehensive undergraduate Programmes covering pharmaceutical sciences, drug discovery, development, and healthcare.",
+                highlights: [
+                  "Industry Internships",
+                  "Research Projects",
+                  "Clinical Training",
+                  "Modern Laboratories",
+                ],
+                link: "/programs/B.Pharmacy",
+                color: "#fea700",
+              },
+              {
+                name: "M.Pharmacy",
+                fullName: "Master of Pharmacy (Pharmaceutics)",
+                duration: "2 Years",
+                eligibility: "B.Pharmacy degree",
+                description:
+                  "Advanced postgraduate program focusing on specialized pharmaceutical research and development.",
+                highlights: [
+                  "Research Excellence",
+                  "Advanced Techniques",
+                  "Publication Opportunities",
+                  "Industry Connect",
+                ],
+                link: "/programs/M.Pharmacy-Pharmaceutics",
+                color: "#f59e0b",
+              },
+              {
+                name: "M.Pharmacy (Pharmacology)",
+                fullName: "Master of Pharmacy (Pharmacology)",
+                duration: "2 Years",
+                eligibility: "B.Pharmacy degree",
+                description:
+                  "Advanced postgraduate program focusing on drug action, experimental pharmacology, clinical research, toxicology, and pharmacological research.",
+                highlights: [
+                  "Experimental Pharmacology",
+                  "Clinical Research",
+                  "Toxicology Studies",
+                  "Research & Development",
+                ],
+                link: "/programs/M.Pharmacy-Pharmacology",
+                color: "#ea580c",
+              },
+              {
+                name: "Pharm.D",
+                fullName: "Doctor of Pharmacy",
+                duration: "6 Years",
+                eligibility: "10+2 with PCM/PCB",
+                description:
+                  "Professional doctorate program emphasizing clinical pharmacy practice and patient care.",
+                highlights: [
+                  "Clinical Practice",
+                  "Hospital Rotations",
+                  "Patient Counseling",
+                  "Healthcare Leadership",
+                ],
+                link: "/programs/Pharm.D",
+                color: "#ea580c",
               },
             ].map((course, index) => (
               <Card
