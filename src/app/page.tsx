@@ -352,13 +352,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
-                number: "104",
-                label: "NIRF Ranking 2021",
-                description: "Recognized among top institutions",
-                icon: Award,
-                color: "#fea700",
-              },
-              {
                 number: "1000+",
                 label: "Students Graduated",
                 description: "Successfully placed in leading companies",
