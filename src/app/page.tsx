@@ -186,7 +186,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <h2 className="border-l-4 border-[#fea700] pl-4 text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Our <span className="text-[#fea700]">Courses</span>
+              Our <span className="text-[#fea700]">Programme</span>
             </h2>
             <p className="text-base text-gray-600 leading-relaxed">
               Comprehensive pharmacy education programs designed to meet
@@ -218,7 +218,7 @@ export default function HomePage() {
                 duration: "4 Years",
                 eligibility: "10+2 with PCM/PCB",
                 description:
-                  "Comprehensive undergraduate Programmes covering pharmaceutical sciences, drug discovery, development, and healthcare.",
+                  "Comprehensive undergraduate Programme  covering pharmaceutical sciences, drug discovery, development, and healthcare.",
                 highlights: [
                   "Industry Internships",
                   "Research Projects",
@@ -229,12 +229,12 @@ export default function HomePage() {
                 color: "#fea700",
               },
               {
-                name: "M.Pharmacy",
+                name: "M.Pharmacy (Pharmaceutics)",
                 fullName: "Master of Pharmacy (Pharmaceutics)",
                 duration: "2 Years",
                 eligibility: "B.Pharmacy degree",
                 description:
-                  "Advanced postgraduate program focusing on specialized pharmaceutical research and development.",
+                  "Advanced postgraduate Programme  focusing on specialized pharmaceutical research and development.",
                 highlights: [
                   "Research Excellence",
                   "Advanced Techniques",
@@ -250,7 +250,7 @@ export default function HomePage() {
                 duration: "2 Years",
                 eligibility: "B.Pharmacy degree",
                 description:
-                  "Advanced postgraduate program focusing on drug action, experimental pharmacology, clinical research, toxicology, and pharmacological research.",
+                  "Advanced postgraduate Programme  focusing on drug action, experimental pharmacology, clinical research, toxicology, and pharmacological research.",
                 highlights: [
                   "Experimental Pharmacology",
                   "Clinical Research",
@@ -266,7 +266,7 @@ export default function HomePage() {
                 duration: "6 Years",
                 eligibility: "10+2 with PCM/PCB",
                 description:
-                  "Professional doctorate program emphasizing clinical pharmacy practice and patient care.",
+                  "Professional doctorate Programme emphasizing clinical pharmacy practice and patient care.",
                 highlights: [
                   "Clinical Practice",
                   "Hospital Rotations",
