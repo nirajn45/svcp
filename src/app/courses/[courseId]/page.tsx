@@ -12,7 +12,7 @@ const courseDetails = {
     eligibility: "10+2 with Physics, Chemistry, Mathematics/Biology",
     color: "#fea700",
     description:
-      "The Bachelor of Pharmacy (B.Pharmacy) is a comprehensive 4-year undergraduate program designed to provide students with in-depth knowledge of pharmaceutical sciences, drug development, and healthcare systems.",
+      "The Bachelor of Pharmacy (B.Pharmacy) is a comprehensive 4-year undergraduate Programme designed to provide students with in-depth knowledge of pharmaceutical sciences, drug development, and healthcare systems.",
     curriculum: [
       "Pharmaceutical Chemistry",
       "Pharmacology",
@@ -39,7 +39,7 @@ const courseDetails = {
     eligibility: "B.Pharmacy degree with minimum 55% marks",
     color: "#f59e0b",
     description:
-      "The Master of Pharmacy (M.Pharmacy) is an advanced 2-year postgraduate program focusing on specialized areas of pharmaceutical sciences and research methodologies.",
+      "The Master of Pharmacy (M.Pharmacy) is an advanced 2-year postgraduate Programme focusing on specialized areas of pharmaceutical sciences and research methodologies.",
     curriculum: [
       "Advanced Pharmaceutical Chemistry",
       "Clinical Research",
@@ -66,7 +66,7 @@ const courseDetails = {
     eligibility: "10+2 with Physics, Chemistry, Biology",
     color: "#ea580c",
     description:
-      "The Doctor of Pharmacy (Pharm.D) is a professional doctorate program focusing on clinical pharmacy practice, patient care, and healthcare leadership.",
+      "The Doctor of Pharmacy (Pharm.D) is a professional doctorate Programme  focusing on clinical pharmacy practice, patient care, and healthcare leadership.",
     curriculum: [
       "Clinical Pharmacology",
       "Therapeutics",
@@ -93,7 +93,7 @@ const courseDetails = {
     eligibility: "10+2 with Physics, Chemistry, Mathematics/Biology",
     color: "#d97706",
     description:
-      "The Diploma in Pharmacy (D.Pharmacy) is a foundational 2-year program providing essential knowledge and practical skills in pharmaceutical practice and community pharmacy.",
+      "The Diploma in Pharmacy (D.Pharmacy) is a foundational 2-year Programme providing essential knowledge and practical skills in pharmaceutical practice and community pharmacy.",
     curriculum: [
       "Pharmaceutical Chemistry",
       "Pharmacognosy",
