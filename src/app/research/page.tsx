@@ -18,7 +18,7 @@ const stagger = {
   viewport: { once: true },
 };
 
-const publications = [
+const publicationsRaw = [
   { sr: 1, title: "Emerging role of Exosomes in parkinson's disease: Pathogenesis, diagnostics and therapeutic perspectives", authors: "Swikriti, Sukhmanjot Kaur, Diksha Soni", journal: "Research Journal of Chemistry and Environment (RJCE)", year: 2025, issn: "0972-0626" },
   { sr: 2, title: "Banana peel: A Nutritional Power House with many uses", authors: " Manni Rohilla , Diksha Soni, Swikriti", journal: "Journal of Carcinogenesis", year: 2025, issn: "1477-3163" },
   { sr: 3, title: "Influence Of Mannitol-Induced Drought Stress On Capsaicin, Antioxidants, And Oil Content Of Capsicum Annum Genotypes", authors: "Eshna Bhatt", journal: "Journal of Applied Bioanalysis", year: 2025, issn: "E-ISSN: 2405-710X" },
@@ -54,6 +54,47 @@ const publications = [
   { sr: 33, title: "Comprehensive review on the structure and phytochemical exploration of diosmetin: A promising moiety", authors: "Prerna Sarup", journal: "", year: 2022, issn: "" },
   { sr: 34, title: "Compendious Review on Bioactive Constituents and Pharmacotherapeutic Profile of Heliotropium indicum Linn", authors: "Sonia Pahuja, Prerna Sarup", journal: "The Natural Products Journal", year: 2022, issn: "2210-3155" },
   { sr: 35, title: "Evaluation of early menopause symptoms in post-hysterectomy and premature ovarian insufficiency in women of reproductive age group", authors: "Prerna Sarup", journal: "Research Journal of Pharmacy and Technology", year: 2022, issn: "" },
+];
+
+// Sort by year descending and regenerate sequential sr numbers.
+const publications = publicationsRaw
+  .slice()
+  .sort((a, b) => b.year - a.year)
+  .map((p, i) => ({ ...p, sr: i + 1 }));
+
+// ── IPR / Patents / Designs Data ──
+// Sorted by year descending (2026 → 2024 → 2023). Sr. No. is auto-generated in the render.
+const iprRecordsRaw = [
+  // 2026 records
+  { year: 2026, type: "Design",  status: "Registered", appNo: "476678-001",     inventors: "Dr. Swikriti",                                                                                                                      title: "Transportable Analytical Device for The Measurement of Absorbance of Drug",                                                        pubNo: "476678-001" },
+  { year: 2026, type: "Design",  status: "Registered", appNo: "486473-001",     inventors: "Mr. Manni Rohilla",                                                                                                                   title: "Microemulsifier Device for Formulation of Nanoparticles",                                                                           pubNo: "486473-001" },
+  { year: 2026, type: "Design",  status: "Registered", appNo: "479313-001",     inventors: "Dr. Meenakshi Rana",                                                                                                                  title: "Naninvasive Laser Therapy Device to Suppress Inflammation and Pain in Osteoarthritis",                                              pubNo: "479313-001" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202511112919",   inventors: "Dr. Nikita Khera, Sukhmanjot Kaur, Md Asif Khalid Ansari",                                                                           title: "Green Synthesis and Characterization of Silver nanoparticles Using Azadirachta indica for Antibacterial Applications",              pubNo: "202511112919" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611022450",   inventors: "Ms. Diksha Soni, Dr. Swikriti",                                                                                                       title: "3-Thiazolyl-Linked Quinolone Compounds Exhibiting Enhanced Bactericidal Activity Against Rifampicin and Isoniazid-Resistant Mycobacterium tuberculosis", pubNo: "202611022450" },
+  { year: 2026, type: "Design",  status: "Registered", appNo: "489619-001",     inventors: "Dr. Satbir Kaur",                                                                                                                     title: "Laboratory Device for Analytical Study of Drugs",                                                                                   pubNo: "489619-001" },
+  { year: 2026, type: "Design",  status: "Registered", appNo: "493646-001",     inventors: "Dr. Nikita Khera, Ms. Vaishali Mahajan",                                                                                             title: "Blood Glucose Assessment During Pregnancy-Related Diabetes",                                                                        pubNo: "493646-001" },
+  { year: 2026, type: "Design",  status: "Registered", appNo: "500915-001",     inventors: "Ms. Sakshi Sharma",                                                                                                                   title: "Smart Device for Monitoring Neuropsychological Behavioral Activity in Rodents",                                                     pubNo: "500915-001" },
+  { year: 2026, type: "Design",  status: "Registered", appNo: "506210-001",     inventors: "Dr. Meenakshi Rana, Ms. Himani Dhiman, Mr. Ritam Mondal, Dr. Sunidhi Chauhan, Dr. Prince Manta",                                     title: "Dual-Nozzle Nasal Spray Device",                                                                                                    pubNo: "506210-001" },
+  { year: 2026, type: "Design",  status: "Registered", appNo: "506207-001",     inventors: "Dr. Swikriti, Dr. Damit Kumar, Ms. Swati Gupta, Mr. Naveen Kumar",                                                                   title: "Test Tube Holder",                                                                                                                  pubNo: "506207-001" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611079886 A", inventors: "Dr. Ashok Kumar Tiwari, Dr. Damit Kumar, Dr. Gaurav Sharma",                                                                         title: "A logic-gated multi-layer microencapsulation system for controlled and conditional drug release",                                    pubNo: "202611079886 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611076864 A", inventors: "Dr. Manish Goswami, Mr. Rahul kumar, Dr. Nikita, Ms. Diksha Soni, Dr. Kunal Kaul",                                                   title: "A Dual-Surface Dental Bioadhesive For Selective Enamel Retention",                                                                  pubNo: "202611076864 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611076846 A", inventors: "Dr. Meenakshi Rana, Mr. Manni Rohilla, Mr. Naveen Kumar",                                                                             title: "Ph-responsive bioadhesive composition for localized drug delivery with controlled release",                                         pubNo: "202611076846 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611079811 A", inventors: "Mr. Almaz Kamran, Dr. Albab Kamran",                                                                                                  title: "A position-controlled dissolution sampling device and Method thereof",                                                              pubNo: "202611079811 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611079066 A", inventors: "Ms. Eshna Bhatt, Dr. Prince Manta",                                                                                                   title: "Adaptive Bulk Material Distribution System For Freeze-Dryer Loading",                                                               pubNo: "202611079066 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611076219 A", inventors: "Dr. Swikriti, Ms. Chandni Singla",                                                                                                    title: "An Adaptive Dosing Device And Method For Environentally Compensated Mass-Based Dispensing",                                        pubNo: "202611076219 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611078836 A", inventors: "Mr. Anshu Gupta, Dr. Sunidhi Chauhan, Mr. Shabir Ahmad dar",                                                                         title: "A Threshold-Triggered Multi-Stage Solvent Recovery System And Method Thereof",                                                      pubNo: "202611078836 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611076847 A", inventors: "Ms. Tamanna Dhiman, Ms. Priyanka Kumari",                                                                                             title: "A Stimuli-Responsive Dual-Layer Biodegradable Pharmaceutical Packaging Film And Method of Preparation Thereof",                    pubNo: "202611076847 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611078835 A", inventors: "Mr. Ritam Mondal, Ms. Vasvi",                                                                                                         title: "A Multi-Chamber Glucose Dosing Device With Pressure-Activated Sequential Dispensing And A Method Thereof",                         pubNo: "202611078835 A" },
+  { year: 2026, type: "Patent",  status: "Published",  appNo: "202611078281 A", inventors: "Ms. Himani Dhiman, Mr. Tarun Sharma, Mr. Harmeet Singh",                                                                              title: "A Solid Nasal Insert With a Cyclodextrin-Drug Inclusion Complex in a Polymer Matrix",                                               pubNo: "202611078281 A" },
+  // 2024 records
+  { year: 2024, type: "Design",  status: "Registered", appNo: "400008-001",     inventors: "Dr. Puneet Sudan",                                                                                                                    title: "Oral Film Tensile Strength Tester",                                                                                                 pubNo: "400008-001" },
+  { year: 2024, type: "Design",  status: "Registered", appNo: "400006-001",     inventors: "Dr. Puneet Sudan",                                                                                                                    title: "Dissolution Apparatus for Gummies",                                                                                                 pubNo: "400006-001" },
+  { year: 2024, type: "Design",  status: "Registered", appNo: "400007-001",     inventors: "Dr. Puneet Sudan",                                                                                                                    title: "Rat Restrainer Device",                                                                                                             pubNo: "400007-001" },
+  { year: 2024, type: "Design",  status: "Registered", appNo: "410912-001",     inventors: "Dr. Vikas Bansal, Dr. Puneet Sudan, Kumar Prateek Gaurav, Abhishek Yadav, Prashant Kumar, Tanmay Mishra, Aakash Kumar",              title: "Dual-Nostril Dropper Bottle",                                                                                                       pubNo: "410912-001" },
+  { year: 2024, type: "Design",  status: "Registered", appNo: "414595-001",     inventors: "Dr. Vikas Bansal, Dr. Puneet Sudan, Ms. Khushboo rani, Ms. Diksha Soni, Dr. Navdeep Goel, Ms. Sukhmanjot Kaur",                     title: "Digital Tablet Hardness Tester With Diameter Measurement",                                                                         pubNo: "414595-001" },
+  { year: 2024, type: "Patent",  status: "Granted",    appNo: "202311076236",   inventors: "Dr. Prerna Sarup, Mr. Anshu Gupta, Ms. Sonia Pahuja, Mr. Khalid Amin Bhat",                                                          title: "Composition For Intranasal Application Comprising an Oil-in-Water Nanoemulsion",                                                    pubNo: "556980" },
+  // 2023 records
+  { year: 2023, type: "Design",  status: "Registered", appNo: "390130-001",     inventors: "Swikriti Sharma",                                                                                                                     title: "Device for Detection of Sugar Level",                                                                                               pubNo: "390130-001" },
 ];
 
 const books = [
@@ -122,6 +163,11 @@ export default function ResearchPage() {
   const [entries, setEntries] = useState(10);
   const [page, setPage] = useState(1);
 
+  // IPR table state
+  const [iprSearch, setIprSearch] = useState("");
+  const [iprEntries, setIprEntries] = useState(10);
+  const [iprPage, setIprPage] = useState(1);
+
   const filtered = useMemo(() => {
     const q = search.toLowerCase();
     return publications.filter(
@@ -135,6 +181,28 @@ export default function ResearchPage() {
 
   const totalPages = entries === -1 ? 1 : Math.ceil(filtered.length / entries);
   const paginated = entries === -1 ? filtered : filtered.slice((page - 1) * entries, page * entries);
+
+  // IPR — auto-number after sort (already sorted by year desc in iprRecordsRaw)
+  const iprRecords = iprRecordsRaw.map((r, i) => ({ ...r, sr: i + 1 }));
+
+  const filteredIpr = useMemo(() => {
+    const q = iprSearch.toLowerCase();
+    if (!q) return iprRecords;
+    return iprRecords.filter(
+      (r) =>
+        r.title.toLowerCase().includes(q) ||
+        r.inventors.toLowerCase().includes(q) ||
+        r.type.toLowerCase().includes(q) ||
+        r.status.toLowerCase().includes(q) ||
+        r.appNo.toLowerCase().includes(q) ||
+        r.pubNo.toLowerCase().includes(q) ||
+        String(r.year).includes(q)
+    );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [iprSearch]);
+
+  const iprTotalPages = iprEntries === -1 ? 1 : Math.ceil(filteredIpr.length / iprEntries);
+  const iprPaginated = iprEntries === -1 ? filteredIpr : filteredIpr.slice((iprPage - 1) * iprEntries, iprPage * iprEntries);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -312,8 +380,132 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      {/* ── BOOKS ── */}
+      {/* ── IPR / PATENTS / DESIGNS TABLE ── */}
       <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 bg-[#F59E0B]/10 text-[#F59E0B] font-bold text-sm uppercase tracking-widest rounded-full mb-4">
+              Intellectual Property Rights
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-4">
+              IPR — <span className="text-[#F59E0B]">Patents, Copyrights &amp; Designs</span>
+            </h2>
+            <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto" />
+          </motion.div>
+
+          {/* Controls */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-6">
+            <div className="relative w-full sm:w-96">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search by title, inventor, type, year, app no…"
+                value={iprSearch}
+                onChange={(e) => { setIprSearch(e.target.value); setIprPage(1); }}
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] text-sm text-gray-700 bg-white shadow-sm"
+              />
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <span>Show</span>
+              <select
+                value={iprEntries}
+                onChange={(e) => { setIprEntries(Number(e.target.value)); setIprPage(1); }}
+                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] bg-white text-sm"
+              >
+                <option value={10}>10</option>
+                <option value={25}>25</option>
+                <option value={50}>50</option>
+                <option value={-1}>All</option>
+              </select>
+              <span>entries</span>
+            </div>
+          </div>
+
+          {/* Table */}
+          <motion.div {...fadeInUp} className="overflow-x-auto rounded-2xl shadow-lg border border-gray-200">
+            <table className="min-w-full text-sm">
+              <thead>
+                <tr className="bg-[#0F4C81] text-white">
+                  <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">Sr.</th>
+                  <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">Year</th>
+                  <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">Type of IPR</th>
+                  <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">Status</th>
+                  <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">Application No.</th>
+                  <th className="px-4 py-4 text-left font-semibold">Inventor(s) Name</th>
+                  <th className="px-4 py-4 text-left font-semibold">Title of the IPR</th>
+                  <th className="px-4 py-4 text-left font-semibold whitespace-nowrap">Publication / Granted No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                {iprPaginated.length === 0 ? (
+                  <tr>
+                    <td colSpan={8} className="text-center py-10 text-gray-400">No IPR records found.</td>
+                  </tr>
+                ) : (
+                  iprPaginated.map((rec, idx) => (
+                    <tr
+                      key={rec.appNo}
+                      className={`transition-colors duration-150 hover:bg-[#FFF7ED] ${idx % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}
+                    >
+                      <td className="px-4 py-3 font-bold text-[#0F4C81]">{rec.sr}</td>
+                      <td className="px-4 py-3 text-gray-700 font-semibold">{rec.year}</td>
+                      <td className="px-4 py-3">
+                        <span className={`inline-block px-2 py-0.5 rounded-md text-xs font-bold ${
+                          rec.type === "Patent"
+                            ? "bg-blue-100 text-blue-700"
+                            : rec.type === "Design"
+                            ? "bg-amber-100 text-amber-700"
+                            : "bg-green-100 text-green-700"
+                        }`}>
+                          {rec.type}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3">
+                        <span className={`inline-block px-2 py-0.5 rounded-md text-xs font-bold ${
+                          rec.status === "Granted"
+                            ? "bg-green-100 text-green-700"
+                            : rec.status === "Published"
+                            ? "bg-sky-100 text-sky-700"
+                            : "bg-purple-100 text-purple-700"
+                        }`}>
+                          {rec.status}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 text-gray-600 font-mono text-xs whitespace-nowrap">{rec.appNo}</td>
+                      <td className="px-4 py-3 text-gray-600 max-w-xs">{rec.inventors}</td>
+                      <td className="px-4 py-3 text-gray-800 font-medium max-w-sm">{rec.title}</td>
+                      <td className="px-4 py-3 text-gray-600 font-mono text-xs whitespace-nowrap">{rec.pubNo}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </motion.div>
+
+          {/* IPR Pagination */}
+          {iprEntries !== -1 && iprTotalPages > 1 && (
+            <div className="flex justify-center gap-2 mt-6">
+              {Array.from({ length: iprTotalPages }, (_, i) => i + 1).map((p) => (
+                <button
+                  key={p}
+                  onClick={() => setIprPage(p)}
+                  className={`w-9 h-9 rounded-lg text-sm font-bold transition-colors ${
+                    p === iprPage ? "bg-[#0F4C81] text-white shadow" : "bg-white border border-gray-300 text-gray-600 hover:bg-[#F59E0B]/10 hover:border-[#F59E0B]"
+                  }`}
+                >
+                  {p}
+                </button>
+              ))}
+            </div>
+          )}
+          <p className="text-center text-xs text-gray-400 mt-3">
+            Showing {iprPaginated.length} of {filteredIpr.length} IPR records
+          </p>
+        </div>
+      </section>
+
+      {/* ── BOOKS ── */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div {...fadeInUp} className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-4">
