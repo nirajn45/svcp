@@ -215,13 +215,13 @@ export default function AboutPlacementsPage() {
 
               <div className="space-y-4 text-gray-600 leading-relaxed text-base text-justify">
                 <p>
-                  At SVIET, the Placement department constantly keeps working towards bridging the gap between industry & Academia. Our endeavor is to keep the needs of the industry perspective and in turn make the learning more pragmatic and applicable.
+                  At SVCP , the Placement department constantly keeps working towards bridging the gap between industry & Academia. Our endeavor is to keep the needs of the industry perspective and in turn make the learning more pragmatic and applicable.
                 </p>
                 <p>
                   The placement activities are for the students and by the students. SVGOI has been successful in adding more and more companies in the list of its recruiters in last few years.
                 </p>
                 <p className="font-medium text-gray-800 border-l-4 border-[#0F4C81] pl-4 bg-gray-50 py-3 rounded-r-xl">
-                  The Training and placement cell of SVGOI strives for converting every student in to a 100% employable asset while they are pursuing their education with us and endeavors for accomplishing the concept – “One Person One Job.”
+                  The Training and placement cell of The Training and placement cell strives for converting strives for converting every student in to a 100% employable asset while they are pursuing their education with us and endeavors for accomplishing the concept – “One Person One Job.”
                 </p>
               </div>
             </motion.div>

@@ -22,7 +22,7 @@ import HeroSlider from "@/components/HeroSlider";
 export default function HomePage() {
   const stats = [
     { icon: Calendar, number: "2005", label: "Established", bgWhite: true },
-    { icon: BookOpen, number: "4", label: "Programs", bgWhite: false },
+    { icon: BookOpen, number: "5", label: "Programmes", bgWhite: false },
     { icon: Award, number: "19+", label: "Years Experience", bgWhite: true },
     {
       icon: Building,
@@ -186,7 +186,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <h2 className="border-l-4 border-[#fea700] pl-4 text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Our <span className="text-[#fea700]">Programme</span>
+              Our <span className="text-[#fea700]"> Programmes </span>
             </h2>
             <p className="text-base text-gray-600 leading-relaxed">
               Comprehensive pharmacy education programs designed to meet
@@ -202,7 +202,7 @@ export default function HomePage() {
                 duration: "2 Years",
                 eligibility: "10+2 with PCM/PCB",
                 description:
-                  "Foundational program providing essential pharmaceutical knowledge and practical skills.",
+                  "Foundational Programme   providing essential pharmaceutical knowledge and practical skills.",
                 highlights: [
                   "Quick Entry",
                   "Practical Training",

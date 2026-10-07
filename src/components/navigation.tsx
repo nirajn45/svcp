@@ -66,7 +66,7 @@ export default function Navigation() {
     },
     {
       // here i want to classify it in diploma ->d.pharmacy, under graduation ->b.pharma and pharma d, post graduation->m.pharmacy
-      name: "Programs",
+      name: "Programmes",
       href: "",
       subItems: [
         { name: "D.Pharmacy", href: "/programs/D.Pharmacy" },
