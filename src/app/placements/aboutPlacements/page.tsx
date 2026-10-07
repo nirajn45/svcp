@@ -221,7 +221,7 @@ export default function AboutPlacementsPage() {
                   The placement activities are for the students and by the students. SVGOI has been successful in adding more and more companies in the list of its recruiters in last few years.
                 </p>
                 <p className="font-medium text-gray-800 border-l-4 border-[#0F4C81] pl-4 bg-gray-50 py-3 rounded-r-xl">
-                  The Training and placement cell of The Training and placement cell strives for converting strives for converting every student in to a 100% employable asset while they are pursuing their education with us and endeavors for accomplishing the concept – “One Person One Job.”
+                  The Training and placement cell strives for converting every student in to a 100% employable asset while they are pursuing their education with us and endeavors for accomplishing the concept – “One Person One Job.”
                 </p>
               </div>
             </motion.div>
