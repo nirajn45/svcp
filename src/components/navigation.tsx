@@ -207,6 +207,8 @@ export default function Navigation() {
         { name: "Student Feedback", href: "/feedback/student" },
         { name: "Parent Feedback", href: "/feedback/parent" },
         { name: "Alumni Feedback", href: "/feedback/alumni" },
+        { name: "Employer Feedback", href: "/feedback/employer" },
+        { name: "Faculty Feedback", href: "/feedback/faculty" },
       ]
     },
    

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import FeedbackFormView from "@/components/FeedbackFormView";
+import { FEEDBACK_ITEMS } from "@/lib/feedbackData";
+
+const config = FEEDBACK_ITEMS.alumni;
 
 export const metadata: Metadata = {
   title: "Alumni Feedback | Swami Vivekanand College of Pharmacy",
@@ -10,12 +13,12 @@ export const metadata: Metadata = {
 export default function AlumniFeedbackPage() {
   return (
     <FeedbackFormView
-      type="alumni"
-      title="Alumni Feedback"
+      type={config.type}
+      title={config.title}
       subtitle="Swami Vivekanand College of Pharmacy"
-      description="Dear Alumni, your experience in the pharmaceutical industry and healthcare domains is invaluable. Help us shape the future generation of pharmacists by sharing your feedback on curriculum alignment, professional skills, and alumni engagement."
-      formUrl="https://forms.gle/GCNVfVRZiRnkcWnC7"
-      embedUrl="https://docs.google.com/forms/d/e/1FAIpQLSdIBW0lfbRBl-uoZExyx_i_JXXKUbEwUejyOX30BsQykkY3fQ/viewform?embedded=true"
+      description={config.pageDescription}
+      formUrl={config.formUrl}
+      embedUrl={config.embedUrl}
     />
   );
 }

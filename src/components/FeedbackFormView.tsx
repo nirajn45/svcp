@@ -6,6 +6,8 @@ import {
   GraduationCap, 
   Users, 
   Award, 
+  Briefcase,
+  BookOpen,
   ExternalLink, 
   ChevronRight, 
   ShieldCheck, 
@@ -15,7 +17,7 @@ import {
 } from "lucide-react";
 
 interface FeedbackFormViewProps {
-  type: "student" | "parent" | "alumni";
+  type: "student" | "parent" | "alumni" | "employer" | "faculty";
   title: string;
   subtitle: string;
   description: string;
@@ -41,6 +43,18 @@ const feedbackTabs = [
     label: "Alumni Feedback",
     href: "/feedback/alumni",
     icon: Award,
+  },
+  {
+    type: "employer",
+    label: "Employer Feedback",
+    href: "/feedback/employer",
+    icon: Briefcase,
+  },
+  {
+    type: "faculty",
+    label: "Faculty Feedback",
+    href: "/feedback/faculty",
+    icon: BookOpen,
   },
 ];
 
@@ -88,7 +102,7 @@ export default function FeedbackFormView({
 
         {/* ── Category Switcher Tabs ──────────────────────────────── */}
         <div className="mb-8 bg-white p-1.5 rounded-xl border border-gray-200 shadow-sm">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5">
             {feedbackTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = tab.type === type;

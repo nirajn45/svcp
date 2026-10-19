@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GraduationCap, Users, Award, ArrowRight, FileCheck, ExternalLink } from "lucide-react";
+import { 
+  GraduationCap, 
+  Users, 
+  Award, 
+  Briefcase, 
+  BookOpen, 
+  ArrowRight, 
+  FileCheck, 
+  ExternalLink 
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Stakeholder Feedback | Swami Vivekanand College of Pharmacy",
   description:
-    "Feedback portal for students, parents, and alumni of Swami Vivekanand College of Pharmacy (SVCP). Share your feedback to assist our ongoing quality enhancement.",
+    "Feedback portal for students, parents, alumni, employers, and faculty of Swami Vivekanand College of Pharmacy (SVCP). Share your feedback to assist our ongoing quality enhancement.",
 };
 
 const feedbackOptions = [
@@ -25,7 +34,7 @@ const feedbackOptions = [
     description:
       "Share your observations and suggestions regarding your ward's holistic development, campus discipline, safety, and faculty support.",
     badge: "Parents",
-    externalUrl: "https://forms.gle/LnDoNNSaujRbQtVLA",
+    externalUrl: "https://forms.gle/GCNVfVRZiRnkcWnC7",
   },
   {
     title: "Alumni Feedback",
@@ -34,7 +43,25 @@ const feedbackOptions = [
     description:
       "Provide valuable industry perspective to strengthen pharmaceutical curriculum relevance, technical skills, and placement preparedness.",
     badge: "Alumni",
-    externalUrl: "https://forms.gle/GCNVfVRZiRnkcWnC7",
+    externalUrl: "https://forms.gle/LnDoNNSaujRbQtVLA",
+  },
+  {
+    title: "Employer Feedback",
+    href: "/feedback/employer",
+    icon: Briefcase,
+    description:
+      "Share feedback on SVCP graduates' domain competence, technical knowledge, professional ethics, and industry readiness.",
+    badge: "Employers",
+    externalUrl: "https://forms.gle/rZFwD66tAHWMVWKh7",
+  },
+  {
+    title: "Faculty Feedback",
+    href: "/feedback/faculty",
+    icon: BookOpen,
+    description:
+      "Provide faculty insights regarding curriculum design, academic resources, research facilities, and teaching-learning environment.",
+    badge: "Faculty",
+    externalUrl: "https://forms.gle/FB5GxWrgpJvEZUoc6",
   },
 ];
 
@@ -55,12 +82,12 @@ export default function FeedbackPortalPage() {
           <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mx-auto mb-6" />
 
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            At SVCP, we actively seek constructive feedback from our students, parents, and esteemed alumni to foster continuous improvement in teaching, infrastructure, research, and holistic education.
+            At SVCP, we actively seek constructive feedback from our students, parents, esteemed alumni, industry employers, and dedicated faculty to foster continuous improvement in teaching, infrastructure, research, and holistic education.
           </p>
         </div>
 
         {/* Options Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {feedbackOptions.map((option) => {
             const Icon = option.icon;
             return (
