@@ -108,11 +108,11 @@ const IQACPage = () => {
               <Users size={32} />
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-bold text-[#0F4C81]">Committee / Members List</h3>
-              <p className="text-gray-500 text-sm mt-1">Academic & administrative leadership roster.</p>
+              <h3 className="text-xl font-bold text-[#0F4C81]">IQAC Committee 2026-27</h3>
+              <p className="text-gray-500 text-sm mt-1">Academic & administrative leadership roster for 2026-27.</p>
             </div>
             <a 
-              href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhVK0lGkIEQ4cRHYwiyedFPC60nBahSDLMGk1J"
+              href="/documents/IQAC%202026-27.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#F59E0B] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#d97706] transition-colors whitespace-nowrap shadow-sm active:scale-95"

@@ -59,22 +59,42 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Committees</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  SC/ST Committee
+                <a
+                  href="/documents/SC%20%26%20ST%20AND%20OBC%20COMMITTEE%202026-27.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  SC/ST & OBC Committee
                 </a>
               </li>
               <li>
-                <a href="/documents/anti-ragging.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a
+                  href="/documents/Anti-Ragging%20Committee%202026-27%20.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
                   Anti-Ragging Committee
                 </a>
               </li>
               <li>
-                <a href="" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a
+                  href="/documents/Student%20Grievance%20Redressal%20Committee%202026-27.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
                   Grievance Redressal Committee
                 </a>
               </li>
               <li>
-                <a href="/documents/Internal%20Complaint%20Committee%201.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a
+                  href="/documents/Internal%20Complaints%20Committee%202026-27.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
                   Internal Complaint Committee
                 </a>
               </li>

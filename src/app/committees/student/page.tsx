@@ -121,7 +121,7 @@ export default function StudentGrievancePage() {
 
             {/* PDF Button */}
             <motion.a
-              href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhzxpbqIo41AFrh79RX5MGYLJuQNHB8i4EamxW"
+              href="/documents/Student%20Grievance%20Redressal%20Committee%202026-27.pdf"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, x: 30 }}
@@ -373,7 +373,7 @@ export default function StudentGrievancePage() {
               {/* Download PDF */}
               <motion.div {...fadeInUp}>
                 <a
-                  href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhzxpbqIo41AFrh79RX5MGYLJuQNHB8i4EamxW"
+                  href="/documents/Student%20Grievance%20Redressal%20Committee%202026-27.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-5 py-4 rounded-xl shadow-md transition-all duration-300 group w-full"
@@ -429,7 +429,7 @@ export default function StudentGrievancePage() {
                 </p>
               </div>
               <motion.a
-                href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhzxpbqIo41AFrh79RX5MGYLJuQNHB8i4EamxW"
+                href="/documents/Student%20Grievance%20Redressal%20Committee%202026-27.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.04, y: -2 }}

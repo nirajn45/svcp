@@ -42,6 +42,10 @@ export default function Navigation() {
           name: "Affiliated College / Affiliating University",
           href: "/about/AffiliatedCollege",
         },
+        {
+          name: "PCI Approval (PCI-2443)",
+          href: "/documents/PCI",
+        },
       ],
     },
     {
@@ -124,11 +128,18 @@ export default function Navigation() {
       name: "Committees",
       href: "",
       subItems: [
-        
-        { name: "Anti Ragging Cell ", href: "/committees/antiRagging" },
+        { name: "Anti Ragging Cell", href: "/committees/antiRagging" },
         {
           name: "Student Grievance Redressal Committee (SGRC)",
           href: "/committees/student",
+        },
+        {
+          name: "Internal Complaints Committee (ICC)",
+          href: "/documents/Internal%20Complaints%20Committee%202026-27.pdf",
+        },
+        {
+          name: "SC / ST & OBC Committee",
+          href: "/documents/SC%20%26%20ST%20AND%20OBC%20COMMITTEE%202026-27.pdf",
         },
       ],
     },
@@ -314,21 +325,35 @@ export default function Navigation() {
                               </button>
                               <div className="absolute right-full top-0 hidden group-hover/nested:block bg-white shadow-xl rounded-md z-[9999] border border-gray-100 min-w-[240px]">
                                 {sub.subItems.map((nestedSub) => (
-                                  <Link
-                                    key={nestedSub.name}
-                                    href={nestedSub.href}
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
-                                  >
-                                    {nestedSub.name}
-                                  </Link>
+                                  nestedSub.href.startsWith("http") || nestedSub.href.includes(".pdf") ? (
+                                    <a
+                                      key={nestedSub.name}
+                                      href={nestedSub.href}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
+                                    >
+                                      {nestedSub.name}
+                                    </a>
+                                  ) : (
+                                    <Link
+                                      key={nestedSub.name}
+                                      href={nestedSub.href}
+                                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
+                                    >
+                                      {nestedSub.name}
+                                    </Link>
+                                  )
                                 ))}
                               </div>
                             </div>
                           ) : (
-                            sub.href.startsWith("http") ? (
+                            sub.href.startsWith("http") || sub.href.includes(".pdf") ? (
                               <a
                                 key={sub.name}
                                 href={sub.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0F4C81] whitespace-nowrap"
                               >
                                 {sub.name}
@@ -347,10 +372,12 @@ export default function Navigation() {
                       </div>
                     </div>
                   ) : (
-                    item.href.startsWith("http") ? (
+                    item.href.startsWith("http") || item.href.includes(".pdf") ? (
                       <a
                         key={item.name}
                         href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-white hover:text-yellow-400 hover:bg-white/10 px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-md"
                       >
                         {item.name}
@@ -410,22 +437,37 @@ export default function Navigation() {
                                 <div className="px-3 py-2 text-sm font-semibold text-gray-800">{sub.name}</div>
                                 <div className="ml-4 space-y-1 border-l border-gray-100 pl-2">
                                   {sub.subItems.map((nestedSub) => (
-                                    <Link
-                                      key={nestedSub.name}
-                                      href={nestedSub.href}
-                                      className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
-                                      onClick={() => setIsMenuOpen(false)}
-                                    >
-                                      {nestedSub.name}
-                                    </Link>
+                                    nestedSub.href.startsWith("http") || nestedSub.href.includes(".pdf") ? (
+                                      <a
+                                        key={nestedSub.name}
+                                        href={nestedSub.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                                        onClick={() => setIsMenuOpen(false)}
+                                      >
+                                        {nestedSub.name}
+                                      </a>
+                                    ) : (
+                                      <Link
+                                        key={nestedSub.name}
+                                        href={nestedSub.href}
+                                        className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
+                                        onClick={() => setIsMenuOpen(false)}
+                                      >
+                                        {nestedSub.name}
+                                      </Link>
+                                    )
                                   ))}
                                 </div>
                               </div>
                             ) : (
-                              sub.href.startsWith("http") ? (
+                              sub.href.startsWith("http") || sub.href.includes(".pdf") ? (
                                 <a
                                   key={sub.name}
                                   href={sub.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded"
                                   onClick={() => setIsMenuOpen(false)}
                                 >
@@ -447,10 +489,12 @@ export default function Navigation() {
                       )}
                     </div>
                   ) : (
-                    item.href.startsWith("http") ? (
+                    item.href.startsWith("http") || item.href.includes(".pdf") ? (
                       <a
                         key={item.name}
                         href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >

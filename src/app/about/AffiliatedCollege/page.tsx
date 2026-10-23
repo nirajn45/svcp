@@ -52,7 +52,7 @@ const Page = () => {
                 color: "#d97706",
               },
                {
-                name: "-Affiliation Letter 2026-27",
+                name: "-PCI Approval Letter 2026-27",
                 link: "/documents/pci-approval-letter-2026-27.pdf",
                 color: "#d97706",
               },
