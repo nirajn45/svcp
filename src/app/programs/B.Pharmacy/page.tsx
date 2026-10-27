@@ -335,6 +335,16 @@ const BPharmacyPage = () => {
               <Download className="w-6 h-6 group-hover:animate-bounce" />
               Brochure
             </motion.a>
+            <motion.a
+              variants={fadeInUp}
+              href="/documents/B.Pharm_Syllabus_2026_NEP2020.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 bg-[#0F4C81] hover:bg-[#0c3d68] text-white px-8 py-4 rounded-lg shadow-md transition-all duration-300 font-bold text-lg"
+            >
+              <Download className="w-6 h-6 group-hover:animate-bounce" />
+              Syllabus (NEP-2020)
+            </motion.a>
           </motion.div>
         </div>
       </section>

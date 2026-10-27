@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FileText, FileCheck, Download, Users, Lightbulb, Target } from "lucide-react";
+import { FileText, FileCheck, Download, Users, Lightbulb, Target, ShieldCheck, Calendar, BookOpen, ExternalLink } from "lucide-react";
 
 const objectives = [
   "To develop a systematic approach for continuous improvement in academic and administrative performance.",
@@ -17,35 +17,33 @@ const objectives = [
 ];
 
 const committeeMembers = [
-  { sr: "1", composition: "Chairperson", name: "Prof. (Dr.) Manish Goswami", designation: "Principal" },
-  { sr: "2", composition: "Teachers", name: "Dr. A. Pandurangan", designation: "Professor" },
-  { sr: "", composition: "", name: "Dr. Ashok Kumar Tiwary", designation: "Professor" },
+  { sr: "1", composition: "Chairperson", name: "Dr. Manish Goswami", designation: "Principal" },
+  { sr: "2", composition: "Teachers", name: "Dr. Deepak Garg", designation: "Associate Professor" },
+  { sr: "", composition: "", name: "Dr. Gaurav Sharma", designation: "Professor" },
   { sr: "", composition: "", name: "Dr. Swikriti", designation: "Professor" },
-  { sr: "", composition: "", name: "Dr. Satbir Kaur", designation: "Professor" },
   { sr: "", composition: "", name: "Mr. Anshu Gupta", designation: "Associate Professor" },
   { sr: "", composition: "", name: "Dr. Damit Kumar", designation: "Associate Professor" },
   { sr: "3", composition: "Management Member", name: "Er. Vishal Garg", designation: "Director Secretarial & Administration, Management Representative" },
   { sr: "4", composition: "Senior Administrative Officers", name: "Adv. Shubham Garg", designation: "Director Training & Placement" },
   { sr: "", composition: "", name: "Er. Ankur Gill", designation: "Director Operations" },
-  { sr: "", composition: "", name: "Ms. Tripta Kumari", designation: "Office Superintendent" },
   { sr: "5", composition: "Local Society, Students and Alumni", name: "Mr. Gaurav Garg", designation: "Local Society" },
-  { sr: "", composition: "", name: "Ms. Garima", designation: "B. Pharmacy 3rd Semester" },
-  { sr: "", composition: "", name: "Mr. Sagnik Roy", designation: "B. Pharmacy 3rd Semester" },
+  { sr: "", composition: "", name: "Ms. Garima", designation: "B. Pharmacy 3rd Year" },
+  { sr: "", composition: "", name: "Mr. Sagnik Roy", designation: "B. Pharmacy 3rd Year" },
   { sr: "", composition: "", name: "Mr. Lal Krishna Kumar", designation: "Alumnus, B.Pharmacy" },
   { sr: "6", composition: "Nominee from Employers/ Industrialists/ Stakeholders", name: "Mr. Pradeep Sharma", designation: "General Manager, (Katherine & Kyoor Pharmaceuticals)" },
-  { sr: "7", composition: "Coordinator", name: "Dr. Meenakshi Rana", designation: "" },
+  { sr: "7", composition: "Coordinator", name: "Dr. Meenakshi Rana", designation: "IQAC Coordinator" },
 ];
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 },
+    transition: { staggerChildren: 0.08 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 15 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -58,16 +56,53 @@ const IQACPage = () => {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-12"
+          className="mb-10"
         >
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#0F4C81]/10 text-[#0F4C81] mb-4">
+            <ShieldCheck className="w-4 h-4 text-[#0F4C81]" />
+            <span>Academic Session 2026–27 • NAAC Quality Framework</span>
+          </div>
           <h1 className="text-3xl md:text-5xl font-bold text-[#0F4C81] mb-4">
             Internal Quality Assurance Cell (IQAC)
           </h1>
           <div className="w-24 h-1.5 bg-[#F59E0B] rounded-full mb-6"></div>
           <p className="text-gray-600 max-w-3xl text-lg leading-relaxed">
             Ensuring continuous quality enhancement through systematic academic and administrative performance monitoring, 
-            facilitating a learner-centric environment at SVCP.
+            facilitating a learner-centric environment at Swami Vivekanand College of Pharmacy (SVCP).
           </p>
+        </motion.div>
+
+        {/* Official Notification Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="bg-white rounded-2xl shadow-sm border-l-4 border-[#0F4C81] p-6 mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4"
+        >
+          <div className="space-y-1">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="font-bold text-[#0F4C81] text-base">Official Office Order:</span>
+              <span className="bg-blue-50 text-[#0F4C81] text-xs font-semibold px-2.5 py-1 rounded-md">
+                Ref: SVCP/Cell/2026/113
+              </span>
+              <span className="text-gray-500 text-xs">
+                Dated: <strong>25/07/2026</strong> (Effective w.e.f. 25th July, 2026)
+              </span>
+            </div>
+            <p className="text-gray-600 text-sm">
+              The IQAC committee is reconstituted for Session 2026–27 and shall conduct proceedings as per NAAC IQAC guidelines.
+            </p>
+          </div>
+          <a 
+            href="/documents/IQAC%202026-27.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#F59E0B] text-white px-5 py-2.5 rounded-xl font-bold hover:bg-[#d97706] transition-colors whitespace-nowrap shadow-sm text-sm shrink-0 self-start md:self-auto"
+          >
+            <FileText className="w-4 h-4" />
+            <span>Download IQAC 2026-27 PDF</span>
+            <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+          </a>
         </motion.div>
 
         {/* Section 1: Top PDF Cards */}
@@ -87,15 +122,15 @@ const IQACPage = () => {
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold text-[#0F4C81]">IQAC Constitution / Manual</h3>
-              <p className="text-gray-500 text-sm mt-1">Foundational quality guidelines and vision.</p>
+              <p className="text-gray-500 text-sm mt-1">Foundational quality guidelines and institutional vision.</p>
             </div>
             <a 
               href="https://sm7p82l93d.ufs.sh/f/zpMFlB41AFrhUhFfzDtLDPe7fJQ0dYxH6AGR5kbzZvLr2T8m"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#F59E0B] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#d97706] transition-colors whitespace-nowrap shadow-sm active:scale-95"
+              className="bg-[#0F4C81] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#0c3d68] transition-colors whitespace-nowrap shadow-sm active:scale-95 text-sm"
             >
-              View PDF
+              View Manual
             </a>
           </motion.div>
 
@@ -104,25 +139,91 @@ const IQACPage = () => {
             variants={itemVariants}
             className="bg-white rounded-2xl shadow-md p-6 border border-gray-100 flex items-center gap-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
           >
-            <div className="bg-blue-50 p-4 rounded-xl text-[#0F4C81] group-hover:bg-[#0F4C81] group-hover:text-white transition-colors duration-300">
+            <div className="bg-orange-50 p-4 rounded-xl text-[#F59E0B] group-hover:bg-[#F59E0B] group-hover:text-white transition-colors duration-300">
               <Users size={32} />
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-bold text-[#0F4C81]">IQAC Committee 2026-27</h3>
-              <p className="text-gray-500 text-sm mt-1">Academic & administrative leadership roster for 2026-27.</p>
+              <h3 className="text-xl font-bold text-[#0F4C81]">IQAC Committee Composition 2026-27</h3>
+              <p className="text-gray-500 text-sm mt-1">Official constitution order SVCP/Cell/2026/113.</p>
             </div>
             <a 
               href="/documents/IQAC%202026-27.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#F59E0B] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#d97706] transition-colors whitespace-nowrap shadow-sm active:scale-95"
+              className="bg-[#F59E0B] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#d97706] transition-colors whitespace-nowrap shadow-sm active:scale-95 text-sm"
             >
-              View PDF
+              View Document
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Section 2: Objectives */}
+        {/* Section 2: IQAC Committee Table */}
+        <section className="mb-20">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="mb-8"
+          >
+            <div className="flex items-center gap-4 mb-2">
+              <div className="bg-[#F59E0B] w-1.5 h-10 rounded-full"></div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0F4C81]">
+                  Internal Quality Assurance Cell (IQAC) Committee (2026–27)
+                </h2>
+                <p className="text-gray-500 text-sm sm:text-base mt-1">
+                  Reconstituted w.e.f. 25th July, 2026 as per NAAC IQAC guidelines (Ref: SVCP/Cell/2026/113).
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100"
+          >
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-[#0F4C81] text-white">
+                    <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider w-20">Sr. No</th>
+                    <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider">Composition Category</th>
+                    <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider">Name & Designation</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {committeeMembers.map((member, index) => (
+                    <motion.tr 
+                      key={index}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: index * 0.03 }}
+                      viewport={{ once: true }}
+                      className="hover:bg-orange-50/50 transition-colors duration-200"
+                    >
+                      <td className="px-6 py-4 text-gray-600 font-medium">{member.sr}</td>
+                      <td className="px-6 py-4 text-gray-800 font-semibold">{member.composition}</td>
+                      <td className="px-6 py-4">
+                        <div className="flex flex-col">
+                          <span className="text-[#0F4C81] font-bold text-base sm:text-lg">{member.name}</span>
+                          <span className="text-gray-500 text-sm font-medium">{member.designation}</span>
+                        </div>
+                      </td>
+                    </motion.tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-gray-50 px-6 py-4 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+              <span>* The IQAC shall conduct proceedings as per the NAAC IQAC guidelines.</span>
+              <span className="font-semibold text-[#0F4C81]">Effective w.e.f: 25th July, 2026</span>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Section 3: Objectives */}
         <section className="mb-20">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -157,67 +258,6 @@ const IQACPage = () => {
             ))}
           </motion.div>
         </section>
-
-        {/* Section 3: IQAC Committee Table */}
-        <section className="mb-20">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="mb-8"
-          >
-            <div className="flex items-center gap-4 mb-2">
-              <div className="bg-[#F59E0B] w-1.5 h-10 rounded-full"></div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0F4C81]">
-                Internal Quality Assurance Cell (IQAC) Committee
-              </h2>
-            </div>
-            <p className="text-gray-500 text-lg ml-6 mt-2">
-              The IQAC is hereby reconstituted with the following members for coordinating quality-related activities.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100"
-          >
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="bg-[#0F4C81] text-white">
-                    <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider w-20">Sr. No</th>
-                    <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider">Composition</th>
-                    <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider">Name & Designation</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100">
-                  {committeeMembers.map((member, index) => (
-                    <motion.tr 
-                      key={index}
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: index * 0.05 }}
-                      viewport={{ once: true }}
-                      className="hover:bg-orange-50/50 transition-colors duration-200"
-                    >
-                      <td className="px-6 py-4 text-gray-600 font-medium">{member.sr}</td>
-                      <td className="px-6 py-4 text-gray-800 font-semibold">{member.composition}</td>
-                      <td className="px-6 py-4">
-                        <div className="flex flex-col">
-                          <span className="text-[#0F4C81] font-bold text-lg">{member.name}</span>
-                          <span className="text-gray-500 text-sm font-medium">{member.designation}</span>
-                        </div>
-                      </td>
-                    </motion.tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </motion.div>
-        </section>
-
 
       </div>
     </div>

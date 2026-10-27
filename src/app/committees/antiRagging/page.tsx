@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   ShieldAlert, FileText, ExternalLink, ChevronRight,
   Users, AlertTriangle, CheckCircle2, ClipboardList,
-  BookOpen, Scale, Gavel, X
+  BookOpen, Scale, Gavel, X, Mail, PhoneCall
 } from "lucide-react";
 
 // ── Animation Variants ───────────────────────────────────────────────────────
@@ -32,6 +32,7 @@ const committeeMembers = [
   { sNo: 5, name: "Ms. Diksha Soni",    designation: "Assistant Professor",              role: "Member",                roleType: "member" },
   { sNo: 6, name: "Mr. Mani Ram",       designation: "Hostel Warden (Boys)",             role: "Member",                roleType: "member" },
   { sNo: 7, name: "Ms. Pushpa Goyal",   designation: "Hostel Warden (Girls)",            role: "Member",                roleType: "member" },
+  { sNo: 8, name: "SHO, Banur",         designation: "Police Administration (External)", role: "Member",                roleType: "member" },
 ];
 
 const punishments = [
@@ -101,8 +102,8 @@ export default function AntiRaggingPage() {
                   Anti-Ragging
                   <span className="block text-[#F59E0B]">Committee</span>
                 </h1>
-                <p className="text-white/60 text-sm mt-2">
-                  Effective from <span className="text-white font-semibold">10th February, 2026</span> &nbsp;·&nbsp; Academic Session <span className="text-white font-semibold">2025–26</span>
+                <p className="text-white/70 text-sm mt-2">
+                  Effective from <span className="text-white font-semibold">21st July, 2026</span> &nbsp;·&nbsp; Academic Session <span className="text-[#F59E0B] font-semibold">2026–27</span> &nbsp;·&nbsp; Ref: <span className="text-white font-semibold">SVCP/CELL/2026/110</span>
                 </p>
               </div>
             </motion.div>
@@ -122,7 +123,7 @@ export default function AntiRaggingPage() {
                 className="inline-flex items-center gap-2 bg-[#F59E0B] hover:bg-[#d97706] text-white font-bold px-5 py-3.5 rounded-xl shadow-lg transition-all duration-300 text-sm group"
               >
                 <FileText className="w-4 h-4" />
-                Committee PDF
+                Anti-Ragging PDF 2026-27
                 <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100" />
               </motion.a>
               <motion.a
@@ -147,11 +148,17 @@ export default function AntiRaggingPage() {
           <motion.div {...fadeInUp} className="flex items-start gap-4">
             <div className="w-1 min-h-[56px] bg-red-500 rounded-full shrink-0 mt-1" />
             <div>
-              <h2 className="text-sm font-bold text-red-600 uppercase tracking-wide mb-1.5">Official Notice</h2>
+              <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                <h2 className="text-sm font-bold text-red-600 uppercase tracking-wide">Official Office Order</h2>
+                <span className="bg-red-50 text-red-700 text-xs font-semibold px-2.5 py-0.5 rounded">
+                  Ref: SVCP/CELL/2026/110
+                </span>
+                <span className="text-gray-500 text-xs">Dated: 21/07/2026</span>
+              </div>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-5xl">
                 This is to inform all that as per the UGC guidelines, the Anti-Ragging Committee has been established
-                w.e.f <strong>10th February, 2026</strong>. The revised composition of the committee for academic session
-                2025–26 is mentioned below.
+                w.e.f <strong>21st July, 2026</strong>. The composition of the committee for the academic session
+                <strong> 2026–27</strong> is mentioned below.
               </p>
             </div>
           </motion.div>
@@ -171,7 +178,7 @@ export default function AntiRaggingPage() {
                 <div className="flex items-center gap-3 mb-5">
                   <Users className="w-5 h-5 text-[#0F4C81]" />
                   <div>
-                    <h2 className="text-xl sm:text-2xl font-black text-gray-900">Revised Composition of Anti-Ragging Committee</h2>
+                    <h2 className="text-xl sm:text-2xl font-black text-gray-900">Composition of Anti-Ragging Committee (2026–27)</h2>
                     <div className="w-14 h-1 bg-[#F59E0B] rounded-full mt-2" />
                   </div>
                 </div>
@@ -366,7 +373,7 @@ export default function AntiRaggingPage() {
                   className="flex items-center gap-3 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-5 py-4 rounded-xl shadow-md transition-all duration-300 group w-full"
                 >
                   <FileText className="w-5 h-5 text-[#F59E0B]" />
-                  <span className="flex-1 text-sm">Anti-Ragging Committee PDF</span>
+                  <span className="flex-1 text-sm">Anti-Ragging Committee PDF (2026-27)</span>
                   <ExternalLink className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
                 </a>
                 <a
@@ -396,21 +403,31 @@ export default function AntiRaggingPage() {
             <div className="absolute -top-10 -left-10 w-52 h-52 bg-[#F59E0B]/10 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-white/5 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-              <div className="w-14 h-14 rounded-2xl bg-red-500/20 border border-red-400/30 flex items-center justify-center shrink-0">
-                <ShieldAlert className="w-7 h-7 text-red-400" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-white font-black text-lg">UGC Anti-Ragging Helpline</h3>
-                <p className="text-white/60 text-sm mt-1">
-                  If you witness or experience ragging, report it immediately. Your complaint is confidential and will be acted upon.
-                </p>
-              </div>
-              <div className="flex flex-col sm:items-end gap-2 shrink-0">
-                <div className="inline-flex items-center gap-2 bg-red-500/20 border border-red-400/30 text-red-300 font-black text-xl px-5 py-3 rounded-xl">
-                  1800-180-5522
+            <div className="relative flex flex-col md:flex-row items-center gap-6 text-center md:text-left justify-between">
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-2xl bg-red-500/20 border border-red-400/30 flex items-center justify-center shrink-0">
+                  <ShieldAlert className="w-7 h-7 text-red-400" />
                 </div>
-                <p className="text-white/40 text-xs">UGC Toll-Free Helpline</p>
+                <div>
+                  <h3 className="text-white font-black text-lg">National Anti-Ragging Helpline</h3>
+                  <p className="text-white/70 text-sm mt-1 max-w-xl">
+                    If you witness or experience ragging, report it immediately. Complaints are completely confidential.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+                <div className="flex items-center gap-3 bg-red-500/20 border border-red-400/30 text-red-300 font-black text-base px-5 py-3 rounded-xl">
+                  <PhoneCall className="w-5 h-5" />
+                  <span>1800-180-5522</span>
+                </div>
+                <a 
+                  href="mailto:helpline@antiragging.in"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm px-4 py-3 rounded-xl transition-colors"
+                >
+                  <Mail className="w-4 h-4 text-[#F59E0B]" />
+                  <span>helpline@antiragging.in</span>
+                </a>
               </div>
             </div>
           </motion.div>

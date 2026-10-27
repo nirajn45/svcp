@@ -135,11 +135,11 @@ export default function Navigation() {
         },
         {
           name: "Internal Complaints Committee (ICC)",
-          href: "/documents/Internal%20Complaints%20Committee%202026-27.pdf",
+          href: "/committees/icc",
         },
         {
           name: "SC / ST & OBC Committee",
-          href: "/documents/SC%20%26%20ST%20AND%20OBC%20COMMITTEE%202026-27.pdf",
+          href: "/committees/scst",
         },
       ],
     },

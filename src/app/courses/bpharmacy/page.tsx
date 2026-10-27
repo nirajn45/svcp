@@ -158,6 +158,20 @@ export default function BPharmacyPage() {
               </CardContent>
             </Card>
 
+            {/* Download Syllabus */}
+            <Card className="animate-slide-up" style={{ animationDelay: "0.4s" }}>
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Syllabus (NEP 2020)</h3>
+                <p className="text-gray-600 mb-6">Download detailed PCI curriculum aligned with NEP 2020</p>
+                <Button asChild className="w-full bg-[#0F4C81] hover:bg-[#0c3d68]">
+                  <a href="/documents/B.Pharm_Syllabus_2026_NEP2020.pdf" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Syllabus
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
             {/* Apply Now */}
             <Card className="animate-slide-up" style={{ animationDelay: "0.5s" }}>
               <CardContent className="p-6 text-center">

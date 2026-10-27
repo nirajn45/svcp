@@ -104,7 +104,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="/committees/icc" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Women Grievances Cell
                 </a>
               </li>

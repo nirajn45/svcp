@@ -29,7 +29,7 @@ const committeeMembers = [
     composition: "Chairperson",
     compositionType: "chair",
     members: [
-      { name: "Mr. Sarabjeet Singh", designation: "Dean (Student Welfare)" },
+      { name: "Mr. Sarabjeet Singh", designation: "Dean - Student Welfare" },
     ],
   },
   {
@@ -39,7 +39,7 @@ const committeeMembers = [
     members: [
       { name: "Dr. Swikriti",       designation: "Professor" },
       { name: "Dr. Meenakshi Rana", designation: "Associate Professor" },
-      { name: "Dr. Damit",          designation: "Associate Professor" },
+      { name: "Dr. Damit Kumar",    designation: "Associate Professor" },
     ],
   },
   {
@@ -47,8 +47,8 @@ const committeeMembers = [
     composition: "Students as Members",
     compositionType: "student",
     members: [
-      { name: "Mr. Nishikant Singh", designation: "B. Pharmacy 5th Semester" },
-      { name: "Mr. Shubh Kumar",     designation: "B. Pharmacy 5th Semester" },
+      { name: "Mr. Nishikant Singh", designation: "B. Pharmacy 4th Year" },
+      { name: "Mr. Shubh Kumar",     designation: "B. Pharmacy 4th Year" },
     ],
   },
 ];
@@ -109,13 +109,15 @@ export default function StudentGrievancePage() {
               </div>
               <div>
                 <span className="text-[#F59E0B] font-bold text-xs uppercase tracking-widest block mb-2">
-                  Academic Session 2025–26
+                  Academic Session 2026–27
                 </span>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
                   Student Grievance
                   <span className="block text-[#F59E0B]">Redressal Committee</span>
                 </h1>
-                <p className="text-white/60 text-sm mt-2 font-medium tracking-wide">SGRC &nbsp;·&nbsp; As per UGC Regulations 2018</p>
+                <p className="text-white/70 text-sm mt-2 font-medium tracking-wide">
+                  SGRC &nbsp;·&nbsp; As per UGC Regulations 2018 &nbsp;·&nbsp; Ref: SVCP/CELL/2026/112 (Dated 22/07/2026)
+                </p>
               </div>
             </motion.div>
 
@@ -131,7 +133,7 @@ export default function StudentGrievancePage() {
               className="inline-flex items-center gap-3 bg-[#F59E0B] hover:bg-[#d97706] text-white font-bold px-6 py-4 rounded-xl shadow-lg transition-all duration-300 text-sm shrink-0 group"
             >
               <FileText className="w-5 h-5" />
-              View Official PDF
+              View SGRC 2026-27 PDF
               <ExternalLink className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             </motion.a>
           </div>
@@ -144,13 +146,17 @@ export default function StudentGrievancePage() {
           <motion.div {...fadeInUp} className="flex items-start gap-4">
             <div className="w-1 min-h-[60px] bg-[#F59E0B] rounded-full shrink-0 mt-1" />
             <div>
-              <h2 className="text-sm font-bold text-[#0F4C81] uppercase tracking-wide mb-1.5">
-                About the Committee
-              </h2>
+              <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                <h2 className="text-sm font-bold text-[#0F4C81] uppercase tracking-wide">Official Office Order</h2>
+                <span className="bg-blue-50 text-[#0F4C81] text-xs font-semibold px-2.5 py-0.5 rounded">
+                  Ref: SVCP/CELL/2026/112
+                </span>
+                <span className="text-gray-500 text-xs">Dated: 22/07/2026</span>
+              </div>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-5xl">
                 The following composition of the Student Grievance Redressal Committee has been approved as per{" "}
                 <strong className="text-gray-800">UGC (Grievance Redressal of Students) Regulations, 2018</strong> for
-                the academic session 2025–26 to develop a responsive and accountable attitude among all the students
+                the academic session <strong>2026–27</strong> to develop a responsive and accountable attitude among all students
                 in order to maintain a harmonious educational atmosphere in the institute.
               </p>
             </div>
@@ -172,7 +178,7 @@ export default function StudentGrievancePage() {
                   <Users className="w-5 h-5 text-[#0F4C81]" />
                   <div>
                     <h2 className="text-xl sm:text-2xl font-black text-gray-900">
-                      Composition of SGRC — 2025–26
+                      Composition of SGRC — 2026–27
                     </h2>
                     <div className="w-14 h-1 bg-[#F59E0B] rounded-full mt-2" />
                   </div>
@@ -327,11 +333,12 @@ export default function StudentGrievancePage() {
                   <h3 className="text-base font-black uppercase tracking-wide mb-4">Committee At a Glance</h3>
                   {[
                     { label: "Regulation", value: "UGC 2018" },
-                    { label: "Session",    value: "2025–26" },
+                    { label: "Session",    value: "2026–27" },
+                    { label: "Order Ref",  value: "SVCP/CELL/2026/112" },
                     { label: "Chairperson", value: "Mr. Sarabjeet Singh" },
                     { label: "Total Members", value: "6" },
                   ].map((item, i) => (
-                    <div key={i} className={`flex justify-between items-center py-3 ${i < 3 ? "border-b border-white/10" : ""}`}>
+                    <div key={i} className={`flex justify-between items-center py-3 ${i < 4 ? "border-b border-white/10" : ""}`}>
                       <span className="text-white/60 text-xs font-medium">{item.label}</span>
                       <span className="text-white font-bold text-sm text-right">{item.value}</span>
                     </div>
@@ -379,7 +386,7 @@ export default function StudentGrievancePage() {
                   className="flex items-center gap-3 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-5 py-4 rounded-xl shadow-md transition-all duration-300 group w-full"
                 >
                   <FileText className="w-5 h-5 text-[#F59E0B]" />
-                  <span className="flex-1 text-sm">Download SGRC PDF</span>
+                  <span className="flex-1 text-sm">Download SGRC 2026-27 PDF</span>
                   <ExternalLink className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
                 </a>
               </motion.div>
