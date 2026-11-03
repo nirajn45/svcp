@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   MessageSquare, FileText, ExternalLink, ChevronRight,
@@ -78,6 +78,28 @@ const objectives = [
 export default function StudentGrievancePage() {
   const [iframeKey, setIframeKey] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  // Smooth auto-scroll when visiting via #student-complaint-form or #complaint-form
+  useEffect(() => {
+    const scrollToSection = () => {
+      const hash = window.location.hash;
+      if (hash === "#student-complaint-form" || hash === "#complaint-form") {
+        const el = document.getElementById("student-complaint-form") || document.getElementById("complaint-form");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    // Delay slightly to ensure component layout has stabilized
+    const timer = setTimeout(scrollToSection, 150);
+    window.addEventListener("hashchange", scrollToSection);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("hashchange", scrollToSection);
+    };
+  }, []);
 
   const handleReloadForm = () => {
     setIsLoading(true);
@@ -428,7 +450,13 @@ export default function StudentGrievancePage() {
       </section>
 
       {/* ── 1. GOOGLE COMPLAINT FORM SECTION ─────────────────────────────────── */}
-      <section id="complaint-form" className="py-16 bg-white border-t border-gray-200/70">
+      <section
+        id="student-complaint-form"
+        className="scroll-mt-24 py-16 bg-white border-t border-gray-200/70 relative"
+      >
+        {/* Secondary anchor for backwards compatibility */}
+        <span id="complaint-form" className="scroll-mt-24 sr-only" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.div {...fadeInUp} className="mb-8">
@@ -475,7 +503,7 @@ export default function StudentGrievancePage() {
                   Online Complaint Submission
                 </p>
                 <p>
-                  You can fill out and submit your complaint directly below. If your browser restricts embedded forms or Google account cookies, please click the button to open the form in a new tab.
+                  You can fill out and submit your complaint directly below. If your browser restricts embedded forms or Google account cookies, click the button to open the form in a new tab.
                 </p>
               </div>
             </div>

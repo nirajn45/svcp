@@ -52,7 +52,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/committees/student" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/committees/student#student-complaint-form" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Student Complaint Form
                 </Link>
               </li>
