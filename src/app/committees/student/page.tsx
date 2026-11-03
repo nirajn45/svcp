@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   MessageSquare, FileText, ExternalLink, ChevronRight,
   Users, Shield, BookOpen, CheckCircle2, Star, User,
+  Download, Eye, RefreshCw, ShieldCheck, Info
 } from "lucide-react";
 
 // ── Animation Variants ───────────────────────────────────────────────────────
@@ -71,6 +72,14 @@ const objectives = [
 // ── Page ─────────────────────────────────────────────────────────────────────
 
 export default function StudentGrievancePage() {
+  const [iframeKey, setIframeKey] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const handleReloadForm = () => {
+    setIsLoading(true);
+    setIframeKey((prev) => prev + 1);
+  };
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans antialiased">
 
@@ -292,7 +301,7 @@ export default function StudentGrievancePage() {
                     <div className="space-y-5">
                       {[
                         { step: "01", title: "Identify the Grievance", desc: "Document your concern clearly — academic, administrative, or campus-related.", color: "bg-[#0F4C81]" },
-                        { step: "02", title: "Submit Written Complaint", desc: "Submit a written complaint to the SGRC Chairperson or drop it in the grievance box.", color: "bg-[#F59E0B]" },
+                        { step: "02", title: "Submit Written Complaint", desc: "Submit a written complaint to the SGRC Chairperson, submit online below, or drop it in the grievance box.", color: "bg-[#F59E0B]" },
                         { step: "03", title: "SGRC Review", desc: "The committee reviews the grievance within the stipulated timeframe as per UGC norms.", color: "bg-emerald-600" },
                         { step: "04", title: "Resolution & Redressal", desc: "A resolution is communicated to the student and appropriate action is taken.", color: "bg-purple-600" },
                       ].map((s, i) => (
@@ -414,8 +423,363 @@ export default function StudentGrievancePage() {
         </div>
       </section>
 
+      {/* ── 1. GOOGLE COMPLAINT FORM SECTION ─────────────────────────────────── */}
+      <section id="complaint-form" className="py-16 bg-white border-t border-gray-200/70">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <motion.div {...fadeInUp} className="mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#0F4C81]/10 text-[#0F4C81] mb-3">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#0F4C81]" />
+              <span>Online Grievance Submission Portal</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-5">
+              <div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight">
+                  Student Complaint Form
+                </h2>
+                <div className="w-16 h-1.5 bg-[#F59E0B] rounded-full mt-2" />
+                <p className="text-gray-600 text-sm sm:text-base mt-3 max-w-3xl leading-relaxed">
+                  Students can submit their grievance directly online to the Student Grievance Redressal Committee using the Google Complaint Form below.
+                  All grievances submitted are confidential and reviewed promptly as per UGC regulations.
+                </p>
+              </div>
+
+              {/* Alternative Button */}
+              <div className="shrink-0">
+                <a
+                  href="https://forms.gle/jWKguiWTSLT7okwG9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-sm group"
+                >
+                  <span>Open Complaint Form</span>
+                  <ExternalLink className="w-4 h-4 text-[#F59E0B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Fallback & Info Banner */}
+          <motion.div
+            {...fadeInUp}
+            className="mb-6 bg-blue-50/70 border border-blue-100 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          >
+            <div className="flex items-start gap-3">
+              <Info className="w-5 h-5 text-[#0F4C81] mt-0.5 shrink-0" />
+              <div className="text-xs sm:text-sm text-gray-700">
+                <p className="font-semibold text-[#0F4C81] mb-0.5">
+                  Responsive Google Form View
+                </p>
+                <p>
+                  You can fill out and submit the complaint directly below without leaving the website.
+                  If the embedded form does not load due to browser or network restrictions, click the button to open it in a new tab.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://forms.gle/jWKguiWTSLT7okwG9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0F4C81] hover:text-[#F59E0B] transition-colors whitespace-nowrap"
+            >
+              <span>Open in new tab</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </motion.div>
+
+          {/* Form Card Container */}
+          <motion.div
+            {...fadeInUp}
+            className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden"
+          >
+            {/* Card Toolbar */}
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50/50 px-4 sm:px-6 py-3.5 border-b border-gray-200 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700 font-medium">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Official SGRC Google Form • Confidential & Secure</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handleReloadForm}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-700 hover:text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 shadow-sm transition-colors"
+                  title="Reload embedded form"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" />
+                  <span>Reload Form</span>
+                </button>
+                <a
+                  href="https://forms.gle/jWKguiWTSLT7okwG9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold text-[#0F4C81] hover:text-white bg-white hover:bg-[#0F4C81] border border-[#0F4C81]/30 hover:border-[#0F4C81] shadow-sm transition-all"
+                >
+                  <span>Open Complaint Form</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Responsive Iframe Frame */}
+            <div className="relative w-full bg-gray-50 flex flex-col items-center justify-center min-h-[750px] sm:min-h-[850px] lg:min-h-[950px]">
+              {isLoading && (
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/90 backdrop-blur-sm p-6 text-center">
+                  <div className="w-10 h-10 border-4 border-[#0F4C81] border-t-transparent rounded-full animate-spin mb-4" />
+                  <p className="text-gray-800 font-semibold text-base mb-1">
+                    Loading Student Complaint Form...
+                  </p>
+                  <p className="text-gray-500 text-xs sm:text-sm max-w-sm mb-4">
+                    Please wait while the form is fetched from Google Forms.
+                  </p>
+                  <a
+                    href="https://forms.gle/jWKguiWTSLT7okwG9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold text-[#0F4C81] bg-blue-50 hover:bg-blue-100 border border-blue-200 transition-colors"
+                  >
+                    <span>Open Complaint Form directly</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[#F59E0B]" />
+                  </a>
+                </div>
+              )}
+
+              <iframe
+                key={iframeKey}
+                src="https://forms.gle/jWKguiWTSLT7okwG9"
+                title="Student Complaint Form - Swami Vivekanand College of Pharmacy"
+                className="w-full border-0 min-h-[750px] sm:min-h-[850px] lg:min-h-[950px]"
+                onLoad={() => setIsLoading(false)}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                loading="lazy"
+              >
+                Loading complaint form...
+              </iframe>
+            </div>
+
+            {/* Bottom Fallback Notice */}
+            <div className="bg-gray-50 p-4 sm:p-5 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+              <div>
+                <p className="text-sm font-bold text-gray-800">
+                  Having trouble submitting inside the page?
+                </p>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  Some browser restrictions or network settings may affect embedded forms. You can open and submit the form directly in a new browser tab.
+                </p>
+              </div>
+              <a
+                href="https://forms.gle/jWKguiWTSLT7okwG9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition-all text-xs shrink-0"
+              >
+                <span>Open Complaint Form</span>
+                <ExternalLink className="w-3.5 h-3.5 text-[#F59E0B]" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── 2. OFFICIAL COMPLAINT FORM PDF SECTION ───────────────────────────── */}
+      <section id="complaint-pdf" className="py-16 bg-[#F8FAFC] border-t border-gray-200/70">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <motion.div {...fadeInUp} className="mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#F59E0B]/10 text-amber-800 mb-3 border border-[#F59E0B]/20">
+              <FileText className="w-3.5 h-3.5 text-[#F59E0B]" />
+              <span>Official Printable Document</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-5">
+              <div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight">
+                  Official Complaint Form
+                </h2>
+                <div className="w-16 h-1.5 bg-[#F59E0B] rounded-full mt-2" />
+                <p className="text-gray-600 text-sm sm:text-base mt-3 max-w-3xl leading-relaxed">
+                  Students who wish to submit a physical written grievance may view or download the official SVCP Complaint Form PDF.
+                  Print the form, complete the required details, and submit it directly to the SGRC Chairperson or the Grievance Box.
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-3 shrink-0">
+                <a
+                  href="/documents/Complaint%20Form.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-sm group"
+                >
+                  <Eye className="w-4 h-4 text-[#F59E0B]" />
+                  <span>View Complaint Form PDF</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 transition-opacity" />
+                </a>
+                <a
+                  href="/documents/Complaint%20Form.pdf"
+                  download="Complaint Form.pdf"
+                  className="inline-flex items-center justify-center gap-2 bg-[#F59E0B] hover:bg-[#d97706] text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-sm group"
+                >
+                  <Download className="w-4 h-4 text-white" />
+                  <span>Download Complaint Form PDF</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* In-Page Responsive PDF Viewer */}
+          <motion.div
+            {...fadeInUp}
+            className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden mb-8"
+          >
+            {/* Viewer Top Toolbar */}
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50/50 px-4 sm:px-6 py-3.5 border-b border-gray-200 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-red-50 border border-red-200 flex items-center justify-center shrink-0">
+                  <FileText className="w-5 h-5 text-red-600" />
+                </div>
+                <div>
+                  <p className="text-xs sm:text-sm font-bold text-gray-900">Complaint Form.pdf</p>
+                  <p className="text-[11px] text-gray-500">Official SVCP Student Grievance Redressal Form</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <a
+                  href="/documents/Complaint%20Form.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-[#0F4C81] hover:text-white bg-white hover:bg-[#0F4C81] border border-[#0F4C81]/30 transition-all"
+                >
+                  <Eye className="w-3.5 h-3.5 text-[#F59E0B]" />
+                  <span>View PDF</span>
+                </a>
+                <a
+                  href="/documents/Complaint%20Form.pdf"
+                  download="Complaint Form.pdf"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-[#F59E0B] hover:bg-[#d97706] transition-colors shadow-sm"
+                >
+                  <Download className="w-3.5 h-3.5 text-white" />
+                  <span>Download PDF</span>
+                </a>
+              </div>
+            </div>
+
+            {/* PDF Viewport */}
+            <div className="relative w-full bg-gray-100 flex flex-col items-center justify-center min-h-[600px] sm:min-h-[750px] lg:min-h-[850px]">
+              <object
+                data="/documents/Complaint%20Form.pdf"
+                type="application/pdf"
+                className="w-full min-h-[600px] sm:min-h-[750px] lg:min-h-[850px]"
+              >
+                <iframe
+                  src="/documents/Complaint%20Form.pdf#toolbar=1"
+                  title="Official SVCP Complaint Form PDF"
+                  className="w-full min-h-[600px] sm:min-h-[750px] lg:min-h-[850px] border-0"
+                >
+                  <div className="p-8 text-center flex flex-col items-center justify-center min-h-[400px]">
+                    <FileText className="w-16 h-16 text-gray-400 mb-4" />
+                    <p className="text-gray-800 font-bold text-base mb-1">
+                      PDF Preview
+                    </p>
+                    <p className="text-gray-500 text-xs sm:text-sm max-w-md mb-6">
+                      Your browser does not support inline PDF viewing. Please use the options below to view or download the Complaint Form PDF.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-3">
+                      <a
+                        href="/documents/Complaint%20Form.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-[#0F4C81] text-white font-bold px-5 py-2.5 rounded-xl text-xs"
+                      >
+                        <Eye className="w-4 h-4 text-[#F59E0B]" />
+                        <span>View Complaint Form PDF</span>
+                      </a>
+                      <a
+                        href="/documents/Complaint%20Form.pdf"
+                        download="Complaint Form.pdf"
+                        className="inline-flex items-center gap-2 bg-[#F59E0B] text-white font-bold px-5 py-2.5 rounded-xl text-xs"
+                      >
+                        <Download className="w-4 h-4" />
+                        <span>Download Complaint Form PDF</span>
+                      </a>
+                    </div>
+                  </div>
+                </iframe>
+              </object>
+            </div>
+
+            {/* Viewer Bottom Footer Bar */}
+            <div className="bg-gray-50 px-5 py-4 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600">
+              <span className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Document: <code className="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 font-mono text-[11px]">/documents/Complaint Form.pdf</code></span>
+              </span>
+              <div className="flex items-center gap-3 font-medium">
+                <a
+                  href="/documents/Complaint%20Form.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#0F4C81] hover:underline"
+                >
+                  View Complaint Form PDF
+                </a>
+                <span>•</span>
+                <a
+                  href="/documents/Complaint%20Form.pdf"
+                  download="Complaint Form.pdf"
+                  className="font-bold text-[#F59E0B] hover:underline"
+                >
+                  Download Complaint Form PDF
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Submission Guidelines Cards */}
+          <motion.div
+            {...fadeInUp}
+            className="grid sm:grid-cols-3 gap-4"
+          >
+            <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm flex items-start gap-3.5">
+              <div className="w-8 h-8 rounded-lg bg-[#0F4C81]/10 text-[#0F4C81] font-black text-sm flex items-center justify-center shrink-0">
+                1
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">Download & Print</h4>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">
+                  Download the official Complaint Form PDF and print a clear physical copy.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm flex items-start gap-3.5">
+              <div className="w-8 h-8 rounded-lg bg-[#F59E0B]/10 text-[#F59E0B] font-black text-sm flex items-center justify-center shrink-0">
+                2
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">Fill in Details</h4>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">
+                  Provide your name, roll number, course, contact info, and clear grievance details.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm flex items-start gap-3.5">
+              <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 font-black text-sm flex items-center justify-center shrink-0">
+                3
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">Submit to Committee</h4>
+                <p className="text-gray-500 text-xs mt-1 leading-relaxed">
+                  Submit to the SGRC Chairperson (Mr. Sarabjeet Singh) or drop in the Grievance Box.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── BOTTOM CTA ──────────────────────────────────────────────────────── */}
-      <section className="pb-16">
+      <section className="pb-16 pt-8 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             {...fadeInUp}
@@ -432,7 +796,7 @@ export default function StudentGrievancePage() {
                 <h3 className="text-white font-black text-xl">Have a Grievance?</h3>
                 <p className="text-white/60 text-sm mt-1.5 max-w-xl">
                   The SGRC is committed to addressing all student concerns fairly and promptly.
-                  Submit your grievance in writing to the Chairperson or drop it at the institute's grievance box.
+                  Submit your grievance in writing to the Chairperson, use the online form above, or drop it at the institute's grievance box.
                 </p>
               </div>
               <motion.a

@@ -51,6 +51,11 @@ export default function Footer() {
                   Faculty ERP Login
                 </a>
               </li>
+              <li>
+                <Link href="/committees/student" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Student Complaint Form
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -126,10 +131,10 @@ export default function Footer() {
               <div className="flex items-start space-x-2">
                 <Mail className="h-4 w-4 text-blue-400 mt-1" />
                 <div>
-                      <p className="text-gray-300">hod@svcp.org.in</p>
-                      <p className="text-gray-300">hr@svcp.org.in</p>
-                      <p className="text-gray-300">principalsvcop.pharmacy@gmail.com</p>
-                    </div>
+                  <p className="text-gray-300">hod@svcp.org.in</p>
+                  <p className="text-gray-300">hr@svcp.org.in</p>
+                  <p className="text-gray-300">principalsvcop.pharmacy@gmail.com</p>
+                </div>
               </div>
               {/* <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400 mt-1" />
