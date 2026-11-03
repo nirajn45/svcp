@@ -8,6 +8,10 @@ import {
   Download, Eye, RefreshCw, ShieldCheck, Info
 } from "lucide-react";
 
+// ── Google Form URLs ─────────────────────────────────────────────────────────
+const GOOGLE_FORM_PUBLIC_URL = "https://forms.gle/jWKguiWTSLT7okwG9";
+const GOOGLE_FORM_EMBED_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfa6248PDyCiqnh1AG3454AnzcetJd6Bd1GPwASiouiLg7U-g/viewform?embedded=true";
+
 // ── Animation Variants ───────────────────────────────────────────────────────
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -439,7 +443,7 @@ export default function StudentGrievancePage() {
                 </h2>
                 <div className="w-16 h-1.5 bg-[#F59E0B] rounded-full mt-2" />
                 <p className="text-gray-600 text-sm sm:text-base mt-3 max-w-3xl leading-relaxed">
-                  Students can submit their grievance directly online to the Student Grievance Redressal Committee using the Google Complaint Form below.
+                  Students can submit their grievance directly online to the Student Grievance Redressal Committee using the official Google Complaint Form below.
                   All grievances submitted are confidential and reviewed promptly as per UGC regulations.
                 </p>
               </div>
@@ -447,7 +451,7 @@ export default function StudentGrievancePage() {
               {/* Alternative Button */}
               <div className="shrink-0">
                 <a
-                  href="https://forms.gle/jWKguiWTSLT7okwG9"
+                  href={GOOGLE_FORM_PUBLIC_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2.5 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-sm group"
@@ -459,7 +463,7 @@ export default function StudentGrievancePage() {
             </div>
           </motion.div>
 
-          {/* Fallback & Info Banner */}
+          {/* Form Instructions / Notice Banner */}
           <motion.div
             {...fadeInUp}
             className="mb-6 bg-blue-50/70 border border-blue-100 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
@@ -468,16 +472,15 @@ export default function StudentGrievancePage() {
               <Info className="w-5 h-5 text-[#0F4C81] mt-0.5 shrink-0" />
               <div className="text-xs sm:text-sm text-gray-700">
                 <p className="font-semibold text-[#0F4C81] mb-0.5">
-                  Responsive Google Form View
+                  Online Complaint Submission
                 </p>
                 <p>
-                  You can fill out and submit the complaint directly below without leaving the website.
-                  If the embedded form does not load due to browser or network restrictions, click the button to open it in a new tab.
+                  You can fill out and submit your complaint directly below. If your browser restricts embedded forms or Google account cookies, please click the button to open the form in a new tab.
                 </p>
               </div>
             </div>
             <a
-              href="https://forms.gle/jWKguiWTSLT7okwG9"
+              href={GOOGLE_FORM_PUBLIC_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0F4C81] hover:text-[#F59E0B] transition-colors whitespace-nowrap"
@@ -487,13 +490,13 @@ export default function StudentGrievancePage() {
             </a>
           </motion.div>
 
-          {/* Form Card Container */}
+          {/* Clean White Form Container */}
           <motion.div
             {...fadeInUp}
             className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden"
           >
             {/* Card Toolbar */}
-            <div className="bg-gradient-to-r from-gray-50 to-blue-50/50 px-4 sm:px-6 py-3.5 border-b border-gray-200 flex flex-wrap items-center justify-between gap-3">
+            <div className="bg-white px-4 sm:px-6 py-3.5 border-b border-gray-200 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700 font-medium">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Official SGRC Google Form • Confidential & Secure</span>
@@ -509,7 +512,7 @@ export default function StudentGrievancePage() {
                   <span>Reload Form</span>
                 </button>
                 <a
-                  href="https://forms.gle/jWKguiWTSLT7okwG9"
+                  href={GOOGLE_FORM_PUBLIC_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold text-[#0F4C81] hover:text-white bg-white hover:bg-[#0F4C81] border border-[#0F4C81]/30 hover:border-[#0F4C81] shadow-sm transition-all"
@@ -520,10 +523,10 @@ export default function StudentGrievancePage() {
               </div>
             </div>
 
-            {/* Responsive Iframe Frame */}
-            <div className="relative w-full bg-gray-50 flex flex-col items-center justify-center min-h-[750px] sm:min-h-[850px] lg:min-h-[950px]">
+            {/* Responsive Iframe Frame (Clean White Background) */}
+            <div className="relative w-full bg-white flex flex-col items-center justify-center min-h-[850px] sm:min-h-[950px] lg:min-h-[1050px]">
               {isLoading && (
-                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/90 backdrop-blur-sm p-6 text-center">
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/95 backdrop-blur-sm p-6 text-center">
                   <div className="w-10 h-10 border-4 border-[#0F4C81] border-t-transparent rounded-full animate-spin mb-4" />
                   <p className="text-gray-800 font-semibold text-base mb-1">
                     Loading Student Complaint Form...
@@ -532,7 +535,7 @@ export default function StudentGrievancePage() {
                     Please wait while the form is fetched from Google Forms.
                   </p>
                   <a
-                    href="https://forms.gle/jWKguiWTSLT7okwG9"
+                    href={GOOGLE_FORM_PUBLIC_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold text-[#0F4C81] bg-blue-50 hover:bg-blue-100 border border-blue-200 transition-colors"
@@ -545,9 +548,9 @@ export default function StudentGrievancePage() {
 
               <iframe
                 key={iframeKey}
-                src="https://forms.gle/jWKguiWTSLT7okwG9"
+                src={GOOGLE_FORM_EMBED_URL}
                 title="Student Complaint Form - Swami Vivekanand College of Pharmacy"
-                className="w-full border-0 min-h-[750px] sm:min-h-[850px] lg:min-h-[950px]"
+                className="w-full bg-white border-0 min-h-[850px] sm:min-h-[950px] lg:min-h-[1050px]"
                 onLoad={() => setIsLoading(false)}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 loading="lazy"
@@ -557,7 +560,7 @@ export default function StudentGrievancePage() {
             </div>
 
             {/* Bottom Fallback Notice */}
-            <div className="bg-gray-50 p-4 sm:p-5 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div className="bg-white p-4 sm:p-5 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
               <div>
                 <p className="text-sm font-bold text-gray-800">
                   Having trouble submitting inside the page?
@@ -567,7 +570,7 @@ export default function StudentGrievancePage() {
                 </p>
               </div>
               <a
-                href="https://forms.gle/jWKguiWTSLT7okwG9"
+                href={GOOGLE_FORM_PUBLIC_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#0F4C81] hover:bg-[#0a3a63] text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition-all text-xs shrink-0"
